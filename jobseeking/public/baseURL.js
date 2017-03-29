@@ -1,1 +1,1 @@
-var base_url = "/test/login3/public/api"
+var base_url = "/jobseek/jobseeking/public/api"

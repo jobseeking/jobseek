@@ -1,5 +1,5 @@
 1. "composer install"    (download 3rd party lib to /vendor)
 2. "composer update"     (download 3rd party lib to /vendor)
-3. config .env (DB comnection)
+3. config .env (DB connection)
 4. "php artisan migrate"   (create DB table)
-5  ...
+5  config baseURL.js
