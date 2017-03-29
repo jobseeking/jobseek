@@ -17,12 +17,14 @@ password       string
 id                 int
 name               string
 company            string
+salary             int
+details            text
 location_id        int    
 type_id            int
 classification_id  int
-salary             int
-details            text
 user_id            int    (employer)
+
+
 
 
 [locations]
