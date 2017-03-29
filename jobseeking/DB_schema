@@ -1,0 +1,44 @@
+[table name]
+column_name    type
+column_name    type
+column_name    type
+...
+
+
+[users]
+id             int
+name           string
+last_name      string
+email          string
+password       string
+
+      
+[jobs]
+id                 int
+name               string
+company            string
+location_id        int    
+type_id            int
+classification_id  int
+salary             int
+details            text
+user_id            int    (employer)
+
+
+[locations]
+id                 int
+name               string
+
+
+[types]
+id                 int
+name               string
+
+
+[classifications]
+id                 int
+name               string
+
+
+
+
