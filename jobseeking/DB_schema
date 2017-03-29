@@ -3,7 +3,7 @@ column_name    type
 column_name    type
 column_name    type
 ...
-
+  
 
 [users]
 id             int
