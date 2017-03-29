@@ -10,7 +10,7 @@
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
 
-                <form action="/jobseek/jobseeking/public/user" method="post">
+                <form action="{{$base_url}}/user" method="post">
 
                     {{ csrf_field() }}
 
