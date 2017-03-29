@@ -1,8 +1,9 @@
 1. "git clone https://github.com/jobseeking/jobseek.git"
 
-2. "sudo chown -R ubuntu:www-data jobseeking"
+2. "sudo chown -R ubuntu:www-data jobseek"
 
-3. "composer install"    (download 3rd party lib to /vendor)
+3. go to project root
+  "composer install"    (download 3rd party lib to /vendor)
    
 4. config .env (DB connection)
 
