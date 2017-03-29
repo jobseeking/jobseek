@@ -11,13 +11,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 class Controller extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
-/*
+
     public function __construct() {
 
        $base_url = "/jobseek/jobseeking/public";
 
        View::share ( 'base_url', $base_url );
     } 
-*/
-    
+
+
 }
