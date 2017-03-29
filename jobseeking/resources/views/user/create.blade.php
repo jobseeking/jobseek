@@ -1,3 +1,5 @@
+@include('baseurl')
+
 <div class="panel-group col-md-6 col-sm-12" id="accordion" style="padding-left: 0">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -10,7 +12,7 @@
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
 
-                <form action="/test/login3/public/user" method="post">
+                <form action="{{$base_url}}/user" method="post">
 
                     {{ csrf_field() }}
 
