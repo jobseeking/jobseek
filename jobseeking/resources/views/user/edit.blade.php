@@ -4,7 +4,7 @@
 
     <h2>Update User: {{$user->name}}</h2>
 
-    <form action="/jobseek/jobseeking/public/user/{{$user->id}}" method="post">
+    <form action="{{$base_url}}/user/{{$user->id}}" method="post">
 
         {{ csrf_field() }}
 

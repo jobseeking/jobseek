@@ -81,7 +81,7 @@
 					<td>
 						{{ $record->updated_at }}
 						</td>
-					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => 'jobseek/jobseeking/public/user', 'record' => $record ] )
+					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => $base_url, 'record' => $record ] )
 		    	</tr>
 			@empty
 				@include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 8])
