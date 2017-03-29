@@ -45,7 +45,7 @@
 							  data-name="name"
 							  data-value="{{ $record->name }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/user/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->name }}</span>
 						</td>
 					<td>
@@ -54,7 +54,7 @@
 							  data-name="email"
 							  data-value="{{ $record->email }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/user/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->email }}</span>
 						</td>
 					<td>
@@ -63,7 +63,7 @@
 							  data-name="password"
 							  data-value="{{ $record->password }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/user/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->password }}</span>
 						</td>
 					<td>
@@ -72,7 +72,7 @@
 							  data-name="remember_token"
 							  data-value="{{ $record->remember_token }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/user/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->remember_token }}</span>
 						</td>
 					<td>
