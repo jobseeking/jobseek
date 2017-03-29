@@ -9,7 +9,7 @@
 
 5. "php artisan migrate"   (create DB table)
 
-6  config (frontend baseURL.js) + (backend baseURL)
+6  config baseURL : (frontend baseURL.js) + (backend base Controller)
 
 
 
