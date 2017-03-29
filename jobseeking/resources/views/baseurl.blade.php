@@ -1,1 +1,1 @@
-{{  $base_url = "/jobseek/jobseeking/public"; }}
+{{  $base_url = "/jobseek/jobseeking/public" }}
