@@ -1,11 +1,19 @@
-6. chmod -R 777 storage (skip?)
-7. sudo chown -R www-data:www-data jobseeking/
+1. "git clone https://github.com/jobseeking/jobseek.git"
+
+2. "sudo chown -R ubuntu:www-data jobseeking"
+
+3. "composer install"    (download 3rd party lib to /vendor)
+   
+4. config .env (DB connection)
+
+5. "php artisan migrate"   (create DB table)
+
+6  config (frontend baseURL.js) + (backend baseURL)
 
 
-1. "composer install"    (download 3rd party lib to /vendor)
-2. "composer update"     (download 3rd party lib to /vendor)
-3. config .env (DB connection)
-4. "php artisan migrate"   (create DB table)
-5  config baseURL.js
 
+
+No need : 
+"chmod -R 777 storage"
+"composer update"     (download 3rd party lib to /vendor)
 
