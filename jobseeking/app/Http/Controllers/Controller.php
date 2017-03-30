@@ -28,12 +28,12 @@ class Controller extends BaseController
         try {
             $token = $request->input('token'); // HTTP POST BODY
             if(!empty($token)){
-                // Token in POST BODY PARAM
+                // Token in POST BODY PARAM (token = XXX)
                 if (! $user = JWTAuth::setToken($token)->authenticate()) {
                     return response()->json(['user_not_found'], 404);
                 }
             }else{
-                // Token in HEADER or HTTP GET PARAM
+                // Token in HEADER or HTTP GET PARAM (http://...?token=XXX)
                 if (! $user = JWTAuth::parseToken()->authenticate()) {
                     return response()->json(['user_not_found'], 404);
                 }
