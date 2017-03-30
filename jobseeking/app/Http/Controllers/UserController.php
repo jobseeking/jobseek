@@ -41,9 +41,9 @@ class UserController extends Controller
     {
 
         // Not allow to create user if not login...
-        if ($this->getUser($request) == null){
-            return response()->json(['user_not_login'], 404);
-        }
+        //if ($this->getUser($request) == null){
+        //    return response()->json(['user_not_login'], 404);
+        //}
 
         $this->validate($request, User::validationRules());
 
