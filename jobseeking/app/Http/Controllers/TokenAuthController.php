@@ -74,7 +74,7 @@ class TokenAuthController extends Controller
         //$search = $request->all();
         // ... 
         
-        return redirect("home");
+        return redirect("./");
     }
 
 }
