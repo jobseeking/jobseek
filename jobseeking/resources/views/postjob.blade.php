@@ -39,30 +39,33 @@
       <div class="form-group">
         <label for="location" class="col-sm-2 control-label">Location</label>
         <div class="col-sm-10">
-            <select class="form-control" name="location_id">
-                <option value ="1" >Sydney</option>
-                <option value ="2" >Melbourne</option>
-            </select>
+          <select class="form-control" name="location_id">
+            @for ( $locations as $location )
+              <option value ="{{$location->id}}" > {{$location->name}} </option>            
+            @endfor
+          </select>
         </div>
       </div>
 
       <div class="form-group">
         <label for="worktype" class="col-sm-2 control-label">Work type</label>
         <div class="col-sm-10">
-            <select class="form-control" name="type_id">
-                <option value ="1" >Full time</option>
-                <option value ="2" >Part time</option>
-            </select>
+          <select class="form-control" name="type_id">
+            @for ( $types as $type )
+              <option value ="{{$types->id}}" > {{$types->name}} </option>            
+            @endfor
+          </select>
         </div>
       </div>
 
       <div class="form-group">
         <label for="classification" class="col-sm-2 control-label">Classification</label>
         <div class="col-sm-10">
-            <select class="form-control" name="classification_id">
-                <option value ="1" >IT</option>
-                <option value ="2" >Accounting</option>
-            </select>
+          <select class="form-control" name="classification_id">
+            @for ( $classifications as $classification )
+              <option value ="{{$classification->id}}" > {{$classification->name}} </option>
+            @endfor   
+          </select>
         </div>
       </div>
 

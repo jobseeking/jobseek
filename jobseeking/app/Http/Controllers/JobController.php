@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Classification;
+use App\Type;
 use App\Location;
 use App\Job;
 use Illuminate\Http\Request;
@@ -111,7 +113,14 @@ class JobController extends Controller
     // post job page
     public function postjob_page( Request $request )
     {
-        return view('postjob'); 
+        $types = Type::all();
+        $locations = Location::all();
+        $classifications = Classification::all();
+
+        return view('postjob', ['types' => $types, 
+                                'locations' => $locations,
+                                'classifications' => $classifications,
+                               ]); 
     }
 
     // post job page call this API
