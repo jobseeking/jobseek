@@ -25,7 +25,7 @@
 		                    if(status == 'success'){
 		                        alert( "Login Success" );
 		                        localStorage.setItem("my_token", data.token);
-		                        window.location = "#";
+		                        window.location = "../";
 		                        //alert("success");
 		                    }else{
 		                        //alert("status not success");
@@ -72,7 +72,7 @@
 		                        
 		                        if(status == 'success'){
 		                            alert( "Login Already!" );
-		                            window.location = "#"; 
+		                            window.location = "../"; 
 		                        }else{
 		                            localStorage.removeItem("my_token");
 		                            //$("#login-form").css({ display: "block"});
