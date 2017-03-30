@@ -27,8 +27,8 @@ Route::get('login', function () { return view('login.login'); });
 
 
 // post job
-Route::get('postjob', function () { return view('postjob'); });
-Route::post('postjob', 'JobController@postjob');
+Route::get('postjob', 'JobController@postjob_page');
+Route::post('api/postjob', 'JobController@postjob_api');
 
 
 // CRUD

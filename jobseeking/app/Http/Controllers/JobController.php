@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Location;
 use App\Job;
 use Illuminate\Http\Request;
 
@@ -107,7 +108,14 @@ class JobController extends Controller
         return view($this->viewDir.".".$view, $data);
     }
 
-    public function postjob( Request $request )
+    // post job page
+    public function postjob_page( Request $request )
+    {
+        return view('postjob'); 
+    }
+
+    // post job page call this API
+    public function postjob_api( Request $request )
     {
         $this->validate($request, Job::validationRules());
 
