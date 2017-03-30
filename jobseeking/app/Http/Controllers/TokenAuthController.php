@@ -69,12 +69,12 @@ class TokenAuthController extends Controller
         return User::create($newuser);
     }
 
-    public function search(Request $request){
+    public function test(Request $request){
  
-        $search= $request->all();
+        //$search = $request->all();
         // ... 
         
-        return response()->json(compact('search'));
+        return $this->view("home");
     }
 
 }
