@@ -12,7 +12,10 @@ class AlterUsersTableAddLastName extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('users', function(Blueprint $table)
+        {
+            $table->string('last_name');
+        });
     }
 
     /**
@@ -22,6 +25,10 @@ class AlterUsersTableAddLastName extends Migration
      */
     public function down()
     {
-        //
+        // here you're not dropping the whole table, only removing the newly added columns
+        //Schema::table('users', function(Blueprint $table){
+        //    $table->dropColumn('last_name');
+        //});
+
     }
 }
