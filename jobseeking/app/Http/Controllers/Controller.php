@@ -26,7 +26,7 @@ class Controller extends BaseController
     public function getUser(Request $request){
         
         try {
-            $token = $request->input('token'); // HTTP POST BODY
+            $token = $request->input('my_token'); // HTTP POST BODY
             if(!empty($token)){
                 // Token in POST BODY PARAM (token = XXX)
                 if (! $user = JWTAuth::setToken($token)->authenticate()) {
