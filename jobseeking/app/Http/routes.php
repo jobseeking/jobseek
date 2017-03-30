@@ -26,4 +26,4 @@ Route::get('api/authenticate/user', 'TokenAuthController@getAuthenticatedUser');
 
 
 
-Route::resource('user','UserController');
+Route::resource('user-0329','UserController-0329');
