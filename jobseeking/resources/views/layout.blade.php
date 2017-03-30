@@ -128,7 +128,8 @@
                             console.log(JSON.stringify(data));
                             
                             if(status == 'success'){
-                                alert( "Login Already!" );
+                                //alert( "Login Already!" );
+                                console.log("Login Already!");
                                 g_is_login = true;
                             }else{
                                 localStorage.removeItem("my_token");
