@@ -52,7 +52,7 @@
 
 
 
-	<div class="container post_form">
+	<div class="post_form">
 		<h1 class="center">Register</h1>
 		<form class="form-horizontal" method="post" action="register.php">
 		  <div class="form-group">
