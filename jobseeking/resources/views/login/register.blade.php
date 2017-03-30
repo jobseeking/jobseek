@@ -118,7 +118,7 @@
 		                        if(status == 'success'){
 		                            
 		                            alert( "Login Already!" );
-		                            window.location = ""; 
+		                            window.location = "#"; 
 		                        }else{
 		                            localStorage.removeItem("my_token");
 		                        }
