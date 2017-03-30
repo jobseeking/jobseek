@@ -41,9 +41,11 @@
            
     } 
 
+    //before form submit do something : 
     $('#myform').submit(function() {
         console.log("before submit");
         console.log(localStorage.getItem("my_token"));
+        // Attach token to http post parameter
         document.getElementById("post_token_id").value = localStorage.getItem("my_token");
         return true; // return false to cancel form action
     });
