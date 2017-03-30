@@ -10,7 +10,7 @@
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
 
-                <form action="{{$base_url}}/user" method="post">
+                <form id="myform" action="{{$base_url}}/user" method="post">
 
                     {{ csrf_field() }}
 
@@ -37,13 +37,14 @@
 
 <script>
     function check_login_callback(is_login){
-            console.log(" create user : check_login_callback : " + is_login);
-            if(is_login){
-                 document.getElementById("input_token").value = localStorage.getItem("my_token");
-            }else{
-                
-            }
-        } 
+        console.log(" create user : check_login_callback : " + is_login);
+           
+    } 
+
+    $('#myform').submit(function() {
+        document.getElementById("input_token").value = localStorage.getItem("my_token");
+        return true; // return false to cancel form action
+    });
 
 </script>
 
