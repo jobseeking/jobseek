@@ -37,7 +37,7 @@
 <div class="container header">
     <div class="row">
         <div class="col-xs-4">
-            <a href="index.html"><img class="logo img-responsive" src="{{ asset('images/logo.png') }}" alt=""></a>
+            <a href="/"><img class="logo img-responsive" src="{{ asset('images/logo.png') }}" alt=""></a>
         </div>
 
         <div id="login_link" class="col-xs-8 info" style="display:none;">
@@ -51,8 +51,8 @@
     </div>
 
     <div class="row mynav">
-        <a class="active" href="index.html">Home</a> |
-        <a href="post.php">Post job</a> |
+        <a class="active" href="/">Home</a> |
+        <a href="postjob">Post job</a> |
         <a href="find.php">Find job</a> |
         <a href="about.html">About us</a> |
         <a href="contact.php">Contact us</a>
