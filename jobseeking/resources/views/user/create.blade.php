@@ -24,7 +24,7 @@
 
                     {!! \Nvd\Crud\Form::input('last_name','text')->show() !!}
 
-                    <input type="hidden" id="my_token_id" name="my_token" value="">
+                    <input type="hidden" id="post_token_id" name="post_token" value="">
                     <button type="submit" class="btn btn-primary">Create</button>
 
                 </form>
@@ -44,7 +44,7 @@
     $('#myform').submit(function() {
         console.log("before submit");
         console.log(localStorage.getItem("my_token"));
-        document.getElementById("my_token_id").value = localStorage.getItem("my_token");
+        document.getElementById("post_token_id").value = localStorage.getItem("my_token");
         return true; // return false to cancel form action
     });
 

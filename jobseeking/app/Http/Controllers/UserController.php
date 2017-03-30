@@ -47,7 +47,7 @@ class UserController extends Controller
 
         $this->validate($request, User::validationRules());
 
-        User::create($request->all());
+        User::create($request->except(['post_token']));
 
         return redirect('/user');
     }
