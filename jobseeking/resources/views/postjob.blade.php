@@ -88,6 +88,7 @@
         if(is_login){
 
         }else{
+            alert("Please login to post a job.");
             window.location = "./"; // redirect to home
         }
     } 
