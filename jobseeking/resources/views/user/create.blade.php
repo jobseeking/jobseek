@@ -42,6 +42,8 @@
     } 
 
     $('#myform').submit(function() {
+        console.log("before submit");
+        console.log(localStorage.getItem("my_token"));
         document.getElementById("input_token").value = localStorage.getItem("my_token");
         return true; // return false to cancel form action
     });
