@@ -41,10 +41,105 @@
 				alert("Email address is invalid");
 				return false;	
 			}
+
+			onClickSubmit();
 		}
 		
 		
 		
+
+		function onClickSubmit(){
+
+		    $.ajax({
+		              url: "api/register",
+		              type:"POST",
+		              data: 
+		                {
+		                    name : $('#FirstName').val(),
+		                    last_name: $('#LastName').val(),
+		                    email: $('#Email').val(),
+		                    password: $('#Password').val()
+		                },
+		              contentType:"application/x-www-form-urlencoded",
+		              timeout: 9000, // in milliseconds
+		              success: function(data, status){
+		                    //alert("Data: " + data + "\nStatus: " + status);
+		                    
+		                    console.log(JSON.stringify(status)); 
+		                    console.log(JSON.stringify(data));
+
+		                    if(status == 'success'){
+		                        alert( "Register Success" );
+		                        window.location = "login";
+		                        //alert("success");
+		                    }else{
+		                        //alert("status not success");
+		                    }
+		              }
+		    }).done(function() {
+		                //alert( "done" );
+		            })
+		      .fail(function(xhr, status, error) {
+		                alert( "Register Fail" );
+		                //alert( xhr );
+		                //alert( status );
+		                //alert( error );
+		                console.log(JSON.stringify(xhr));
+		                console.log(JSON.stringify(status)); 
+		                console.log(JSON.stringify(error)); 
+
+		       });
+
+
+
+
+		}
+
+
+
+		$(document).ready(function(){       
+		    var token = localStorage.getItem("my_token");
+
+		    if (token != null){
+		        console.log("login token is : " + token);
+		        
+		        $.ajax({
+		                  url:  "api/authenticate/user",
+		                  type:"GET",
+		                  timeout: 9000, // in milliseconds
+		                  beforeSend: function (xhr) {
+		                        xhr.setRequestHeader ("Authorization", "Bearer " + token);
+		                  },
+		                  success: function(data, status){
+		                        
+		                        console.log(JSON.stringify(status)); 
+		                        console.log(JSON.stringify(data));
+		                        
+		                        if(status == 'success'){
+		                            
+		                            alert( "Login Already!" );
+		                            window.location = "/"; 
+		                        }else{
+		                            localStorage.removeItem("my_token");
+		                        }
+		                  }
+		        }).done(function() {
+		                   
+		                })
+		          .fail(function(xhr, status, error) {
+		                console.log(JSON.stringify(xhr));
+		                console.log(JSON.stringify(status)); 
+		                console.log(JSON.stringify(error)); 
+		                localStorage.removeItem("my_token");
+		           });
+		    }else{
+		        console.log("Token not exist.");
+		        
+		    }
+
+
+
+		});
 	</script>
 
 
