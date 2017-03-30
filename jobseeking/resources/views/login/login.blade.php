@@ -4,6 +4,10 @@
 @section('content')
 	<script>
 
+		function check_login_callback(is_login){
+			console.log(" login : check_login_callback : " + is_login);
+		} 
+
 		function onClickSubmit(){
 
 		    $.ajax({

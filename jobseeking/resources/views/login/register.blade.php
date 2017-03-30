@@ -3,6 +3,11 @@
 
 @section('content')
 	<script type="text/javascript">
+
+		function check_login_callback(is_login){
+			console.log("register : check_login_callback : " + is_login);
+		} 
+
 		function validateRegistForm()
 		{
 			var email= $('#Email').val();
@@ -96,7 +101,7 @@
 		}
 
 
-
+/*
 		$(document).ready(function(){       
 		    var token = localStorage.getItem("my_token");
 
@@ -140,6 +145,9 @@
 
 
 		});
+
+*/
+
 	</script>
 
 

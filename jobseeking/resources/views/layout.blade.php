@@ -89,51 +89,65 @@
 
 <script>
 
-        $(document).ready(function(){       
+    var g_is_login = false;
 
-            var token = localStorage.getItem("my_token");
-            var is_login = false;
+    function show_hide_login_out(is_login){
+        if (!is_login){
+            $("#login_link").css({ display: "block"});
+            $("#logout_link").css({ display: "none"});
+        }else{
+            $("#login_link").css({ display: "none"});
+            $("#logout_link").css({ display: "block"});
+        }
 
-            if (token != null){
-                console.log("Token found.");
-                $.ajax({
-                          url:  "api/authenticate/user",
-                          type:"GET",
-                          timeout: 9000, // in milliseconds
-                          beforeSend: function (xhr) {
-                                xhr.setRequestHeader ("Authorization", "Bearer " + token);
-                          },
-                          success: function(data, status){
-                                console.log('success');
-                                console.log(JSON.stringify(status)); 
-                                console.log(JSON.stringify(data));
-                                
-                                if(status == 'success'){
-                                    alert( "Login Already!" );
-                                    is_login = true;
-                                }else{
-                                    localStorage.removeItem("my_token");
-                                }
-                          }
-                }).done(function() {
-                           console.log('done');
-                        })
-                  .fail(function(xhr, status, error) {
-                        console.log('fail');
-                        console.log(JSON.stringify(xhr));
-                        console.log(JSON.stringify(status)); 
-                        console.log(JSON.stringify(error)); 
-                        localStorage.removeItem("my_token");
-                        
-                   });
-            }else{
-                console.log("Token not exist.");
-               
-            }
+        check_login_callback(is_login);
+    }
+
+    $(document).ready(function(){       
+
+        var token = localStorage.getItem("my_token");
+        
+
+        if (token != null){
+            console.log("Token found.");
+            $.ajax({
+                      url:  "api/authenticate/user",
+                      type:"GET",
+                      timeout: 9000, // in milliseconds
+                      beforeSend: function (xhr) {
+                            xhr.setRequestHeader ("Authorization", "Bearer " + token);
+                      },
+                      success: function(data, status){
+                            console.log(JSON.stringify(status)); 
+                            console.log(JSON.stringify(data));
+                            
+                            if(status == 'success'){
+                                alert( "Login Already!" );
+                                g_is_login = true;
+                            }else{
+                                localStorage.removeItem("my_token");
+                            }
+                      }
+            }).done(function() {
+                       console.log('api/authenticate/user : done');
+                       show_hide_login_out(g_is_login);
+                    })
+              .fail(function(xhr, status, error) {
+                    console.log('fail');
+                    console.log(JSON.stringify(xhr));
+                    console.log(JSON.stringify(status)); 
+                    console.log(JSON.stringify(error)); 
+                    localStorage.removeItem("my_token");
+                    
+               });
+        }else{
+            console.log("Token not exist.");
+            show_hide_login_out(false);
+        }
 
 
 
-        });
+    });
 
  </script>
 
