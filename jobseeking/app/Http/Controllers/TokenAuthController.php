@@ -70,9 +70,6 @@ class TokenAuthController extends Controller
     }
 
     public function test(Request $request){
- 
-        //$search = $request->all();
-        // ... 
         
         return redirect("./");
     }

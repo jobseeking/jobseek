@@ -57,44 +57,6 @@
 		}
 
 
-		function onClickSubmitTest(){
-
-		    $.ajax({
-		              url:  "api/test",
-		              type:"POST",
-		              data: 
-		                {
-		                  
-		                },
-		              contentType:"application/x-www-form-urlencoded",
-		              timeout: 9000, // in milliseconds
-		              beforeSend: function (xhr) {
-                            xhr.setRequestHeader("TESTHEADER", "Bearerrrrr");
-                      },
-		              success: function(data, status){
-		                    //alert("Data: " + data + "\nStatus: " + status);
-		                    
-		                    console.log(JSON.stringify(status)); 
-		                    console.log(JSON.stringify(data));
-		                    //console.log(data.token);
-		                    if(status == 'success'){
-		                      
-		                    }else{
-		                        
-		                    }
-		              }
-		    }).done(function() {
-		            	console.log("done");
-		            })
-		      .fail(function(xhr, status, error) {
-		                console.log(JSON.stringify(xhr));
-		                console.log(JSON.stringify(status)); 
-		                console.log(JSON.stringify(error)); 
-
-		       });
-
-		}
-
 
 	</script>
 
@@ -122,7 +84,7 @@
 		  
 		  <div class="form-group">
 		    <div class="col-sm-offset-2 col-sm-10">
-		      <button type="submit" class="btn btn-default" onclick="onClickSubmitTest()">Log in</button>
+		      <button type="submit" class="btn btn-default" onclick="onClickSubmit()">Log in</button>
 		    </div>
 		  </div>
 		</div>
