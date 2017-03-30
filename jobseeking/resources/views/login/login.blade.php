@@ -60,52 +60,6 @@
 		}
 
 
-/*
-		$(document).ready(function(){       
-
-		    var token = localStorage.getItem("my_token");
-
-		    if (token != null){
-		        console.log("Token found.");
-		        $.ajax({
-		                  url:  "api/authenticate/user",
-		                  type:"GET",
-		                  timeout: 9000, // in milliseconds
-		                  beforeSend: function (xhr) {
-		                        xhr.setRequestHeader ("Authorization", "Bearer " + token);
-		                  },
-		                  success: function(data, status){
-		                        
-		                        console.log(JSON.stringify(status)); 
-		                        console.log(JSON.stringify(data));
-		                        
-		                        if(status == 'success'){
-		                            alert( "Login Already!" );
-		                            window.location = "./"; // redirect to home
-		                        }else{
-		                            localStorage.removeItem("my_token");
-		                            //$("#login-form").css({ display: "block"});
-		                        }
-		                  }
-		        }).done(function() {
-		                   
-		                })
-		          .fail(function(xhr, status, error) {
-		                console.log(JSON.stringify(xhr));
-		                console.log(JSON.stringify(status)); 
-		                console.log(JSON.stringify(error)); 
-		                localStorage.removeItem("my_token");
-		                //$("#login-form").css({ display: "block"});
-		           });
-		    }else{
-		        console.log("Token not exist.");
-		        //$("#login-form").css({ display: "block"});
-		    }
-
-
-
-		});
-*/
 
 	</script>
 
