@@ -113,9 +113,9 @@ class JobController extends Controller
     // post job page
     public function postjob_page( Request $request )
     {
-        $types = Type::findRequested();
-        $locations = Location::findRequested();
-        $classifications = Classification::findRequested();
+        $types = Type::all();
+        $locations = Location::all();
+        $classifications = Classification::all();
 
         return view('postjob', ['types' => $types, 
                                 'locations' => $locations,

@@ -52,7 +52,7 @@
         <div class="col-sm-10">
           <select class="form-control" name="type_id">
             @foreach ( $types as $type )
-              <option value ="{{$types->id}}" > {{$types->name}} </option>            
+              <option value ="{{$type->id}}" > {{$type->name}} </option>            
             @endforeach
           </select>
         </div>
