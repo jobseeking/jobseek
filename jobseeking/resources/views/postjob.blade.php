@@ -5,7 +5,7 @@
 
 
 
-<div class="post_form">
+<div id="post_form_id" class="post_form" style="display:none;">
     <h1 class="center">Post your job</h1>
     <form class="form-horizontal" id="myform" action="api/postjob" method="post">
       <div class="form-group">
@@ -86,14 +86,14 @@
 <script>
     function check_login_callback(is_login){
         if(is_login){
-
+            $("#post_form_id").css({ display: "block"});
         }else{
             alert("Please login to post a job.");
             window.location = "./"; // redirect to home
         }
     } 
 
-        //before form submit do something : 
+    //before form submit do something : 
     $('#myform').submit(function() {
         console.log("before submit");
         console.log("user id : " + g_user.id);
