@@ -36,10 +36,14 @@
 
 
 <script>
-
-    $(document).ready(function(){       
-        document.getElementById("input_token").value = localStorage.getItem("my_token");
-    });
+    function check_login_callback(is_login){
+            console.log(" create user : check_login_callback : " + is_login);
+            if(is_login){
+                 document.getElementById("input_token").value = localStorage.getItem("my_token");
+            }else{
+                
+            }
+        } 
 
 </script>
 
