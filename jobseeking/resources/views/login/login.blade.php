@@ -6,6 +6,11 @@
 
 		function check_login_callback(is_login){
 			console.log(" login : check_login_callback : " + is_login);
+			if(is_login){
+				window.location = "./"; // redirect to home
+			}else{
+				
+			}
 		} 
 
 		function onClickSubmit(){
