@@ -71,8 +71,13 @@ class TokenAuthController extends Controller
 
     public function test(Request $request){
         
+        $token = $request->input('token');
+        if(empty($token)){
+            return response()->json(['token_absent']);
+        }
+
         try {
-            if (! $user = JWTAuth::parseToken()->authenticate()) {
+            if (! $user = JWTAuth::setToken($token)->authenticate()) {
                 return response()->json(['user_not_found'], 404);
             }
  
