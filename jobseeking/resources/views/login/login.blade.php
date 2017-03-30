@@ -9,7 +9,7 @@
 			if(is_login){
 				window.location = "./"; // redirect to home
 			}else{
-				
+				$("#login_div").css({ display: "block"});
 			}
 		} 
 
@@ -114,7 +114,7 @@
 
 
 
-	<div class="post_form">
+	<div class="post_form" id="login_div" style="display:none;">
 		<h1 class="center">Log in</h1>
 		<div class="form-horizontal">
 		  <div class="form-group">
