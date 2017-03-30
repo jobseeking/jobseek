@@ -149,7 +149,7 @@
 
 	<div class="post_form">
 		<h1 class="center">Register</h1>
-		<form class="form-horizontal" method="post" action="register.php">
+		<div class="form-horizontal"  >
 		  <div class="form-group">
 			<div class="col-sm-12">
 			  <input type="text" class="form-control" id="Email" name="Email" placeholder="Email address">
@@ -183,7 +183,7 @@
 			  <button type="submit" class="btn btn-default" onClick="javascript:return validateRegistForm()">Create Account</button>
 			</div>
 		  </div>
-		</form>
+		</div>
 	</div>
 @endsection
 
