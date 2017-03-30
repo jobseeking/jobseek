@@ -35,6 +35,8 @@ class Controller extends BaseController
                     return null;
                 }
             }else{
+                return null; // No token in HTTP POST parameter
+
                 // This throws exception somehow cannot catch??
                 // Token in HEADER or HTTP GET PARAM (http://...?token=XXX)
                 //if (! $user = JWTAuth::parseToken()->authenticate()) {
