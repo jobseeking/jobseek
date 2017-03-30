@@ -51,7 +51,7 @@
 		}
 
 
-
+/*
 		$(document).ready(function(){       
 
 		    var token = localStorage.getItem("my_token");
@@ -96,6 +96,7 @@
 
 
 		});
+*/
 
 	</script>
 

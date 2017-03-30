@@ -40,10 +40,13 @@
             <a href="index.html"><img class="logo img-responsive" src="{{ asset('images/logo.png') }}" alt=""></a>
         </div>
 
-        <div class="col-xs-8 info">
+        <div id="login_link" class="col-xs-8 info" style="display:none;">
             <a href="login">Log in</a>
             or
             <a href="register">Register</a>
+        </div>
+        <div id="logout_link" class="col-xs-8 info" style="display:none;" >
+            <a href="./">Log out</a>
         </div>
     </div>
 
@@ -80,6 +83,59 @@
     <a href="http://www.youtube.com" target="_blank"><img src="{{ asset('images/youtube.png') }}" alt=""></a>
 </div>
 <!--Rex-->
+
+
+
+
+<script>
+
+        $(document).ready(function(){       
+
+            var token = localStorage.getItem("my_token");
+            var is_login = false;
+
+            if (token != null){
+                console.log("Token found.");
+                $.ajax({
+                          url:  "api/authenticate/user",
+                          type:"GET",
+                          timeout: 9000, // in milliseconds
+                          beforeSend: function (xhr) {
+                                xhr.setRequestHeader ("Authorization", "Bearer " + token);
+                          },
+                          success: function(data, status){
+                                console.log('success');
+                                console.log(JSON.stringify(status)); 
+                                console.log(JSON.stringify(data));
+                                
+                                if(status == 'success'){
+                                    alert( "Login Already!" );
+                                    is_login = true;
+                                }else{
+                                    localStorage.removeItem("my_token");
+                                }
+                          }
+                }).done(function() {
+                           console.log('done');
+                        })
+                  .fail(function(xhr, status, error) {
+                        console.log('fail');
+                        console.log(JSON.stringify(xhr));
+                        console.log(JSON.stringify(status)); 
+                        console.log(JSON.stringify(error)); 
+                        localStorage.removeItem("my_token");
+                        
+                   });
+            }else{
+                console.log("Token not exist.");
+               
+            }
+
+
+
+        });
+
+ </script>
 
 
 
