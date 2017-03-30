@@ -46,7 +46,7 @@
             <a href="register">Register</a>
         </div>
         <div id="logout_link" class="col-xs-8 info" style="display:none;" >
-            <a href="./">Log out</a>
+            <a onclick="onClickLogout()" >Log out</a>
         </div>
     </div>
 
@@ -90,6 +90,12 @@
 <script>
 
     var g_is_login = false;
+
+    function onClickLogout(){
+        console.log("onClickLogout");
+        localStorage.removeItem("my_token");
+        window.location = "./"; // redirect to home
+    }
 
     function show_hide_login_out(is_login){
         if (!is_login){
