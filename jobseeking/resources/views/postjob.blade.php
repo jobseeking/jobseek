@@ -40,9 +40,9 @@
         <label for="location" class="col-sm-2 control-label">Location</label>
         <div class="col-sm-10">
           <select class="form-control" name="location_id">
-            @for ( $locations as $location )
+            @foreach ( $locations as $location )
               <option value ="{{$location->id}}" > {{$location->name}} </option>            
-            @endfor
+            @endforeach
           </select>
         </div>
       </div>
@@ -51,9 +51,9 @@
         <label for="worktype" class="col-sm-2 control-label">Work type</label>
         <div class="col-sm-10">
           <select class="form-control" name="type_id">
-            @for ( $types as $type )
+            @foreach ( $types as $type )
               <option value ="{{$types->id}}" > {{$types->name}} </option>            
-            @endfor
+            @endforeach
           </select>
         </div>
       </div>
@@ -62,9 +62,9 @@
         <label for="classification" class="col-sm-2 control-label">Classification</label>
         <div class="col-sm-10">
           <select class="form-control" name="classification_id">
-            @for ( $classifications as $classification )
+            @foreach ( $classifications as $classification )
               <option value ="{{$classification->id}}" > {{$classification->name}} </option>
-            @endfor   
+            @endforeach   
           </select>
         </div>
       </div>
