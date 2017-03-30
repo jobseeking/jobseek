@@ -23,6 +23,7 @@ class Controller extends BaseController
        View::share ( 'base_url', $base_url );
     } 
 
+    // Get user info from token provided in HTTP POST parameter "post_token"
     public function getUser(Request $request){
         
         try {
@@ -34,11 +35,12 @@ class Controller extends BaseController
                     return null;
                 }
             }else{
+                // This throws exception somehow cannot catch??
                 // Token in HEADER or HTTP GET PARAM (http://...?token=XXX)
-                if (! $user = JWTAuth::parseToken()->authenticate()) {
+                //if (! $user = JWTAuth::parseToken()->authenticate()) {
                     //return response()->json(['user_not_found'], 404);
-                    return null;
-                }
+                //    return null;
+                //}
             }
 
         } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
