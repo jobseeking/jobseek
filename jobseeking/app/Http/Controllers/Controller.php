@@ -30,27 +30,31 @@ class Controller extends BaseController
             if(!empty($token)){
                 // Token in POST BODY PARAM (token = XXX)
                 if (! $user = JWTAuth::setToken($token)->authenticate()) {
-                    return response()->json(['user_not_found'], 404);
+                    //return response()->json(['user_not_found'], 404);
+                    return null;
                 }
             }else{
                 // Token in HEADER or HTTP GET PARAM (http://...?token=XXX)
                 if (! $user = JWTAuth::parseToken()->authenticate()) {
-                    return response()->json(['user_not_found'], 404);
+                    //return response()->json(['user_not_found'], 404);
+                    return null;
                 }
             }
 
         } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
  
-            return response()->json(['token_expired'], $e->getStatusCode());
+            //return response()->json(['token_expired'], $e->getStatusCode());
+            return null;
  
         } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
  
-            return response()->json(['token_invalid'], $e->getStatusCode());
- 
+            //return response()->json(['token_invalid'], $e->getStatusCode());
+            return null;
+
         } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
  
-            return response()->json(['token_absent'], $e->getStatusCode());
- 
+            //return response()->json(['token_absent'], $e->getStatusCode());
+            return null;
         }
  
         return $user;

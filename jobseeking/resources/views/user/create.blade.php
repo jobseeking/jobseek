@@ -24,6 +24,7 @@
 
                     {!! \Nvd\Crud\Form::input('last_name','text')->show() !!}
 
+                    <input type="hidden" id="input_token" value="">
                     <button type="submit" class="btn btn-primary">Create</button>
 
                 </form>
@@ -32,3 +33,13 @@
         </div>
     </div>
 </div>
+
+
+<script>
+
+    $(document).ready(function(){       
+        document.getElementById("input_token").value = localStorage.getItem("my_token");
+    });
+
+</script>
+
