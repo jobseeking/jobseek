@@ -7,7 +7,7 @@
 
 <div class="post_form">
     <h1 class="center">Post your job</h1>
-    <form class="form-horizontal" id="myform" action="{{$base_url}}/postjob" method="post">
+    <form class="form-horizontal" id="myform" action="postjob" method="post">
       <div class="form-group">
         <label for="jobname" class="col-sm-2 control-label">Job name</label>
         <div class="col-sm-10">
