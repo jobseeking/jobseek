@@ -25,6 +25,12 @@ Route::post('api/test', 'TokenAuthController@test');
 Route::get('register', function () { return view('login.register'); });
 Route::get('login', function () { return view('login.login'); });
 
+
+// post job
+Route::get('postjob', function () { return view('postjob'); });
+Route::post('postjob', 'JobController@postjob');
+
+
 // CRUD
 Route::resource('user','UserController');
 Route::resource('location','LocationController');

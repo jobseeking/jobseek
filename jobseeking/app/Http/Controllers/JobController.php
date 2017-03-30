@@ -107,4 +107,14 @@ class JobController extends Controller
         return view($this->viewDir.".".$view, $data);
     }
 
+    public function postjob( Request $request )
+    {
+        $this->validate($request, Job::validationRules());
+
+        Job::create($request->all());
+
+        return redirect('/');
+    }
+
+
 }

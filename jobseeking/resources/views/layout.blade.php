@@ -90,6 +90,7 @@
 <script>
 
     var g_is_login = false;
+    var g_user = null;
 
     function onClickLogout(){
         console.log("onClickLogout");
@@ -131,6 +132,7 @@
                                 //alert( "Login Already!" );
                                 console.log("Login Already!");
                                 g_is_login = true;
+                                g_user = data.user;
                             }else{
                                 localStorage.removeItem("my_token");
                             }
