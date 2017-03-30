@@ -41,9 +41,9 @@
         </div>
 
         <div class="col-xs-8 info">
-            <a href="login.php">Log in</a>
+            <a href="login">Log in</a>
             or
-            <a href="register.html">Register</a>
+            <a href="register">Register</a>
         </div>
     </div>
 
