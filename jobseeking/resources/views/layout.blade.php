@@ -45,7 +45,7 @@
             or
             <a href="register">Register</a>
         </div>
-        <div id="logout_link" class="col-xs-8 info" style="display:none; cursor: cell;" >
+        <div id="logout_link" class="col-xs-8 info" style="display:none; cursor: pointer;" >
             <a onclick="onClickLogout()" >Log out</a>
         </div>
     </div>
