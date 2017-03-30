@@ -4,7 +4,7 @@
 
     <h2>Update Location: {{$location->name}}</h2>
 
-    <form action="/location/{{$location->id}}" method="post">
+    <form action="{{$base_url}}/location/{{$location->id}}" method="post">
 
         {{ csrf_field() }}
 

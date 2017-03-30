@@ -11,6 +11,10 @@ class TypeController extends Controller
 {
     public $viewDir = "type";
 
+    public function __construct(){
+       parent::__construct();
+    }
+    
     public function index()
     {
         $records = Type::findRequested();

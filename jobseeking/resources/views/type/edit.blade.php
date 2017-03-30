@@ -4,7 +4,7 @@
 
     <h2>Update Type: {{$type->name}}</h2>
 
-    <form action="/type/{{$type->id}}" method="post">
+    <form action="{{$base_url}}/type/{{$type->id}}" method="post">
 
         {{ csrf_field() }}
 

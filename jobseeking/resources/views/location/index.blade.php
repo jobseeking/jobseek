@@ -39,7 +39,7 @@
 							  data-name="name"
 							  data-value="{{ $record->name }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/location/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/location/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->name }}</span>
 						</td>
 					<td>
@@ -48,7 +48,7 @@
 					<td>
 						{{ $record->updated_at }}
 						</td>
-					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => 'location', 'record' => $record ] )
+					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => $base_url.'/location', 'record' => $record ] )
 		    	</tr>
 			@empty
 				@include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 5])

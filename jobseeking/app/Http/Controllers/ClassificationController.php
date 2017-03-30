@@ -11,6 +11,10 @@ class ClassificationController extends Controller
 {
     public $viewDir = "classification";
 
+    public function __construct(){
+       parent::__construct();
+    }
+    
     public function index()
     {
         $records = Classification::findRequested();

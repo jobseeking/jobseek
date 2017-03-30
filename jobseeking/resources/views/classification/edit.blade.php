@@ -4,7 +4,7 @@
 
     <h2>Update Classification: {{$classification->name}}</h2>
 
-    <form action="/classification/{{$classification->id}}" method="post">
+    <form action="{{$base_url}}/classification/{{$classification->id}}" method="post">
 
         {{ csrf_field() }}
 

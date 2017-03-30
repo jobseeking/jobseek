@@ -53,7 +53,7 @@
 							  data-name="name"
 							  data-value="{{ $record->name }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->name }}</span>
 						</td>
 					<td>
@@ -62,7 +62,7 @@
 							  data-name="company"
 							  data-value="{{ $record->company }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->company }}</span>
 						</td>
 					<td>
@@ -71,7 +71,7 @@
 							  data-name="salary"
 							  data-value="{{ $record->salary }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->salary }}</span>
 						</td>
 					<td>
@@ -80,7 +80,7 @@
 							  data-name="details"
 							  data-value="{{ $record->details }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->details }}</span>
 						</td>
 					<td>
@@ -89,7 +89,7 @@
 							  data-name="location_id"
 							  data-value="{{ $record->location_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->location_id }}</span>
 						</td>
 					<td>
@@ -98,7 +98,7 @@
 							  data-name="type_id"
 							  data-value="{{ $record->type_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->type_id }}</span>
 						</td>
 					<td>
@@ -107,7 +107,7 @@
 							  data-name="classification_id"
 							  data-value="{{ $record->classification_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->classification_id }}</span>
 						</td>
 					<td>
@@ -116,7 +116,7 @@
 							  data-name="user_id"
 							  data-value="{{ $record->user_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="/job/{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->user_id }}</span>
 						</td>
 					<td>
@@ -125,7 +125,7 @@
 					<td>
 						{{ $record->updated_at }}
 						</td>
-					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => 'job', 'record' => $record ] )
+					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => $base_url.'/job', 'record' => $record ] )
 		    	</tr>
 			@empty
 				@include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 12])

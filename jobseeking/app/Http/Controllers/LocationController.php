@@ -11,6 +11,10 @@ class LocationController extends Controller
 {
     public $viewDir = "location";
 
+    public function __construct(){
+       parent::__construct();
+    }
+    
     public function index()
     {
         $records = Location::findRequested();

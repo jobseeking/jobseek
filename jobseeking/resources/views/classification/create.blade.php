@@ -10,7 +10,7 @@
         <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
 
-                <form action="/classification" method="post">
+                <form action="{{$base_url}}/classification" method="post">
 
                     {{ csrf_field() }}
 

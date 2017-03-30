@@ -11,6 +11,10 @@ class JobController extends Controller
 {
     public $viewDir = "job";
 
+    public function __construct(){
+       parent::__construct();
+    }
+    
     public function index()
     {
         $records = Job::findRequested();
