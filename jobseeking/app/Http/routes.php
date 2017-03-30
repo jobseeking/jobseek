@@ -15,15 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('api/search', 'TokenAuthController@search');
+// APIs for login & register
 Route::post('api/register', 'TokenAuthController@register');
 Route::post('api/authenticate', 'TokenAuthController@authenticate');
 Route::get('api/authenticate/user', 'TokenAuthController@getAuthenticatedUser');
 
-
+// login & register
 Route::get('register', function () { return view('login.register'); });
+Route::get('login', function () { return view('login.login'); });
 
-
+// CRUD
 Route::resource('user','UserController');
 Route::resource('location','LocationController');
 Route::resource('type','TypeController');
