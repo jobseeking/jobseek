@@ -71,16 +71,20 @@ class TokenAuthController extends Controller
 
     public function test(Request $request){
         
-        $token = $request->input('token');
-        if(empty($token)){
-            return response()->json(['token_absent']);
-        }
-
         try {
-            if (! $user = JWTAuth::setToken($token)->authenticate()) {
-                return response()->json(['user_not_found'], 404);
+            $token = $request->input('token'); // HTTP POST BODY
+            if(!empty($token)){
+                // Token in POST BODY PARAM
+                if (! $user = JWTAuth::setToken($token)->authenticate()) {
+                    return response()->json(['user_not_found'], 404);
+                }
+            }else{
+                // Token in HEADER or HTTP GET PARAM
+                if (! $user = JWTAuth::parseToken()->authenticate()) {
+                    return response()->json(['user_not_found'], 404);
+                }
             }
- 
+
         } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
  
             return response()->json(['token_expired'], $e->getStatusCode());
