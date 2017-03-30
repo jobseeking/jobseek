@@ -16,14 +16,12 @@ Route::get('/', function () {
 });
 
 Route::post('api/search', 'TokenAuthController@search');
-
 Route::post('api/register', 'TokenAuthController@register');
-
 Route::post('api/authenticate', 'TokenAuthController@authenticate');
-
 Route::get('api/authenticate/user', 'TokenAuthController@getAuthenticatedUser');
 
 
+Route::get('register', function () { return view('login.register'); });
 
 
 Route::resource('user','UserController');
