@@ -128,16 +128,19 @@ class JobController extends Controller
     // post job page call this API
     public function postjob_api( Request $request )
     {
+        Log::info('postjob_api...1 ');
         try{
+            Log::info('postjob_api...2 ');
             $validate_return = $this->validate($request, Job::validationRules());
-
+            Log::info('postjob_api...3 ');
             $create_return = Job::create($request->all());
+            Log::info('postjob_api...4 ');
         }catch(Exception $e){
             Log::info('postjob_api exception: '.$e->getMessage());
         }
 
         Log::info('postjob_api validate_return: '.$validate_return);
-        Log::info('postjob_api reate_return: '.$create_return);
+        Log::info('postjob_api create_return: '.$create_return);
 
         return redirect('/');
     }
