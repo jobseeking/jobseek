@@ -130,18 +130,20 @@ class JobController extends Controller
     public function postjob_api( Request $request )
     {
 
+/*   Option 1 to handle input error : 
         $validator = Validator::make($request->all(), Job::validationRules());
         if ($validator->fails()) {
             $message = $validator->errors();
             Log::info('postjob_api Validator error : '.$message);
             return response()->json($message, 500);
         }
+*/
 
 
+// Option 2 to handle input error : this method will redirect back to the input view page with $errors
         $validate_return = $this->validate($request, Job::validationRules());
         $create_return = Job::create($request->all());
         
-        Log::info('postjob_api validate_return: '.$validate_return);
         Log::info('postjob_api create_return: '.$create_return);
 
         return redirect('/');
