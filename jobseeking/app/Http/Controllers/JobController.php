@@ -133,8 +133,8 @@ class JobController extends Controller
         $validator = Validator::make($request->all(), Job::validationRules());
         if ($validator->fails()) {
             $message = $validator->errors();
-            $this->SetStatusCode(404);
-            return $this->RespondWithError($message);
+            Log::info('postjob_api Validator error : '.$message);
+            return response()->json($message, 500);
         }
 
 
