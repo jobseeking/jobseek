@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use Log;
+
 use App\Classification;
 use App\Type;
 use App\Location;
@@ -126,9 +128,16 @@ class JobController extends Controller
     // post job page call this API
     public function postjob_api( Request $request )
     {
-        $this->validate($request, Job::validationRules());
+        try{
+            $validate_return = $this->validate($request, Job::validationRules());
 
-        Job::create($request->all());
+            $create_return = Job::create($request->all());
+        }catch(Exception $e){
+            Log::info('postjob_api exception: '.$e->getMessage());
+        }
+
+        Log::info('postjob_api validate_return: '.$validate_return);
+        Log::info('postjob_api reate_return: '.$create_return);
 
         return redirect('/');
     }
