@@ -16,7 +16,7 @@
 		function onClickSubmit(){
 
 		    $.ajax({
-		              url:  "api/authenticate",
+		              url:  "{{$base_url}}/api/authenticate",
 		              type:"POST",
 		              data: 
 		                {

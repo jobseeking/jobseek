@@ -61,7 +61,7 @@
 		function onClickSubmit(){
 
 		    $.ajax({
-		              url: "api/register",
+		              url: "{{$base_url}}/api/register",
 		              type:"POST",
 		              data: 
 		                {

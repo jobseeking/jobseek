@@ -120,7 +120,7 @@
         if (token != null){
             console.log("Token found.");
             $.ajax({
-                      url:  "api/authenticate/user",
+                      url:  "{{$base_url}}/api/authenticate/user",
                       type:"GET",
                       timeout: 9000, // in milliseconds
                       beforeSend: function (xhr) {
