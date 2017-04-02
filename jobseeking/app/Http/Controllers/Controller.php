@@ -18,8 +18,7 @@ class Controller extends BaseController
     public function __construct() {
 
        //$base_url = "/jobseek/jobseeking/public";
-      
-       View::share ( 'base_url', $base_url );
+       //View::share ( 'base_url', $base_url );
     } 
 
     // Get user info from token provided in HTTP POST parameter "post_token"
