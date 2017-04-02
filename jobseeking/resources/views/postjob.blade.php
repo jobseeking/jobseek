@@ -74,7 +74,7 @@
 
       @if (count($errors) > 0)
       <div class="form-group">
-        <div class="col-sm-10">
+        <div class="col-sm-offset-2 col-sm-10">
           <div class="alert alert-danger">
               <ul>
                   @foreach ($errors->all() as $error)
