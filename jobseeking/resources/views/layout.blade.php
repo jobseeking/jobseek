@@ -86,6 +86,8 @@
 
 
 
+{{ $base_url = "/jobseek/jobseeking/public" }}
+
 
 <script>
 

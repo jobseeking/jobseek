@@ -17,9 +17,8 @@ class Controller extends BaseController
 
     public function __construct() {
 
-       $base_url = "/jobseek/jobseeking/public";
-       //$base_url = "";
-
+       //$base_url = "/jobseek/jobseeking/public";
+      
        View::share ( 'base_url', $base_url );
     } 
 
