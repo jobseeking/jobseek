@@ -9,6 +9,21 @@
 <div id="post_form_id" class="post_form" style="display:none;">
     <h1 class="center">Post your job</h1>
     <form class="form-horizontal" id="myform" action="{{$base_url}}/api/postjob" method="post">
+      
+      @if (count($errors) > 0)
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="alert alert-danger">
+              <ul>
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+        </div>
+      </div>
+      @endif
+
       <div class="form-group">
         <label for="jobname" class="col-sm-2 control-label">Job name</label>
         <div class="col-sm-10">
@@ -72,19 +87,6 @@
 
       <input type="hidden" id="input_user_id" name="user_id" value="">
 
-      @if (count($errors) > 0)
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <div class="alert alert-danger">
-              <ul>
-                  @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                  @endforeach
-              </ul>
-          </div>
-        </div>
-      </div>
-      @endif
 
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
