@@ -7,7 +7,7 @@
 		function check_login_callback(is_login){
 			console.log(" login : check_login_callback : " + is_login);
 			if(is_login){
-				window.location = "./"; // redirect to home
+				window.location = "{{$base_url}}/"; // redirect to home
 			}else{
 				$("#login_div").css({ display: "block"});
 			}
@@ -34,7 +34,7 @@
 		                    if(status == 'success'){
 		                        alert( "Login Success" );
 		                        localStorage.setItem("my_token", data.token);
-		                        window.location = "./"; // redirect to home
+		                        window.location = "{{$base_url}}/"; // redirect to home
 		                        //alert("success");
 		                    }else{
 		                        //alert("status not success");

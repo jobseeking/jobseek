@@ -7,7 +7,7 @@
 		function check_login_callback(is_login){
 			console.log("register : check_login_callback : " + is_login);
 			if(is_login){
-				window.location = "./"; // redirect to home
+				window.location = "{{$base_url}}/"; // redirect to home
 			}else{
 				$("#register_div").css({ display: "block"});
 			}
@@ -80,7 +80,7 @@
 
 		                    if(status == 'success'){
 		                        alert( "Register Success" );
-		                        window.location = "login";
+		                        window.location = "{{$base_url}}/login";
 		                        //alert("success");
 		                    }else{
 		                        //alert("status not success");

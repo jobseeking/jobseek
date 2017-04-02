@@ -8,7 +8,7 @@
 
 <div id="post_form_id" class="post_form" style="display:none;">
     <h1 class="center">Post your job</h1>
-    <form class="form-horizontal" id="myform" action="api/postjob" method="post">
+    <form class="form-horizontal" id="myform" action="{{$base_url}}/api/postjob" method="post">
       <div class="form-group">
         <label for="jobname" class="col-sm-2 control-label">Job name</label>
         <div class="col-sm-10">
@@ -105,7 +105,7 @@
             $("#post_form_id").css({ display: "block"});
         }else{
             alert("Please login to post a job.");
-            window.location = "./"; // redirect to home
+            window.location = "{{$base_url}}/"; // redirect to home
         }
     } 
 

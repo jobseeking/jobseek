@@ -41,9 +41,9 @@
         </div>
 
         <div id="login_link" class="col-xs-8 info" style="display:none;">
-            <a href="login">Log in</a>
+            <a href="{{$base_url}}/login">Log in</a>
             or
-            <a href="register">Register</a>
+            <a href="{{$base_url}}/register">Register</a>
         </div>
         <div id="logout_link" class="col-xs-8 info" style="display:none; cursor: pointer;" >
             <a onclick="onClickLogout()" >Log out</a>
@@ -52,7 +52,7 @@
 
     <div class="row mynav">
         <a class="active" href="./">Home</a> |
-        <a href="postjob">Post job</a> |
+        <a href="{{$base_url}}/postjob">Post job</a> |
         <a href="find.php">Find job</a> |
         <a href="about.html">About us</a> |
         <a href="contact.php">Contact us</a>
@@ -95,7 +95,7 @@
     function onClickLogout(){
         console.log("onClickLogout");
         localStorage.removeItem("my_token");
-        window.location = "./"; // redirect to home
+        window.location = "{{$base_url}}/"; // redirect to home
     }
 
     function show_hide_login_out(is_login){
