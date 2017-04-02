@@ -29,7 +29,7 @@ Route::get('login', function () { return view('login.login'); });
 // post & show job
 Route::get('postjob', 'JobController@postjob_page');
 Route::post('api/postjob', 'JobController@postjob_api');
-Route::get('showjob/{user}', 'JobController@showjob_page');
+Route::get('showjob/{job}', 'JobController@showjob_page');
 
 
 
