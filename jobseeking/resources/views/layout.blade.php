@@ -109,7 +109,9 @@
             $("#logout_link").css({ display: "block"});
         }
 
-        check_login_callback(is_login);
+        if (typeof check_login_callback === "function") { 
+            check_login_callback(is_login);
+        }
     }
 
     $(document).ready(function(){       

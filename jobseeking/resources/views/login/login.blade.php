@@ -91,7 +91,7 @@
 
 		<div class="row">
 			<div class="col-sm-offset-2 col-sm-10">
-				Don't have an account? <a href="register">Register</a>
+				Don't have an account? <a href="{{$base_url}}/register">Register</a>
 			</div>
 		</div>
 	</div>
