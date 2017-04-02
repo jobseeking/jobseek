@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Log;
+use Validator;
 
 use App\Classification;
 use App\Type;
@@ -128,17 +129,18 @@ class JobController extends Controller
     // post job page call this API
     public function postjob_api( Request $request )
     {
-        Log::info('postjob_api...1 ');
-        try{
-            Log::info('postjob_api...2 ');
-            $validate_return = $this->validate($request, Job::validationRules());
-            Log::info('postjob_api...3 ');
-            $create_return = Job::create($request->all());
-            Log::info('postjob_api...4 ');
-        }catch(Exception $e){
-            Log::info('postjob_api exception: '.$e->getMessage());
+
+        $validator = Validator::make($request->all(), Job::validationRules());
+        if ($validator->fails()) {
+            $message = $validator->errors();
+            $this->SetStatusCode(404);
+            return $this->RespondWithError($message);
         }
 
+
+        $validate_return = $this->validate($request, Job::validationRules());
+        $create_return = Job::create($request->all());
+        
         Log::info('postjob_api validate_return: '.$validate_return);
         Log::info('postjob_api create_return: '.$create_return);
 
