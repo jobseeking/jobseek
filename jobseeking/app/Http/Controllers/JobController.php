@@ -154,5 +154,9 @@ class JobController extends Controller
         return view("showjob",['job' => $job]);
     }
 
+    public function findjob_page(Request $request)
+    {
+        return view("findjob");
+    }
 
 }

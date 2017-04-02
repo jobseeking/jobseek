@@ -23,11 +23,15 @@ Route::post('api/test', 'TokenAuthController@test');
 Route::get('register', 'TokenAuthController@register_page');
 Route::get('login', 'TokenAuthController@login_page');
 
+// contact us & about us
+Route::get('contactus', 'TokenAuthController@contactus_page');
+Route::get('aboutus', 'TokenAuthController@aboutus_page');
 
-// post & show job
+// post job & show job & find job
 Route::get('postjob', 'JobController@postjob_page');
 Route::post('api/postjob', 'JobController@postjob_api');
 Route::get('showjob/{job}', 'JobController@showjob_page');
+Route::get('findjob', 'JobController@findjob_page');
 
 
 
