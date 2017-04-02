@@ -149,5 +149,10 @@ class JobController extends Controller
         return redirect('/');
     }
 
+    public function showjob_page(Request $request, Job $job)
+    {
+        return $this->view("showjob",['job' => $job]);
+    }
+
 
 }

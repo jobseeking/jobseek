@@ -26,9 +26,11 @@ Route::get('register', function () { return view('login.register'); });
 Route::get('login', function () { return view('login.login'); });
 
 
-// post job
+// post & show job
 Route::get('postjob', 'JobController@postjob_page');
 Route::post('api/postjob', 'JobController@postjob_api');
+Route::get('showjob/{user}', 'JobController@showjob_page');
+
 
 
 // CRUD
