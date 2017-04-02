@@ -151,7 +151,7 @@ class JobController extends Controller
 
     public function showjob_page(Request $request, Job $job)
     {
-        return $this->view("showjob",['job' => $job]);
+        return view("showjob",['job' => $job]);
     }
 
 
