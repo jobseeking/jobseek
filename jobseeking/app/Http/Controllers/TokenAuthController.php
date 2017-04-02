@@ -85,11 +85,11 @@ class TokenAuthController extends Controller
         return view('login.register');
     }
 
-    public function contact_us_page(Request $request){   
+    public function contactus_page(Request $request){   
         return view('contactus');
     }
 
-    public function about_us_page(Request $request){   
+    public function aboutus_page(Request $request){   
         return view('aboutus');
     }
 

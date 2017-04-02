@@ -53,9 +53,9 @@
     <div class="row mynav">
         <a class="active" href="./">Home</a> |
         <a href="{{$base_url}}/postjob">Post job</a> |
-        <a href="find.php">Find job</a> |
-        <a href="about.html">About us</a> |
-        <a href="contact.php">Contact us</a>
+        <a href="{{$base_url}}/findjob">Find job</a> |
+        <a href="{{$base_url}}/aboutus">About us</a> |
+        <a href="{{$base_url}}/contactus">Contact us</a>
     </div>
 </div>
 <!--Rex-->
