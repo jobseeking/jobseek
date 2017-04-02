@@ -73,6 +73,7 @@
       <input type="hidden" id="input_user_id" name="user_id" value="">
 
       @if (count($errors) > 0)
+      <div class="form-group">
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -80,6 +81,7 @@
                 @endforeach
             </ul>
         </div>
+      </div>
       @endif
 
       <div class="form-group">
