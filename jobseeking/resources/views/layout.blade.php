@@ -1,3 +1,5 @@
+{{ $base_url = "/jobseek/jobseeking/public" }}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,7 +88,7 @@
 
 
 
-{{ $base_url = "/jobseek/jobseeking/public" }}
+
 
 
 <script>
