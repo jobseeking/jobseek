@@ -4,6 +4,16 @@
 @section('content')
 
 
+@if (count($errors) > 0)
+    <div >
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 
 <div id="post_form_id" class="post_form" style="display:none;">
     <h1 class="center">Post your job</h1>
