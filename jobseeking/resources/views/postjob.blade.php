@@ -105,7 +105,7 @@
             $("#post_form_id").css({ display: "block"});
         }else{
             alert("Please login to post a job.");
-            window.location = "{{$base_url}}/"; // redirect to home
+            window.location = "{{$base_url}}/login"; // redirect to home
         }
     } 
 
