@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'TokenAuthController@home_page');
 
 // APIs for login & register
 Route::post('api/register', 'TokenAuthController@register');
@@ -21,9 +19,9 @@ Route::post('api/authenticate', 'TokenAuthController@authenticate');
 Route::get('api/authenticate/user', 'TokenAuthController@getAuthenticatedUser');
 Route::post('api/test', 'TokenAuthController@test');
 
-// login & register
-Route::get('register', function () { return view('login.register'); });
-Route::get('login', function () { return view('login.login'); });
+// login page & register page
+Route::get('register', 'TokenAuthController@register_page');
+Route::get('login', 'TokenAuthController@login_page');
 
 
 // post & show job

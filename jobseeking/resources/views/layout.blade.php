@@ -1,5 +1,3 @@
-{{ $base_url = "/jobseek/jobseeking/public" }}
-
 <!DOCTYPE html>
 <html>
 <head>

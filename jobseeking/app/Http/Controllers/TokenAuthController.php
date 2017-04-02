@@ -73,6 +73,19 @@ class TokenAuthController extends Controller
         return User::create($newuser);
     }
 
+    public function home_page(Request $request){   
+        return view('home');
+    }
+
+    public function login_page(Request $request){
+        return view('login.login');
+    }
+
+    public function register_page(Request $request){
+        return view('login.register');
+    }
+
+
     public function test(Request $request){
         
         $user = $this->getUser($request);
