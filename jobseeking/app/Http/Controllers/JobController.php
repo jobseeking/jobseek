@@ -152,7 +152,7 @@ class JobController extends Controller
 
     public function showjob_page(Request $request, Job $job)
     {
-        $query_result = DB::unprepared('SELECT * FROM jobs WHERE id = '.$job->id);
+        $query_result = DB::select('SELECT * FROM jobs WHERE id = '.$job->id);
         Log::info('showjob_page query_result: '.$query_result);
 
 
