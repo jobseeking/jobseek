@@ -20,9 +20,9 @@
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .post_form{
-        width: 80%;
+        width: 100%;
         height: 50%;
-        left: 10%; /* (100 - width)/2 */
+        left: 0%; /* (100 - width)/2 */
         top: 25%;  /* (100% - height)/2 */
     }
 }
