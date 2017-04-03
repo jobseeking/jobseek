@@ -72,7 +72,7 @@ class TokenAuthController extends Controller
         $newuser= $request->all();
 
         // Check email existence : 
-        $query_result = DB::select('SELECT * FROM users WHERE email = '.$request->input('email'));
+        $query_result = DB::select("SELECT * FROM users WHERE email = '".$request->input('email')."'");
         if($query_result){
             Log::info('register query_result: ', $query_result);
         }else{
