@@ -86,13 +86,13 @@
 			<h1 class="center">Login</h1>
 			<div class="form-horizontal">
 			  <div class="form-group">
-			    <div class="col-sm-10">
+			    <div class="col-sm-12">
 			      <input type="text" class="form-control" id="Email" placeholder="Email address">
 			    </div>
 			  </div>
 
 			  <div class="form-group">			    
-			    <div class="col-sm-10">
+			    <div class="col-sm-12">
 			      <input type="password" class="form-control" id="Password" placeholder="Password">
 			    </div>
 			  </div>
