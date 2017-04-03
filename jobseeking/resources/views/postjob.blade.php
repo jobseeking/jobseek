@@ -9,10 +9,10 @@
     display: none;
     position: relative;
 
-    width: 40%;
-    height: 50%;
-    left: 30%; /* (100 - width)/2 */
-    top: 25%;  /* (100% - height)/2 */
+    width: 60%;
+    height: 70%;
+    left: 20%; /* (100 - width)/2 */
+    top: 15%;  /* (100% - height)/2 */
 }
 </style>
 
