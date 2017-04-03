@@ -83,7 +83,7 @@
 
 
 	<div class="post_form" id="login_div" >
-		 <div class="well">
+		 <div >
 			<h1 class="center">Login</h1>
 			<div class="form-horizontal">
 			  <div class="form-group">
