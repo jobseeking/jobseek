@@ -107,10 +107,8 @@
 		                //alert( "done" );
 		            })
 		      .fail(function(xhr, status, error) {
-		                alert( "Register Fail" + xhr.responseJSON.error );
-		                //alert( xhr );
-		                //alert( status );
-		                //alert( error );
+		                alert( "Register Fail : " + xhr.responseJSON.error );
+		               
 		                console.log(JSON.stringify(xhr));
 		                console.log(JSON.stringify(status)); 
 		                console.log(JSON.stringify(error)); 
