@@ -13,6 +13,9 @@
     left: 20%; /* (100 - width)/2 */
     top: 15%;  /* (100% - height)/2 */
 }
+
+.job_descripton {width: 100%;}
+
 </style>
 
 
@@ -38,7 +41,7 @@
             <h5>{{$job->salary}}</h5>
         </li>
         <li class="list-group-item">
-            <div style="width: 100%;">
+            <div class="job_descripton">
                 <h4>Details</h4>
                 <p>{{$job->details}}</p>
             </div>
