@@ -138,21 +138,6 @@
 			<h1 class="center">Register</h1>
 			<div class="form-horizontal"  >
 
-		  	  {{-- input error message --}}
-	          @if (count($errors) > 0)
-	          <div class="form-group">
-	            <div class="col-sm-12">
-	              <div class="alert alert-danger">
-	                  <ul>
-	                      @foreach ($errors->all() as $error)
-	                          <li>{{ $error }}</li>
-	                      @endforeach
-	                  </ul>
-	              </div>
-	            </div>
-	          </div>
-	          @endif
-
 			  <div class="form-group">
 				<div class="col-sm-12">
 				  <input type="text" class="form-control" id="Email" name="Email" placeholder="Email address">
