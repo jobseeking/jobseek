@@ -41,7 +41,7 @@
             <div>
                 <h4>Details</h4>
                 <p>{{$job->details}}</p>
-            </div>>
+            </div>
         </li>
         <li class="list-group-item">
             <h4>Location Id</h4>
