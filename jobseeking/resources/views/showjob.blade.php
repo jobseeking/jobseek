@@ -4,7 +4,7 @@
 
 
 <style>
-.show_form{
+.post_form{
 
     position: relative;
 
@@ -31,7 +31,7 @@
 </style>
 
 
-<div class="well show_form">
+<div class="well post_form">
     <h2>Job: {{$job->name}}</h2>
 
     <ul class="list-group">
