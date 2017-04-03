@@ -12,12 +12,16 @@
     height: 70%;
     left: 20%; /* (100 - width)/2 */
     top: 15%;  /* (100% - height)/2 */
-}
 
-.job_descripton {
-    width: 100%;
     word-wrap: break-word;
 }
+
+/*
+.job_descripton {
+    width: 100%;
+
+}
+*/
 
 </style>
 
