@@ -39,7 +39,7 @@
         </li>
         <li class="list-group-item">
             <h4>Details</h4>
-            <h5>{{$job->details}}</h5>
+            <p>{{$job->details}}</p>
         </li>
         <li class="list-group-item">
             <h4>Location Id</h4>
