@@ -10,9 +10,9 @@
     display: none;
     position: relative;
 
-    width: 30%;
+    width: 40%;
     height: 50%;
-    left: 35%; /* (100 - width)/2 */
+    left: 30%; /* (100 - width)/2 */
     top: 25%;  /* (100% - height)/2 */
 }
 
@@ -84,7 +84,7 @@
 
 	<div class="post_form" id="login_div" >
 		 <div class="well">
-			<h1 class="center">Log in</h1>
+			<h1 class="center">Login</h1>
 			<div class="form-horizontal">
 			  <div class="form-group">
 			    <label for="Email" class="col-sm-2 control-label">Email address</label>
@@ -102,7 +102,7 @@
 			  
 			  <div class="form-group">
 			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-default" onclick="onClickSubmit()">Log in</button>
+			      <button type="submit" class="btn btn-primary" onclick="onClickSubmit()">Log in</button>
 			    </div>
 			  </div>
 			</div>
