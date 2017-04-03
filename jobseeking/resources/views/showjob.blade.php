@@ -16,12 +16,6 @@
     word-wrap: break-word;
 }
 
-/*
-.job_descripton {
-    width: 100%;
-
-}
-*/
 
 </style>
 
@@ -48,10 +42,8 @@
             <h5>{{$job->salary}}</h5>
         </li>
         <li class="list-group-item">
-            <div class="job_descripton">
-                <h4>Details</h4>
-                <p>{{$job->details}}</p>
-            </div>
+            <h4>Details</h4>
+            <h5>{{$job->details}}</h5>
         </li>
         <li class="list-group-item">
             <h4>Location Id</h4>
