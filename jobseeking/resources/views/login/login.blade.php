@@ -8,7 +8,7 @@
 <style>
 .post_form{
     display: none;
-    /*position: absolute;*/
+    position: relative;
 
     width: 30%;
     height: 50%;
