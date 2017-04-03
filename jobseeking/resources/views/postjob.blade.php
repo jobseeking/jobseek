@@ -10,6 +10,7 @@
     <h1 class="center">Post your job</h1>
     <form class="form-horizontal" id="myform" action="{{$base_url}}/api/postjob" method="post">
       
+      {{-- input error message --}}
       @if (count($errors) > 0)
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">

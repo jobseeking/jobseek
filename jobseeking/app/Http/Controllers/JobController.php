@@ -5,10 +5,10 @@ use Log;
 use Validator;
 use DB;
 
-use App\Classification;
-use App\Type;
-use App\Location;
-use App\Job;
+use App\Classification; // Model
+use App\Type;  // Model
+use App\Location; // Model
+use App\Job; // Model
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laravel Sandbox</title>
+    <title>Jobseeking</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -66,7 +66,7 @@
 
 <div class="container">
     <div class="content">
-        @yield("content")
+        @yield("content") <!--main content for all pages-->
     </div>
 </div>
 
@@ -100,6 +100,7 @@
         window.location = "{{$base_url}}/"; // redirect to home
     }
 
+    // to show or hide login/logout/register button
     function show_hide_login_out(is_login){
         if (!is_login){
             $("#login_link").css({ display: "block"});
