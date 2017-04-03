@@ -37,8 +37,8 @@
             <h4>Salary</h4>
             <h5>{{$job->salary}}</h5>
         </li>
-        <li class="list-group-item" style="width: 90%;">
-            <div>
+        <li class="list-group-item">
+            <div style="width: 100%;">
                 <h4>Details</h4>
                 <p>{{$job->details}}</p>
             </div>
