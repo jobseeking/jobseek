@@ -2,6 +2,21 @@
 
 @section('content')
 
+
+<style>
+.show_form{
+
+    position: relative;
+
+    width: 40%;
+    height: 50%;
+    left: 30%; /* (100 - width)/2 */
+    top: 25%;  /* (100% - height)/2 */
+}
+</style>
+
+
+<div class="well show_form">
     <h2>Job: {{$job->name}}</h2>
 
     <ul class="list-group">
@@ -52,5 +67,7 @@
         </li>
         
     </ul>
+</div> 
+
 
 @endsection
