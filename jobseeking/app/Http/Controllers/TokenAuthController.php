@@ -76,9 +76,8 @@ class TokenAuthController extends Controller
         $query_result = DB::select("SELECT * FROM users WHERE email = '".$request->input('email')."'");
         if($query_result){
             Log::info('register email exist already: ', $query_result);
-            return response()->json(['error' => 'This email has been registered, please use a different one.'], 500);
-        }else{
-            // email not exist
+            return view('login.register', ['This email has been registered, please use a different one.']);
+            //return response()->json(['error' => 'This email has been registered, please use a different one.'], 500);
         }
 
 
