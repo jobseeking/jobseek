@@ -1,7 +1,12 @@
 <?php
  
 namespace App\Http\Controllers;
- 
+
+
+use Log;
+use Validator;
+use DB;
+
 use App\Http\Controllers\Controller;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
