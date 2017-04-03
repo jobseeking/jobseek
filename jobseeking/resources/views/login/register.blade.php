@@ -2,6 +2,23 @@
 
 
 @section('content')
+
+
+
+
+<style>
+.post_form{
+    display: none;
+    position: relative;
+
+    width: 40%;
+    height: 50%;
+    left: 30%; /* (100 - width)/2 */
+    top: 25%;  /* (100% - height)/2 */
+}
+</style>
+
+
 	<script type="text/javascript">
 
 		function check_login_callback(is_login){
@@ -114,42 +131,44 @@
 
 
 
-	<div class="post_form" id="register_div" style="display:none;">
-		<h1 class="center">Register</h1>
-		<div class="form-horizontal"  >
-		  <div class="form-group">
-			<div class="col-sm-12">
-			  <input type="text" class="form-control" id="Email" name="Email" placeholder="Email address">
-			</div>
-		  </div>
+	<div class="post_form" id="register_div" >
+		<div class="well">
+			<h1 class="center">Register</h1>
+			<div class="form-horizontal"  >
+			  <div class="form-group">
+				<div class="col-sm-12">
+				  <input type="text" class="form-control" id="Email" name="Email" placeholder="Email address">
+				</div>
+			  </div>
 
-		  <div class="form-group">
-			<div class="col-xs-6">
-			  <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First name">
-			</div>
+			  <div class="form-group">
+				<div class="col-xs-6">
+				  <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First name">
+				</div>
 
-			 <div class="col-xs-6">
-			  <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Last name">
-			</div>
-		  </div>
+				 <div class="col-xs-6">
+				  <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Last name">
+				</div>
+			  </div>
 
-		  <div class="form-group">
-			<div class="col-sm-12">
-			  <input type="password" class="form-control" id="Password" name="Password" placeholder="Password">
-			</div>
-		  </div>
+			  <div class="form-group">
+				<div class="col-sm-12">
+				  <input type="password" class="form-control" id="Password" name="Password" placeholder="Password">
+				</div>
+			  </div>
 
-		  <div class="form-group">
-			<div class="col-sm-12">
-			  <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+			  <div class="form-group">
+				<div class="col-sm-12">
+				  <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+				<div class="col-xs-12">
+				  <button type="submit" class="btn btn-primary" onClick="javascript:return validateRegistForm()">Create Account</button>
+				</div>
+			  </div>
 			</div>
-		  </div>
-		  
-		  <div class="form-group">
-			<div class="col-xs-12">
-			  <button type="submit" class="btn btn-default" onClick="javascript:return validateRegistForm()">Create Account</button>
-			</div>
-		  </div>
 		</div>
 	</div>
 @endsection
