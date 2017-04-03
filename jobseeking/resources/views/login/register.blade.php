@@ -107,8 +107,12 @@
 		                //alert( "done" );
 		            })
 		      .fail(function(xhr, status, error) {
-		                alert( "Register Fail : " + xhr.responseJSON.error );
-		               
+		      			if (typeof xhr.responseJSON.error !== 'undefined') {
+							alert( "Register Fail : " + xhr.responseJSON.error );
+						}else{
+							alert( "Register Fail");
+						}
+
 		                console.log(JSON.stringify(xhr));
 		                console.log(JSON.stringify(status)); 
 		                console.log(JSON.stringify(error)); 
