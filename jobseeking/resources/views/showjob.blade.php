@@ -37,12 +37,12 @@
             <h4>Salary</h4>
             <h5>{{$job->salary}}</h5>
         </li>
-       
-        <div>
-            <h4>Details</h4>
-            <p>{{$job->details}}</p>
-        </div>
-
+        <li class="list-group-item">
+            <div>
+                <h4>Details</h4>
+                <p>{{$job->details}}</p>
+            </div>
+        </li>
         <li class="list-group-item">
             <h4>Location Id</h4>
             <h5>{{$job->location_id}}</h5>
