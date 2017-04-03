@@ -2,6 +2,23 @@
 
 
 @section('content')
+
+
+
+<style>
+.post_form{
+    display: none;
+    position: absolute;
+
+    width: 30%;
+    height: 50%;
+    left: 35%; /* (100 - width)/2 */
+    top: 25%;  /* (100% - height)/2 */
+}
+
+</style>
+
+
 	<script>
 
 		function check_login_callback(is_login){
@@ -65,7 +82,7 @@
 
 
 
-	<div class="post_form" id="login_div" style="display:none;">
+	<div class="post_form" id="login_div" >
 		<h1 class="center">Log in</h1>
 		<div class="form-horizontal">
 		  <div class="form-group">
