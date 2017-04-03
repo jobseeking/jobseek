@@ -51,7 +51,8 @@
     </div>
 
     <div class="row mynav">
-        <a class="active" href="./">Home</a> |
+        <!--class="active"-->
+        <a href="{{$base_url}}">Home</a> |
         <a href="{{$base_url}}/postjob">Post job</a> |
         <a href="{{$base_url}}/findjob">Find job</a> |
         <a href="{{$base_url}}/aboutus">About us</a> |
