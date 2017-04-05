@@ -6,7 +6,7 @@
 
 #des_div {
     white-space: nowrap; 
-    width: 12em; 
+    width: 6em; 
     overflow: hidden;
     text-overflow: ellipsis; 
 }
