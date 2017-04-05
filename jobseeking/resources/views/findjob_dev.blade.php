@@ -12,7 +12,7 @@
 }
 
 table {
-	table-layout: auto;
+	table-layout: fixed;
 }
 
 </style>
