@@ -11,7 +11,7 @@
     text-overflow: ellipsis; 
 }
 
-td th{
+td, th{
     min-width: 25%;
 }
 
