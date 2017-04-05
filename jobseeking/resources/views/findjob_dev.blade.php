@@ -69,8 +69,30 @@
 					    @endforeach  
 		            </select>
 				</td>
-				<td><input type="text" class="form-control" name="type_id" value="{{Request::input("type_id")}}"></td>
-				<td><input type="text" class="form-control" name="classification_id" value="{{Request::input("classification_id")}}"></td>
+				<td>
+					<select class="form-control" name="type_id">
+					    <option value="" > All </option>   
+			        	@foreach ( $types as $type )
+					    	@if ( Request::input("type_id") == $type->id)
+					        	<option value ="{{$type->id}}" selected> {{$type->name}} </option>   
+					        @else
+					        	<option value ="{{$type->id}}" > {{$type->name}} </option>   
+					        @endif
+					    @endforeach  
+		            </select>
+				</td>
+				<td>
+					<select class="form-control" name="classification_id">
+					    <option value="" > All </option>   
+			        	@foreach ( $classifications as $classification )
+					    	@if ( Request::input("classification_id") == $classification->id)
+					        	<option value ="{{$classification->id}}" selected> {{$classification->name}} </option>   
+					        @else
+					        	<option value ="{{$classification->id}}" > {{$classification->name}} </option>   
+					        @endif
+					    @endforeach  
+		            </select>
+				</td>
 				<td><input type="text" class="form-control" name="user_id" value="{{Request::input("user_id")}}"></td>
 				<td></td>
 				
