@@ -32,12 +32,14 @@
 				    <!--
 				    <input type="text" class="form-control" name="salary" value="{{Request::input("salary")}}">
 				    -->
+
+				    &nbsp;&nbsp;&nbsp;&nbsp; From
 				    <select class="form-control" name="">
           
                         <option value ="" > XXX </option>            
               
             		</select>
-            		&nbsp;&nbsp; to &nbsp;&nbsp;
+            		&nbsp;&nbsp;&nbsp;&nbsp; To
             		<select class="form-control" name="">
           
                         <option value ="" > YYY </option>            
