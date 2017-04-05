@@ -29,10 +29,6 @@
 				<td><input type="text" class="form-control" name="name" value="{{Request::input("name")}}"></td>
 				<td><input type="text" class="form-control" name="company" value="{{Request::input("company")}}"></td>
 				<td>
-				    <!--
-				    <input type="text" class="form-control" name="salary" value="{{Request::input("salary")}}">
-				    -->
-
 				    &nbsp;&nbsp;&nbsp;&nbsp; From
 				    <select class="form-control" name="salary_bottom">
 				        @for ($i = 0; $i < 200001; $i+=10000)
@@ -59,10 +55,19 @@
             		    	@endif
 				        @endfor
             		</select>
-
 				</td>
 				<td><input type="text" class="form-control" name="details" value="{{Request::input("details")}}"></td>
-				<td><input type="text" class="form-control" name="location_id" value="{{Request::input("location_id")}}"></td>
+				<td>
+					<select class="form-control" name="location_id">
+			        	@foreach ( $locations as $location )
+					    	@if ( Request::input("location_id") == $location->id)
+					        	<option value ="{{$location->id}}" selected> {{$location->name}} </option>   
+					        @else
+					        	<option value ="{{$location->id}}" > {{$location->name}} </option>   
+					        @endif
+					    @endforeach  
+		            </select>
+				</td>
 				<td><input type="text" class="form-control" name="type_id" value="{{Request::input("type_id")}}"></td>
 				<td><input type="text" class="form-control" name="classification_id" value="{{Request::input("classification_id")}}"></td>
 				<td><input type="text" class="form-control" name="user_id" value="{{Request::input("user_id")}}"></td>
