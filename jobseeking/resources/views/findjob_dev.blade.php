@@ -4,7 +4,7 @@
 
 <style>
 
-#des_div {
+table {
     white-space: nowrap; 
     width: 24em; 
     overflow: hidden;
