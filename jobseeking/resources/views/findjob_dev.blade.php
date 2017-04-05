@@ -4,7 +4,7 @@
 
 <style>
 
-table {
+#des_div {
     white-space: nowrap; 
     width: 60px; 
     overflow: hidden;
@@ -152,7 +152,7 @@ table {
 							  data-value="{{ $record->details }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
 							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->details }}</span>
+							  ><div id="des_div" >{{ $record->details }}</div></span>
 						</td>
 					<td>
 						<span 
