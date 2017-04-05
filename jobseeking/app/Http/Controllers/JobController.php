@@ -150,6 +150,7 @@ class JobController extends Controller
         return redirect('/showjob/'.$create_return->id);
     }
 
+    // Show single job
     public function showjob_page(Request $request, Job $job)
     {
         // Raw SQL : 
@@ -160,9 +161,17 @@ class JobController extends Controller
         return view("showjob",['job' => $job]);
     }
 
+    // Search and show job list
     public function findjob_page(Request $request)
     {
         return view("findjob");
+    }
+
+    // Search and show job list
+    public function findjob_dev_page(Request $request)
+    {
+        $records = Job::find();
+        return view("findjob_dev", ['records' => $records] );
     }
 
 }
