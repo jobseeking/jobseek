@@ -34,7 +34,7 @@
 				    -->
 
 				    &nbsp;&nbsp;&nbsp;&nbsp; From
-				    <select class="form-control" name="">
+				    <select class="form-control" name="salary_bottom">
 				        @for ($i = 0; $i < 200001; $i+=10000)
 				        	@if ( Request::input("salary_bottom") == $i)
 				        		<option value ="{{$i}}" selected> ${{number_format($i)}} </option>
@@ -44,7 +44,7 @@
 				        @endfor  		       
             		</select>
             		&nbsp;&nbsp;&nbsp;&nbsp; To
-            		<select class="form-control" name="">
+            		<select class="form-control" name="salary_top">
             		    @for ($i = 10000; $i < 200001; $i+=10000)
             		    	@if ( Request::input("salary_top") == $i)
             		    		<option value ="{{$i}}" selected> ${{number_format($i)}} </option>
