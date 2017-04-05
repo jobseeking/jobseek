@@ -45,6 +45,12 @@
             		</select>
             		&nbsp;&nbsp;&nbsp;&nbsp; To
             		<select class="form-control" name="salary_top">
+            			@if ( Request::input("salary_top") > 200000 )
+				        	<option value ="99999999999999" selected> $Max </option>      
+				        @else
+				        	<option value ="99999999999999" > $Max </option>      
+				        @endif
+
             		    @for ($i = 10000; $i < 200001; $i+=10000)
             		    	@if ( Request::input("salary_top") == $i)
             		    		<option value ="{{$i}}" selected> ${{number_format($i)}} </option>
@@ -52,11 +58,6 @@
             		    		<option value ="{{$i}}" > ${{number_format($i)}} </option>
             		    	@endif
 				        @endfor
-				        @if ( Request::input("salary_top") > 200000 )
-				        	<option value ="99999999999999" selected> $Max </option>      
-				        @else
-				        	<option value ="99999999999999" > $Max </option>      
-				        @endif
             		</select>
 
 				</td>
