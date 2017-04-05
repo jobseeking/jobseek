@@ -93,7 +93,7 @@
 					    @endforeach  
 		            </select>
 				</td>
-				<td><input type="text" class="form-control" name="user_id" value="{{Request::input("user_id")}}"></td>
+				<td><input type="text" class="form-control" name="user_name" value="{{Request::input("user_name")}}"></td>
 				<td></td>
 				
 				<td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>

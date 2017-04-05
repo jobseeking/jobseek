@@ -23,7 +23,10 @@ class Job extends Model {
         \Request::input('location_id') and $query->where('location_id',\Request::input('location_id'));
         \Request::input('type_id') and $query->where('type_id',\Request::input('type_id'));
         \Request::input('classification_id') and $query->where('classification_id',\Request::input('classification_id'));
-        \Request::input('user_id') and $query->where('user_id',\Request::input('user_id'));
+
+        //\Request::input('user_id') and $query->where('user_id',\Request::input('user_id'));
+        \Request::input('user_name') and $query->join('users', 'users.id', '=', 'jobs.user_id')
+        ->where('users.name',\Request::input('user_name'));
 
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
         \Request::input('updated_at') and $query->where('updated_at',\Request::input('updated_at'));
