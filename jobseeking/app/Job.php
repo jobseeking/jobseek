@@ -12,7 +12,7 @@ class Job extends Model {
         $query = Job::query();
 
         // search results based on user input
-       
+        \Request::input('id') and $query->where('id',\Request::input('id'));
         \Request::input('name') and $query->where('name','like','%'.\Request::input('name').'%');
         \Request::input('company') and $query->where('company','like','%'.\Request::input('company').'%');
         \Request::input('details') and $query->where('details','like','%'.\Request::input('details').'%');
