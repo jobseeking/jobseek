@@ -124,7 +124,8 @@
 						</td>
 					
 					<td class="actions-cell">
-						    <a href="{{$base_url.'/job'}}/{{$record->id}}"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;						
+							&nbsp;&nbsp;&nbsp;&nbsp;
+						    <a href="{{$base_url.'/job'}}/{{$record->id}}"><i class="fa fa-eye"></i></a>						
 					</td>
 
 		    	</tr>
