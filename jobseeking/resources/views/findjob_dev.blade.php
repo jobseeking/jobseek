@@ -36,7 +36,7 @@
 				    &nbsp;&nbsp;&nbsp;&nbsp; From
 				    <select class="form-control" name="">
 				        @for ($i = 0; $i < 200001; $i+=10000)
-				            <option value ="{{$i}}" > ${{number_format(%i)}} </option>
+				            <option value ="{{$i}}" > ${{number_format($i)}} </option>
 				        @endfor  
 				        <!--        
                         <option value ="0" > $0 </option>
