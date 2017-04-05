@@ -11,6 +11,10 @@
     text-overflow: ellipsis; 
 }
 
+td {
+    min-width: 15%;
+}
+
 </style>
 
 	<h2>Find Job</h2>
