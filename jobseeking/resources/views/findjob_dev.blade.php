@@ -34,7 +34,11 @@
 				    -->
 
 				    &nbsp;&nbsp;&nbsp;&nbsp; From
-				    <select class="form-control" name="">          
+				    <select class="form-control" name="">
+				        @for ($i = 0; $i < 200000; $i+=10000)
+				            <option value ="{{$i}}" > ${{$i}} </option>
+				        @endfor  
+				        <!--        
                         <option value ="0" > $0 </option>
                         <option value ="10000" > $10,000 </option>
                         <option value ="20000" > $20,000 </option>   
@@ -49,6 +53,7 @@
                         <option value ="120000" >$120,000 </option>   
                         <option value ="150000" >$150,000 </option> 
                         <option value ="200000" >$200,000 </option> 
+                        -->
             		</select>
             		&nbsp;&nbsp;&nbsp;&nbsp; To
             		<select class="form-control" name="">
