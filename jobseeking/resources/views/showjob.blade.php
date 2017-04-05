@@ -57,29 +57,26 @@
             <h5>{{$job->details}}</h5>
         </li>
         <li class="list-group-item">
-            <h4>Location Id</h4>
-            <h5>{{$job->location_id}}</h5>
+            <h4>Location</h4>
+            <h5>{{$job->location_name}}</h5>
         </li>
         <li class="list-group-item">
-            <h4>Type Id</h4>
-            <h5>{{$job->type_id}}</h5>
+            <h4>Type</h4>
+            <h5>{{$job->type_name}}</h5>
         </li>
         <li class="list-group-item">
-            <h4>Classification Id</h4>
-            <h5>{{$job->classification_id}}</h5>
+            <h4>Classification</h4>
+            <h5>{{$job->classification_name}}</h5>
         </li>
         <li class="list-group-item">
-            <h4>User Id</h4>
-            <h5>{{$job->user_id}}</h5>
+            <h4>User</h4>
+            <h5>{{$job->user_name}}</h5>
         </li>
         <li class="list-group-item">
             <h4>Created At</h4>
             <h5>{{$job->created_at}}</h5>
         </li>
-        <li class="list-group-item">
-            <h4>Updated At</h4>
-            <h5>{{$job->updated_at}}</h5>
-        </li>
+     
         
     </ul>
 </div> 

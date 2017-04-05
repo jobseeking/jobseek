@@ -159,6 +159,11 @@ class JobController extends Controller
         //Log::info('showjob_page query_result: ',  $query_result);
 
 
+        $job->type_name = Type::find($job->type_id)->name;
+        $job->location_name = Location::find($job->location_id)->name;
+        $job->classification_name = Classification::find($job->classification_id)->name;
+        $job->user_name = User::find($job->user_id)->name ."  ". User::find($job->user_id)->last_name;
+
         return view("showjob",['job' => $job]);
     }
 
@@ -181,7 +186,7 @@ class JobController extends Controller
             $record->type_name = Type::find($record->type_id)->name;
             $record->location_name = Location::find($record->location_id)->name;
             $record->classification_name = Classification::find($record->classification_id)->name;
-            $record->user_name = User::find($record->user_id)->name ." ". User::find($record->user_id)->last_name;
+            $record->user_name = User::find($record->user_id)->name ."  ". User::find($record->user_id)->last_name;
         }
 
         return view("findjob_dev", ['records' => $records,
