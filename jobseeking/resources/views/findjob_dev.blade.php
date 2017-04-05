@@ -10,7 +10,7 @@
 	    
 	    <thead>
 		<tr class="header-row">
-			{!!\Nvd\Crud\Html::sortableTh('id','findjob_dev','Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('id','findjob_dev.findjob_dev_page','Id')!!}
 			{!!\Nvd\Crud\Html::sortableTh('name','job.index','Name')!!}
 			{!!\Nvd\Crud\Html::sortableTh('company','job.index','Company')!!}
 			{!!\Nvd\Crud\Html::sortableTh('salary','job.index','Salary')!!}
