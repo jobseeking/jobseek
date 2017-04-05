@@ -90,7 +90,7 @@
 							  data-value="{{ $record->location_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
 							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->location_id }}</span>
+							  >{{ $record->location_name }}</span>
 						</td>
 					<td>
 						<span 
@@ -99,7 +99,7 @@
 							  data-value="{{ $record->type_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
 							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->type_id }}</span>
+							  >{{ $record->type_name }}</span>
 						</td>
 					<td>
 						<span 
@@ -108,7 +108,7 @@
 							  data-value="{{ $record->classification_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
 							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->classification_id }}</span>
+							  >{{ $record->classification_name }}</span>
 						</td>
 					<td>
 						<span 
@@ -117,7 +117,7 @@
 							  data-value="{{ $record->user_id }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
 							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->user_id }}</span>
+							  >{{ $record->user_name }}</span>
 						</td>
 					<td>
 						{{ $record->created_at }}
