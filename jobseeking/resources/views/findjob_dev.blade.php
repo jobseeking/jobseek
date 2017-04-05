@@ -37,6 +37,7 @@
                         <option value ="" > XXX </option>            
               
             		</select>
+            		&nbsp;&nbsp; to &nbsp;&nbsp;
             		<select class="form-control" name="">
           
                         <option value ="" > YYY </option>            
