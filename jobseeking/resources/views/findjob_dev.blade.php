@@ -17,10 +17,10 @@ table {
 
 </style>
 
-	<h2>Find Job</h2>
+<h2>Find Job</h2>
 
 	
-
+<div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
 	    
 	    <thead>
@@ -210,6 +210,7 @@ table {
 	    </tbody>
 
 	</table>
+</div>
 
 	@include('vendor.crud.single-page-templates.common.pagination', [ 'records' => $records ] )
 
