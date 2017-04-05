@@ -6,13 +6,13 @@
 
 #des_div {
     white-space: nowrap; 
-    width: 6em; 
+    width: 24em; 
     overflow: hidden;
     text-overflow: ellipsis; 
 }
 
 table {
-	table-layout: fixed;
+	/*table-layout: fixed;*/
 }
 
 </style>
