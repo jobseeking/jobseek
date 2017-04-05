@@ -34,8 +34,8 @@
 				<td><input type="text" class="form-control" name="type_id" value="{{Request::input("type_id")}}"></td>
 				<td><input type="text" class="form-control" name="classification_id" value="{{Request::input("classification_id")}}"></td>
 				<td><input type="text" class="form-control" name="user_id" value="{{Request::input("user_id")}}"></td>
-			
-				
+				<td></td>
+				<td></td>
 				<td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>
 			</form>
 		</tr>
