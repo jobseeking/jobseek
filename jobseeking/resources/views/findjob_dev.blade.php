@@ -10,16 +10,16 @@
 	    
 	    <thead>
 		<tr class="header-row">
-			{!!\Nvd\Crud\Html::sortableTh('id','job.index','Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('name','job.index','Name')!!}
-			{!!\Nvd\Crud\Html::sortableTh('company','job.index','Company')!!}
-			{!!\Nvd\Crud\Html::sortableTh('salary','job.index','Salary')!!}
-			{!!\Nvd\Crud\Html::sortableTh('details','job.index','Details')!!}
-			{!!\Nvd\Crud\Html::sortableTh('location_id','job.index','Location Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('type_id','job.index','Type Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('classification_id','job.index','Classification Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('user_id','job.index','User Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('created_at','job.index','Created At')!!}
+			{!!\Nvd\Crud\Html::sortableTh('id','findjob_dev','Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('name','findjob_dev','Name')!!}
+			{!!\Nvd\Crud\Html::sortableTh('company','findjob_dev','Company')!!}
+			{!!\Nvd\Crud\Html::sortableTh('salary','findjob_dev','Salary')!!}
+			{!!\Nvd\Crud\Html::sortableTh('details','findjob_dev','Details')!!}
+			{!!\Nvd\Crud\Html::sortableTh('location_id','findjob_dev','Location Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('type_id','findjob_dev','Type Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('classification_id','findjob_dev','Classification Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('user_id','findjob_dev','User Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('created_at','findjob_dev','Created At')!!}
 			
 			<th></th>
 		</tr>
@@ -123,7 +123,10 @@
 						{{ $record->created_at }}
 						</td>
 					
-					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => $base_url.'/job', 'record' => $record ] )
+					<td class="actions-cell">
+						    <a href="{{$base_url.'/job'}}/{{$record->id}}"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;						
+					</td>
+
 		    	</tr>
 			@empty
 				@include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 12])
