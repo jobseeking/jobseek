@@ -9,6 +9,7 @@ use App\Classification; // Model
 use App\Type;  // Model
 use App\Location; // Model
 use App\Job; // Model
+use App\User; // Model
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -171,6 +172,14 @@ class JobController extends Controller
     public function findjob_dev_page(Request $request)
     {
         $records = Job::find();
+
+        foreach ($records as $record) {
+            $record->type_name = Type::find($record->type_id)->name;
+            $record->location_name = Location::find($record->location_id)->name;
+            $record->classification_name = Classification::find($record->classification_id)->name;
+            $record->user_name = User::find($record->user_id)->name . User::find($record->user_id)->last_name;
+        }
+
         return view("findjob_dev", ['records' => $records] );
     }
 
