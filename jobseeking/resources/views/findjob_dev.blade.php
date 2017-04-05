@@ -15,10 +15,10 @@
 			{!!\Nvd\Crud\Html::sortableTh('company','findjob_dev','Company')!!}
 			{!!\Nvd\Crud\Html::sortableTh('salary','findjob_dev','Salary')!!}
 			{!!\Nvd\Crud\Html::sortableTh('details','findjob_dev','Details')!!}
-			{!!\Nvd\Crud\Html::sortableTh('location_id','findjob_dev','Location Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('type_id','findjob_dev','Type Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('classification_id','findjob_dev','Classification Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('user_id','findjob_dev','User Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('location_id','findjob_dev','Location')!!}
+			{!!\Nvd\Crud\Html::sortableTh('type_id','findjob_dev','Type')!!}
+			{!!\Nvd\Crud\Html::sortableTh('classification_id','findjob_dev','Classification')!!}
+			{!!\Nvd\Crud\Html::sortableTh('user_id','findjob_dev','User')!!}
 			{!!\Nvd\Crud\Html::sortableTh('created_at','findjob_dev','Created At')!!}
 			
 			<th></th>
