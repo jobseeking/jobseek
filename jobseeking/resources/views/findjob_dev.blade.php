@@ -34,16 +34,38 @@
 				    -->
 
 				    &nbsp;&nbsp;&nbsp;&nbsp; From
-				    <select class="form-control" name="">
-          
-                        <option value ="" > XXX </option>            
-              
+				    <select class="form-control" name="">          
+                        <option value ="0" > $0 </option>
+                        <option value ="10000" > $10,000 </option>
+                        <option value ="20000" > $20,000 </option>   
+                        <option value ="30000" > $30,000 </option>   
+                        <option value ="40000" > $40,000 </option>   
+                        <option value ="50000" > $50,000 </option>   
+                        <option value ="60000" > $60,000 </option>   
+                        <option value ="70000" > $70,000 </option>   
+                        <option value ="80000" > $80,000 </option>   
+                        <option value ="90000" > $90,000 </option>   
+                        <option value ="100000" >$100,000 </option>   
+                        <option value ="120000" >$120,000 </option>   
+                        <option value ="150000" >$150,000 </option> 
+                        <option value ="200000" >$200,000 </option> 
             		</select>
             		&nbsp;&nbsp;&nbsp;&nbsp; To
             		<select class="form-control" name="">
-          
-                        <option value ="" > YYY </option>            
-              
+                        <option value ="10000" > $10,000 </option>
+                        <option value ="20000" > $20,000 </option>   
+                        <option value ="30000" > $30,000 </option>   
+                        <option value ="40000" > $40,000 </option>   
+                        <option value ="50000" > $50,000 </option>   
+                        <option value ="60000" > $60,000 </option>   
+                        <option value ="70000" > $70,000 </option>   
+                        <option value ="80000" > $80,000 </option>   
+                        <option value ="90000" > $90,000 </option>   
+                        <option value ="100000" >$100,000 </option>   
+                        <option value ="120000" >$120,000 </option>   
+                        <option value ="150000" >$150,000 </option> 
+                        <option value ="200000" >$200,000 </option> 
+                        <option value ="99999999999999" >$Max </option>      
             		</select>
 
 				</td>
