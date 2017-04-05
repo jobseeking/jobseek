@@ -11,8 +11,8 @@
     text-overflow: ellipsis; 
 }
 
-td {
-    min-width: 15%;
+td th{
+    min-width: 25%;
 }
 
 </style>
