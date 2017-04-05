@@ -200,7 +200,7 @@ table {
 					
 					<td class="actions-cell">
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						    <a href="{{$base_url.'/showjob'}}/{{$record->id}}"><i class="fa fa-eye fa-5x"></i></a>						
+						    <a href="{{$base_url.'/showjob'}}/{{$record->id}}"><i class="fa fa-eye fa-3x"></i></a>						
 					</td>
 
 		    	</tr>
