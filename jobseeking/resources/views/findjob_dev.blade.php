@@ -59,6 +59,7 @@
 				<td><input type="text" class="form-control" name="details" value="{{Request::input("details")}}"></td>
 				<td>
 					<select class="form-control" name="location_id">
+					    <option> All </option>   
 			        	@foreach ( $locations as $location )
 					    	@if ( Request::input("location_id") == $location->id)
 					        	<option value ="{{$location->id}}" selected> {{$location->name}} </option>   
