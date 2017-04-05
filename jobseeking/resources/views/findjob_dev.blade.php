@@ -2,6 +2,17 @@
 
 @section('content')
 
+<style>
+
+table {
+    white-space: nowrap; 
+    /*width: 12em;*/ 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+</style>
+
 	<h2>Find Job</h2>
 
 	
