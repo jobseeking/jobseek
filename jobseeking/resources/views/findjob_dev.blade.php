@@ -20,7 +20,7 @@
 			{!!\Nvd\Crud\Html::sortableTh('classification_id','job.index','Classification Id')!!}
 			{!!\Nvd\Crud\Html::sortableTh('user_id','job.index','User Id')!!}
 			{!!\Nvd\Crud\Html::sortableTh('created_at','job.index','Created At')!!}
-			{!!\Nvd\Crud\Html::sortableTh('updated_at','job.index','Updated At')!!}
+			
 			<th></th>
 		</tr>
 		<tr class="search-row">
@@ -35,7 +35,7 @@
 				<td><input type="text" class="form-control" name="classification_id" value="{{Request::input("classification_id")}}"></td>
 				<td><input type="text" class="form-control" name="user_id" value="{{Request::input("user_id")}}"></td>
 				<td></td>
-				<td></td>
+				
 				<td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>
 			</form>
 		</tr>
@@ -122,9 +122,7 @@
 					<td>
 						{{ $record->created_at }}
 						</td>
-					<td>
-						{{ $record->updated_at }}
-						</td>
+					
 					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => $base_url.'/job', 'record' => $record ] )
 		    	</tr>
 			@empty
