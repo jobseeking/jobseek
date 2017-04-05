@@ -28,7 +28,22 @@
 				<td><input type="text" class="form-control" name="id" value="{{Request::input("id")}}"></td>
 				<td><input type="text" class="form-control" name="name" value="{{Request::input("name")}}"></td>
 				<td><input type="text" class="form-control" name="company" value="{{Request::input("company")}}"></td>
-				<td><input type="text" class="form-control" name="salary" value="{{Request::input("salary")}}"></td>
+				<td>
+				    <!--
+				    <input type="text" class="form-control" name="salary" value="{{Request::input("salary")}}">
+				    -->
+				    <select class="form-control" name="">
+          
+                        <option value ="" > XXX </option>            
+              
+            		</select>
+            		<select class="form-control" name="">
+          
+                        <option value ="" > YYY </option>            
+              
+            		</select>
+
+				</td>
 				<td><input type="text" class="form-control" name="details" value="{{Request::input("details")}}"></td>
 				<td><input type="text" class="form-control" name="location_id" value="{{Request::input("location_id")}}"></td>
 				<td><input type="text" class="form-control" name="type_id" value="{{Request::input("type_id")}}"></td>
