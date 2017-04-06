@@ -36,18 +36,15 @@ a {
 	font-size: 4vmin;
 }
 
-/*
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 768px) {
 
 	.header {
-		font-size: 15px;
+		font-size: 3vmin;
 	}
 
-	.header {
-		font-size: 15px;
-	}
 }
-*/
+
 
 .mynav {
 	text-align: center;
