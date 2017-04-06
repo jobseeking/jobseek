@@ -16,9 +16,9 @@
 
     position: relative;
 
-    width: 30%;
+    width: 50%;
    
-    left: 35%; 
+    left: 25%; 
  
 }
 
@@ -32,7 +32,15 @@
 	}
 }
 
-
+@media only screen and (max-width: 768px) {
+   
+    .page_div{
+	    width: 80%;
+	   
+	    left: 10%; 
+	  
+	}
+}
 
 
 
