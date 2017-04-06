@@ -33,7 +33,7 @@ a {
 */
 
 .header{
-	font-size: 6vmin;
+	font-size: 4vmin;
 }
 
 @media screen and (max-width: 400px) {
