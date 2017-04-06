@@ -10,18 +10,18 @@
     display: none;
     position: relative;
 
-    width: 20%;
+    width: 30%;
     height: 50%;
-    left: 40%; /* (100 - width)/2 */
+    left: 35%; /* (100 - width)/2 */
     top: 25%;  /* (100% - height)/2 */
 }
 
 @media only screen and (max-width: 1224px) {
     /* For mobile phones: */
     .post_form{
-	    width: 30%;
+	    width: 40%;
 	    height: 50%;
-	    left: 35%; /* (100 - width)/2 */
+	    left: 30%; /* (100 - width)/2 */
 	    top: 25%;  /* (100% - height)/2 */
 	}
 }
