@@ -35,7 +35,7 @@ class Job extends Model {
         \Request::input("sort") and $query->orderBy(\Request::input("sort"),\Request::input("sortType","asc"));
 
         // paginate results
-        return $query->paginate(3);
+        return $query->paginate(15);
     }
 
     public static function findRequested()
