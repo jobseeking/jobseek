@@ -72,7 +72,7 @@
 				<td><input type="text" class="form-control" name="name" value="{{Request::input("name")}}"></td>
 				<td><input type="text" class="form-control" name="company" value="{{Request::input("company")}}"></td>
 				<td>
-				    &nbsp;&nbsp;&nbsp;&nbsp; From
+				    <!-- &nbsp;&nbsp;&nbsp;&nbsp; From -->
 				    <select class="form-control" name="salary_bottom">
 				        @for ($i = 0; $i < 200001; $i+=10000)
 				        	@if ( Request::input("salary_bottom") == $i)
