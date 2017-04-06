@@ -17,6 +17,7 @@ class Controller extends BaseController
 
     public function __construct() {
 
+       // Use $base_url = ""; if webroot = ".../project/public"
        $base_url = "/jobseek/jobseeking/public";
        View::share ( 'base_url', $base_url );
     } 
