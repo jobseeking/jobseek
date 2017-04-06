@@ -14,7 +14,7 @@
 
 .page_div{
 
-    position: absolute;
+    position: relative;
 
     width: 30%;
    
