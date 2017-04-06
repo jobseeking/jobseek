@@ -35,7 +35,7 @@ a {
 .header{
 	font-size: 100%;  /* fallback of vmin */
 	font-size: 4vmin;
-	color: #337ab7;
+	color: blue;
 }
 
 
