@@ -10,9 +10,9 @@
     display: none;
     position: relative;
 
-    width: 40%;
+    width: 20%;
     height: 50%;
-    left: 30%; /* (100 - width)/2 */
+    left: 40%; /* (100 - width)/2 */
     top: 25%;  /* (100% - height)/2 */
 }
 
