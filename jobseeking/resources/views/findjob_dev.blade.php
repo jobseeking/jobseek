@@ -20,13 +20,13 @@
     left: 40%; 
  
 }
-/*
+
 @media only screen and (max-width: 1224px) {
     
     .page_div{
-	    width: 40%;
+	    width: 30%;
 	 
-	    left: 30%; 
+	    left: 35%; 
 	   
 	}
 }
@@ -40,7 +40,7 @@
 	  
 	}
 }
-*/
+
 
 
 </style>
