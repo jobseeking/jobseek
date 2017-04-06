@@ -239,14 +239,17 @@
 	    </tbody>
 
 	</table>
-</div>
 
-    <!--pagination-->
+	<!--pagination-->
     <div class="page_div" >
 		@if(count($records))
 	    {!! $records->appends(Request::query())->render() !!}
 		@endif
 	</div>
+
+</div>
+
+
 
 <script>
 
