@@ -34,6 +34,7 @@ a {
 
 .header{
 	font-size: 4vmin;
+	font-size: 80%;  /* fallback of vmin */
 }
 
 
