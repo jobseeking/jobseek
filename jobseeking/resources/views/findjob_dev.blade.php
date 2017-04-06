@@ -13,16 +13,15 @@
 
 
 .page_div{
-	margin: auto;
-/*
+
     position: relative;
 
     width: 30%;
    
     left: 35%; 
-*/ 
+ 
 }
-/*
+
 @media only screen and (max-width: 1224px) {
     
     .page_div{
@@ -42,7 +41,7 @@
 	  
 	}
 }
-*/
+
 
 
 </style>
