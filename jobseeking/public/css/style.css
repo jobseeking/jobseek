@@ -57,6 +57,7 @@ a {
 }
 
 .container {
+	width: 100%; /*override bootstrap setting*/
 	background: white;
 }
 
