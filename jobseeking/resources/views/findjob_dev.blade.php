@@ -11,37 +11,37 @@
     text-overflow: ellipsis; 
 }
 
-
+/*
 .page_div{
     display: none;
     position: relative;
 
     width: 30%;
    
-    left: 35%; /* (100 - width)/2 */
+    left: 35%; 
    
 }
 
 @media only screen and (max-width: 1224px) {
-    /* For mobile phones: */
+    
     .page_div{
 	    width: 40%;
 	 
-	    left: 30%; /* (100 - width)/2 */
+	    left: 30%; 
 	   
 	}
 }
 
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
+   
     .page_div{
 	    width: 80%;
 	   
-	    left: 10%; /* (100 - width)/2 */
+	    left: 10%; 
 	  
 	}
 }
-
+*/
 
 
 </style>
