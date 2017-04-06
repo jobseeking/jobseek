@@ -37,7 +37,7 @@
 <div class="container header">
     <div class="row">
         <div class="col-xs-4">
-            <a href="./"><img class="logo img-responsive" src="{{ asset('images/logo.png') }}" alt=""></a>
+            <a href="{{$base_url}}/"><img class="logo img-responsive" src="{{ asset('images/logo.png') }}" alt=""></a>
         </div>
 
         <div id="login_link" class="col-xs-8 info" style="display:none;">
@@ -52,7 +52,7 @@
 
     <div class="row mynav">
         <!--class="active"-->
-        <a href="{{$base_url}}">Home</a> |
+        <a href="{{$base_url}}/">Home</a> |
         <a href="{{$base_url}}/postjob">Post job</a> |
         <a href="{{$base_url}}/findjob">Find job</a> |
         <a href="{{$base_url}}/aboutus">About us</a> |
