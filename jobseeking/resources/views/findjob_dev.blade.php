@@ -11,9 +11,38 @@
     text-overflow: ellipsis; 
 }
 
-table {
-	/*table-layout: fixed;*/
+
+.page_div{
+    display: none;
+    position: relative;
+
+    width: 30%;
+   
+    left: 35%; /* (100 - width)/2 */
+   
 }
+
+@media only screen and (max-width: 1224px) {
+    /* For mobile phones: */
+    .page_div{
+	    width: 40%;
+	 
+	    left: 30%; /* (100 - width)/2 */
+	   
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .page_div{
+	    width: 80%;
+	   
+	    left: 10%; /* (100 - width)/2 */
+	  
+	}
+}
+
+
 
 </style>
 
@@ -212,7 +241,12 @@ table {
 	</table>
 </div>
 
-	@include('vendor.crud.single-page-templates.common.pagination', [ 'records' => $records ] )
+    <!--pagination-->
+    <div class="page_div" >
+		@if(count($records))
+	    {!! $records->appends(Request::query())->render() !!}
+		@endif
+	</div>
 
 <script>
 
