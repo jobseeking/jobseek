@@ -15,10 +15,8 @@
 .page_div{
 
     position: relative;
-
-    width: 50%;
    
-    left: 25%; 
+    left: 50%; 
  
 }
 
