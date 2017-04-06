@@ -16,7 +16,7 @@
 
     position: relative;
    
-    left: 50%; 
+    left: 40%; 
  
 }
 
