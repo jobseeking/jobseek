@@ -32,15 +32,7 @@
 	}
 }
 
-@media only screen and (max-width: 768px) {
-   
-    .page_div{
-	    width: 80%;
-	   
-	    left: 10%; 
-	  
-	}
-}
+
 
 
 
