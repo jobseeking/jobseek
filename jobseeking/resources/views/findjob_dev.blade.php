@@ -14,7 +14,7 @@
 
 .page_div{
 
-    position: relative;
+    /*position: relative;*/
 
     width: 30%;
    
