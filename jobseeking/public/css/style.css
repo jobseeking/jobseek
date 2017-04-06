@@ -36,6 +36,7 @@ a {
 	font-size: 4vmin;
 }
 
+/*
 @media screen and (max-width: 400px) {
 
 	.header {
@@ -46,6 +47,7 @@ a {
 		font-size: 15px;
 	}
 }
+*/
 
 .mynav {
 	text-align: center;
