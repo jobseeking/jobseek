@@ -19,7 +19,7 @@
 
 		</tr>
 		<tr class="search-row">
-			<form class="search-form" action="{{$base_url}}/findjob_dev">
+			<form id="search_form" class="search-form" action="{{$base_url}}/findjob_dev">
 				<td><input type="text" class="form-control" name="id" value="{{Request::input("id")}}"></td>
 				<td><input type="text" class="form-control" name="name" value="{{Request::input("name")}}"></td>
 				<td><input type="text" class="form-control" name="company" value="{{Request::input("company")}}"></td>
@@ -103,7 +103,7 @@
 	</table>
 
     <div class="center" >
-		<button  style="width:40%; font-size: 4vmin;" class="btn btn-primary" onclick="onClickSubmit()">Start Seeking</button>
+		<button  style="width:40%; font-size: 4vmin;" class="btn btn-primary" onclick="$('#search_form').submit()">Start Seeking</button>
 	</div>
 
 </div>
