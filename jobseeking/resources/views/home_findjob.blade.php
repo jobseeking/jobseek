@@ -103,9 +103,9 @@
 
 	</table>
 
-    <div class="center">
+    <div class="center" style="width:40%; height:10%;">
 		<button style="width:100%; height:100%;" class="btn btn-primary" onclick="onClickSubmit()">Seeking</button>
-	</div>>
+	</div>
 
 </div>
 
