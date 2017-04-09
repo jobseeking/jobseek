@@ -196,19 +196,5 @@ class JobController extends Controller
                                    ] );
     }
 
-    public function home_page(Request $request){   
-        $types = Type::all();
-        $locations = Location::all();
-        $classifications = Classification::all();
-
-     
-
-        return view('home', [
-                                    'types' => $types, 
-                                    'locations' => $locations,
-                                    'classifications' => $classifications
-                                   ] );
-    }
-
 
 }

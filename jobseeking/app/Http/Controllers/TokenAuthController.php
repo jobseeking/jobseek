@@ -7,6 +7,10 @@ use Log;
 use Validator;
 use DB;
 
+use App\Classification; // Model
+use App\Type;  // Model
+use App\Location; // Model
+
 use App\Http\Controllers\Controller;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -88,7 +92,15 @@ class TokenAuthController extends Controller
     }
 
     public function home_page(Request $request){   
-        return view('home');
+        $types = Type::all();
+        $locations = Location::all();
+        $classifications = Classification::all();
+
+        return view('home', [
+                                'types' => $types, 
+                                'locations' => $locations,
+                                'classifications' => $classifications
+                            ] );
     }
 
     public function login_page(Request $request){
