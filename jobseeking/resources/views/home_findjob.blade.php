@@ -5,7 +5,7 @@
 	<table class="table table-striped grid-view-tbl">
 	    
 	    <thead>
-		<tr class="header-row">
+		<tr class="header-row" style="color:#337ab7;">
 		    <th>Id</th>
 		    <th>Name</th>
 		    <th>Company</th>
