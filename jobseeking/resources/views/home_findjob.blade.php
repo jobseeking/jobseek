@@ -103,8 +103,8 @@
 
 	</table>
 
-    <div class="center-block">
-		<button class="btn btn-primary" onclick="onClickSubmit()">Seeking</button>
+    <div class="center">
+		<button style="width:100%; height:100%;" class="btn btn-primary" onclick="onClickSubmit()">Seeking</button>
 	</div>>
 
 </div>
