@@ -1,49 +1,6 @@
 
 
-<style>
-
-#des_div {
-    white-space: nowrap; 
-    width: 24em; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-
-
-.page_div{
-
-    position: relative;
-   
-    width: 20%;
-    left: 40%; 
- 
-}
-
-@media only screen and (max-width: 1224px) {
-    
-    .page_div{
-	    width: 30%;
-	 
-	    left: 35%; 
-	   
-	}
-}
-
-@media only screen and (max-width: 768px) {
-   
-    .page_div{
-	    width: 80%;
-	   
-	    left: 10%; 
-	  
-	}
-}
-
-
-
-</style>
-
-<h2>Find Job</h2>
+<h2>Start to find Job</h2>
 
 	
 <div class="table-responsive">  
@@ -65,7 +22,7 @@
 			<th></th>
 		</tr>
 		<tr class="search-row">
-			<form class="search-form">
+			<form class="search-form" action="{{$base_url}}/findjob_dev">
 				<td><input type="text" class="form-control" name="id" value="{{Request::input("id")}}"></td>
 				<td><input type="text" class="form-control" name="name" value="{{Request::input("name")}}"></td>
 				<td><input type="text" class="form-control" name="company" value="{{Request::input("company")}}"></td>
@@ -143,106 +100,12 @@
 	    </thead>
 
 	    <tbody>
-	    	@forelse ( $records as $record )
-		    	<tr>
-					<td>
-						{{ $record->id }}
-						</td>
-					<td>
-						<span 
-							  data-type="text"
-							  data-name="name"
-							  data-value="{{ $record->name }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->name }}</span>
-						</td>
-					<td>
-						<span 
-							  data-type="text"
-							  data-name="company"
-							  data-value="{{ $record->company }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->company }}</span>
-						</td>
-					<td>
-						<span 
-							  data-type="number"
-							  data-name="salary"
-							  data-value="{{ $record->salary }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->salary }}</span>
-						</td>
-					<td>
-						<span 
-							  data-type="text"
-							  data-name="details"
-							  data-value="{{ $record->details }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  ><div id="des_div" >{{ $record->details }}</div></span>
-						</td>
-					<td>
-						<span 
-							  data-type="number"
-							  data-name="location_id"
-							  data-value="{{ $record->location_id }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->location_name }}</span>
-						</td>
-					<td>
-						<span 
-							  data-type="number"
-							  data-name="type_id"
-							  data-value="{{ $record->type_id }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->type_name }}</span>
-						</td>
-					<td>
-						<span 
-							  data-type="number"
-							  data-name="classification_id"
-							  data-value="{{ $record->classification_id }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->classification_name }}</span>
-						</td>
-					<td>
-						<span 
-							  data-type="number"
-							  data-name="user_id"
-							  data-value="{{ $record->user_id }}"
-							  data-pk="{{ $record->{$record->getKeyName()} }}"
-							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  >{{ $record->user_name }}</span>
-						</td>
-					<td>
-						{{ $record->created_at }}
-						</td>
-					
-					<td class="actions-cell">
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						    <a href="{{$base_url.'/showjob'}}/{{$record->id}}"><i class="fa fa-eye fa-3x"></i></a>						
-					</td>
-
-		    	</tr>
-			@empty
-				@include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 12])
-	    	@endforelse
+	    
 	    </tbody>
 
 	</table>
 
-	<!--pagination-->
-    <div class="page_div" >
-		@if(count($records))
-	    {!! $records->appends(Request::query())->render() !!}
-		@endif
-	</div>
+	
 
 </div>
 

@@ -201,16 +201,9 @@ class JobController extends Controller
         $locations = Location::all();
         $classifications = Classification::all();
 
-        $records = Job::find();
+     
 
-        foreach ($records as $record) {
-            $record->type_name = Type::find($record->type_id)->name;
-            $record->location_name = Location::find($record->location_id)->name;
-            $record->classification_name = Classification::find($record->classification_id)->name;
-            $record->user_name = User::find($record->user_id)->name ."  ". User::find($record->user_id)->last_name;
-        }
-
-        return view('home', ['records' => $records,
+        return view('home', [
                                     'types' => $types, 
                                     'locations' => $locations,
                                     'classifications' => $classifications

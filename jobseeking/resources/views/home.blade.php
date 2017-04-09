@@ -55,7 +55,7 @@
 
 
 
-@include('findjob_content')
+@include('home_findjob')
 
 
 
