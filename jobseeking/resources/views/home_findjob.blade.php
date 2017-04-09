@@ -1,7 +1,5 @@
 
 
-<h2 class="center">Start to find jobs...</h2>
-
 	
 <div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
@@ -105,7 +103,7 @@
 
 	</table>
 
-	<button class="btn btn-primary" onclick="onClickSubmit()">Seeking</button>
+	<button class="center btn btn-primary" onclick="onClickSubmit()">Seeking</button>
 
 </div>
 
