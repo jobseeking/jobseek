@@ -15,9 +15,8 @@
 			{!!\Nvd\Crud\Html::sortableTh('type_id','findjob_dev','Type')!!}
 			{!!\Nvd\Crud\Html::sortableTh('classification_id','findjob_dev','Classification')!!}
 			{!!\Nvd\Crud\Html::sortableTh('user_id','findjob_dev','User')!!}
-			{!!\Nvd\Crud\Html::sortableTh('created_at','findjob_dev','Created At')!!}
-			
-			<th></th>
+		
+
 		</tr>
 		<tr class="search-row">
 			<form class="search-form" action="{{$base_url}}/findjob_dev">
@@ -90,9 +89,9 @@
 		            </select>
 				</td>
 				<td><input type="text" class="form-control" name="user_name" value="{{Request::input("user_name")}}"></td>
-				<td></td>
 				
-				<td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>
+				
+				
 			</form>
 		</tr>
 	    </thead>
@@ -104,7 +103,7 @@
 	</table>
 
     <div class="center" >
-		<button  style="width:40%; font-size: 4vmin;" class="btn btn-primary" onclick="onClickSubmit()">Seeking</button>
+		<button  style="width:40%; font-size: 4vmin;" class="btn btn-primary" onclick="onClickSubmit()">Start Seeking</button>
 	</div>
 
 </div>
