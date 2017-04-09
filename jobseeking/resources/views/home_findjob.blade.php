@@ -1,6 +1,6 @@
 
 
-<h2>Start to find Job</h2>
+<h2 class="center">Start to find jobs...</h2>
 
 	
 <div class="table-responsive">  
@@ -105,7 +105,7 @@
 
 	</table>
 
-	
+	<button class="btn btn-primary" onclick="onClickSubmit()">Seeking</button>
 
 </div>
 
