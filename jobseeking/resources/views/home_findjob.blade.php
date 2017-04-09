@@ -103,7 +103,7 @@
 
 	</table>
 
-    <div class="center">
+    <div class="center-block">
 		<button class="btn btn-primary" onclick="onClickSubmit()">Seeking</button>
 	</div>>
 
