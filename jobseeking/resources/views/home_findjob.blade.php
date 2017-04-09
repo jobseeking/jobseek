@@ -6,17 +6,15 @@
 	    
 	    <thead>
 		<tr class="header-row">
-			{!!\Nvd\Crud\Html::sortableTh('id','findjob_dev','Id')!!}
-			{!!\Nvd\Crud\Html::sortableTh('name','findjob_dev','Name')!!}
-			{!!\Nvd\Crud\Html::sortableTh('company','findjob_dev','Company')!!}
-			{!!\Nvd\Crud\Html::sortableTh('salary','findjob_dev','Salary')!!}
-			{!!\Nvd\Crud\Html::sortableTh('details','findjob_dev','Details')!!}
-			{!!\Nvd\Crud\Html::sortableTh('location_id','findjob_dev','Location')!!}
-			{!!\Nvd\Crud\Html::sortableTh('type_id','findjob_dev','Type')!!}
-			{!!\Nvd\Crud\Html::sortableTh('classification_id','findjob_dev','Classification')!!}
-			{!!\Nvd\Crud\Html::sortableTh('user_id','findjob_dev','User')!!}
-		
-
+		    <th>Id</th>
+		    <th>Name</th>
+		    <th>Company</th>
+		    <th>Salary</th>
+		    <th>Details</th>
+		    <th>Location</th>
+		    <th>Type</th>
+		    <th>Classification</th>
+		    <th>User</th>
 		</tr>
 		<tr class="search-row">
 			<form id="search_form" class="search-form" action="{{$base_url}}/findjob_dev">
