@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'TokenAuthController@home_page');
+Route::get('/', 'JobController@home_page');
 
 // APIs for login & register
 Route::post('api/register', 'TokenAuthController@register');
