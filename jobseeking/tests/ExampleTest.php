@@ -32,9 +32,9 @@ class ExampleTest extends TestCase
              ->type('unittest_company', 'company')
              ->type('20000', 'salary')
              ->type('unittest_details', 'details')
-             ->type('1', 'location_id')
-             ->type('2', 'type_id')
-             ->type('3', 'classification_id')
+             ->select('1', 'location_id')
+             ->select('2', 'type_id')
+             ->select('3', 'classification_id')
              ->press('Submit')
              ->see('unittest_job_name');
 
