@@ -1,7 +1,7 @@
 
 
 	
-<div class="table-responsive">  
+<div id="home_search_table" class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
 	    
 	    <thead>
