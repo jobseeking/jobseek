@@ -114,7 +114,10 @@
 
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
+            <!--   Use "<input>" instead for phpunit test
             <button type="submit" class="btn btn-primary">Submit</button>
+            -->
+            <input type="submit" value="Submit" class="btn btn-primary">
           </div>
         </div>
 
