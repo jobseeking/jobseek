@@ -139,7 +139,12 @@
 				<td><input type="text" class="form-control" name="user_name" value="{{Request::input("user_name")}}"></td>
 				<td></td>
 				
-				<td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>
+				<td style="min-width: 6em;">
+				    <!--  Use "<input>" instead for phpunit test
+				    <button type="submit" class="fa fa-search form-control btn btn-primary"></button>
+				    -->
+				    <input type="submit" value="search" class="fa fa-search form-control btn btn-primary">
+				</td>
 			</form>
 		</tr>
 	    </thead>
