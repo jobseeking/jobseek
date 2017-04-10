@@ -33,10 +33,11 @@ class ExampleTest extends TestCase
                                                         'details' => 'unittest_details',
                                                         'location_id' => '1',
                                                         'type_id' => '2',
-                                                        'classification_id' => '',
+                                                        'classification_id' => '3',
                                                         'user_id' => '13'
-                                                       ]);
-        $this->assertContains("showjob", $response->content());
+                                                       ])->assertRedirectedTo('showjob');
+        //$this->assertContains("showjob", $response->content());
+        
 
 
         /*             
