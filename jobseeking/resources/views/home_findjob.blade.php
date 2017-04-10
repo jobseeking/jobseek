@@ -2,7 +2,7 @@
 
 	
 <div>  
-	<table id="home_search_table" class="table-striped grid-view-tbl">
+	<table class="table table-striped grid-view-tbl" id="home_search_table">
 	    
 	    <thead>
 		<tr class="header-row" style="color:#337ab7;">
