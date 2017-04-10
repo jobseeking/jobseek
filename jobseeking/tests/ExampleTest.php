@@ -28,7 +28,7 @@ class ExampleTest extends TestCase
         $this->visit('/login')
              ->type('rrr@rrr.rrr', 'Email')
              ->type('123456', 'Password')
-             ->click('#login_btn')
+             ->click('login_btn')
              ->seePageIs('/');
 
         /*             
