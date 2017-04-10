@@ -6,23 +6,34 @@
 	    
 	    <thead>
 		<tr class="header-row" style="color:#337ab7;">
+		<!--
 		    <th>Id</th>
+		-->    
 		    <th>Name</th>
+		<!--    
 		    <th>Company</th>
 		    <th>Salary</th>
 		    <th>Details</th>
+		-->
 		    <th>Location</th>
+		<!--        
 		    <th>Type</th>
+		-->    
 		    <th>Classification</th>
+		<!--           
 		    <th>User</th>
+		-->       
 		</tr>
 		<tr class="search-row">
 			<form id="search_form" class="search-form" action="{{$base_url}}/findjob_dev">
+			    <!--     
 				<td><input type="text" class="form-control" name="id" value="{{Request::input("id")}}"></td>
+				-->
 				<td><input type="text" class="form-control" name="name" value="{{Request::input("name")}}"></td>
+				<!--     
 				<td><input type="text" class="form-control" name="company" value="{{Request::input("company")}}"></td>
 				<td>
-				    <!-- &nbsp;&nbsp;&nbsp;&nbsp; From -->
+				    
 				    <select class="form-control" name="salary_bottom">
 				        @for ($i = 0; $i < 200001; $i+=10000)
 				        	@if ( Request::input("salary_bottom") == $i)
@@ -50,6 +61,7 @@
             		</select>
 				</td>
 				<td><input type="text" class="form-control" name="details" value="{{Request::input("details")}}"></td>
+				-->
 				<td>
 					<select class="form-control" name="location_id">
 					    <option value="" > All </option>   
@@ -62,6 +74,7 @@
 					    @endforeach  
 		            </select>
 				</td>
+				<!--
 				<td>
 					<select class="form-control" name="type_id">
 					    <option value="" > All </option>   
@@ -74,6 +87,7 @@
 					    @endforeach  
 		            </select>
 				</td>
+				-->
 				<td>
 					<select class="form-control" name="classification_id">
 					    <option value="" > All </option>   
@@ -86,8 +100,9 @@
 					    @endforeach  
 		            </select>
 				</td>
+				<!--
 				<td><input type="text" class="form-control" name="user_name" value="{{Request::input("user_name")}}"></td>
-				
+				-->
 				
 				
 			</form>
