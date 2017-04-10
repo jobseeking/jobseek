@@ -22,7 +22,8 @@ class ExampleTest extends TestCase
         $this->visit('/findjob')
              ->type('hhh', 'name')
              ->press('search')
-             ->seePageIs('/findjob?classification_id=&company=&details=&id=&location_id=&name=hhh&salary_bottom=0&salary_top=99999999999999&type_id=&user_name=');
+             ->see('hhh');
+             //->seePageIs('/findjob?classification_id=&company=&details=&id=&location_id=&name=hhh&salary_bottom=0&salary_top=99999999999999&type_id=&user_name=');
         
 
         /*             
