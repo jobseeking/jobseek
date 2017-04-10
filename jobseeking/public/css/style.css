@@ -41,7 +41,8 @@ a {
 
 @media only screen and (min-width : 1225px) {
     #home_search_table{
-        width:50%; 	
+        width:60%; 	
+        left: 20%;
     }
 }
 
