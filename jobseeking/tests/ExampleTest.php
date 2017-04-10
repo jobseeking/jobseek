@@ -33,7 +33,7 @@ class ExampleTest extends TestCase
                                                         'details' => 'unittest_details',
                                                         'location_id' => '1',
                                                         'type_id' => '2',
-                                                        'classification_id' => '3',
+                                                        'classification_id' => '',
                                                         'user_id' => '13'
                                                        ]);
         $this->assertEquals(302, $response->status()); // 302 redirect
