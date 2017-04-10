@@ -25,6 +25,12 @@ class ExampleTest extends TestCase
              ->seePageIs('/findjob?classification_id=&company=&details=&id=&location_id=&name=hhh&salary_bottom=0&salary_top=99999999999999&type_id=&user_name=');
         */
 
+        $this->visit('/login')
+             ->type('rrr@rrr.rrr', 'Email')
+             ->type('123456', 'Password')
+             ->click('#login_btn')
+             ->seePageIs('/');
+
         /*             
        $this->json('POST', '/api/authenticate', ['email' => 'rrr@rrr.rrr', 'password' => '123456'])
             ->seeJsonStructure([
@@ -32,6 +38,7 @@ class ExampleTest extends TestCase
              ]);
         */
 
+        /*     
         $this->json('POST', '/api/register', ['email' => rand().'@gmail.com',
                                               'password' => '123456',
                                               'name' => 'unittest_name',
@@ -39,7 +46,7 @@ class ExampleTest extends TestCase
              ->seeJsonStructure([
                  'name'                 
              ]);
-
+        */
 
     }
 }
