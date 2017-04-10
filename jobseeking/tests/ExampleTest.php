@@ -35,8 +35,9 @@ class ExampleTest extends TestCase
                                                         'type_id' => '2',
                                                         'classification_id' => '3',
                                                         'user_id' => '13'
-                                                       ])->assertRedirectedTo('showjob');
-        //$this->assertContains("showjob", $response->content());
+                                                       ]);
+        $this->assertEquals(302, $response->status()); // 302 redirect
+        $this->assertContains("showjob", $response->content());
         
 
 
