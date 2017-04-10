@@ -31,8 +31,7 @@ Route::get('aboutus', 'TokenAuthController@aboutus_page');
 Route::get('postjob', 'JobController@postjob_page');
 Route::post('api/postjob', 'JobController@postjob_api');
 Route::get('showjob/{job}', 'JobController@showjob_page');
-Route::get('findjob', 'JobController@findjob_page');
-Route::get('findjob_dev', 'JobController@findjob_dev_page')->name('findjob_dev');
+Route::get('findjob', 'JobController@findjob_page')->name('findjob');
 
 
 // CRUD

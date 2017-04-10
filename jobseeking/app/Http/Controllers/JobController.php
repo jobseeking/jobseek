@@ -167,14 +167,9 @@ class JobController extends Controller
         return view("showjob",['job' => $job]);
     }
 
-    // Search and show job list
-    public function findjob_page(Request $request)
-    {
-        return view("findjob");
-    }
 
     // Search and show job list
-    public function findjob_dev_page(Request $request)
+    public function findjob_page(Request $request)
     {
         $types = Type::all();
         $locations = Location::all();
@@ -189,7 +184,7 @@ class JobController extends Controller
             $record->user_name = User::find($record->user_id)->name ."  ". User::find($record->user_id)->last_name;
         }
 
-        return view("findjob_dev", ['records' => $records,
+        return view("findjob", ['records' => $records,
                                     'types' => $types, 
                                     'locations' => $locations,
                                     'classifications' => $classifications

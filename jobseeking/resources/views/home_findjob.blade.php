@@ -25,7 +25,7 @@
 		-->       
 		</tr>
 		<tr class="search-row">
-			<form id="search_form" class="search-form" action="{{$base_url}}/findjob_dev">
+			<form id="search_form" class="search-form" action="{{$base_url}}/findjob">
 			    <!--     
 				<td><input type="text" class="form-control" name="id" value="{{Request::input("id")}}"></td>
 				-->
