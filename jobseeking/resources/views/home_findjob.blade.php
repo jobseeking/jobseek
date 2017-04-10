@@ -1,8 +1,8 @@
 
 
 	
-<div id="home_search_table" >  
-	<table class="table table-striped grid-view-tbl">
+<div>  
+	<table id="home_search_table" class="table table-striped grid-view-tbl">
 	    
 	    <thead>
 		<tr class="header-row" style="color:#337ab7;">
