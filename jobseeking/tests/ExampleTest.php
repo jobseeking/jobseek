@@ -36,7 +36,7 @@ class ExampleTest extends TestCase
                                                         'classification_id' => '3',
                                                         'user_id' => '13'
                                                        ]);
-        $this->assertEquals("???", $response->content());
+        $this->assertContains("showjob", $response->content());
 
 
         /*             
