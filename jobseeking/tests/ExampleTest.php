@@ -35,8 +35,9 @@ class ExampleTest extends TestCase
                                                         'type_id' => '2',
                                                         'classification_id' => '3',
                                                         'user_id' => '13'
-                                                       ]);
-        $this->assertEquals(200, $response->status());
+                                                       ])
+                        ->seePageIs('showjob/*');
+        //$this->assertEquals(302, $response->status());
 
 
         /*             
