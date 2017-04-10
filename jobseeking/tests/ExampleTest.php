@@ -27,16 +27,16 @@ class ExampleTest extends TestCase
         */
 
 
-        $this->visit('/postjob')
-             ->type('unittest_job_name', 'name')
-             ->type('unittest_company', 'company')
-             ->type('20000', 'salary')
-             ->type('unittest_details', 'details')
-             ->select('1', 'location_id')
-             ->select('2', 'type_id')
-             ->select('3', 'classification_id')
-             ->press('Submit')
-             ->see('unittest_job_name');
+        $response = $this->call('POST', '/api/postjob', ['name' => 'unittest_job_name',
+                                                        'company' => 'unittest_company',
+                                                        'salary' => '20000',
+                                                        'details' => 'unittest_details',
+                                                        'location_id' => '1',
+                                                        'type_id' => '2',
+                                                        'classification_id' => '3',
+                                                        'user_id' => '13'
+                                                       ]);
+        $this->assertEquals(200, $response->status());
 
 
         /*             
