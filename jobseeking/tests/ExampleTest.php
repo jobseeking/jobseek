@@ -27,8 +27,8 @@ class ExampleTest extends TestCase
 
              
        $this->json('POST', '/api/authenticate', ['email' => 'rrr@rrr.rrr', 'password' => '123456'])
-            ->seeJson([
-                 'token' => '*',
+            ->seeJsonStructure([
+                 'token'                 
              ]);
 
     }
