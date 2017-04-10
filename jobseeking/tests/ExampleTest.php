@@ -18,18 +18,12 @@ class ExampleTest extends TestCase
              ->see('Home');
         */
 
-        /*
+        
         $this->visit('/findjob')
              ->type('hhh', 'name')
              ->press('search')
              ->seePageIs('/findjob?classification_id=&company=&details=&id=&location_id=&name=hhh&salary_bottom=0&salary_top=99999999999999&type_id=&user_name=');
-        */
-
-        $this->visit('/login')
-             ->type('rrr@rrr.rrr', 'Email')
-             ->type('123456', 'Password')
-             ->findByNameOrId('#login_btn')->click()
-             ->seePageIs('/');
+        
 
         /*             
        $this->json('POST', '/api/authenticate', ['email' => 'rrr@rrr.rrr', 'password' => '123456'])
