@@ -2,7 +2,7 @@
 
 	
 <div class="table-responsive">  
-	<table class="table table-striped grid-view-tbl" id="home_search_table">
+	<table class="table table-striped grid-view-tbl" id="home_search_table" style="table-layout: fixed;">
 	    
 	    <thead>
 		<tr class="header-row" style="color:#337ab7;">
