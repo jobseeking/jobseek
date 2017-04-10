@@ -26,7 +26,7 @@ class ExampleTest extends TestCase
         */
 
              
-       $this->json('POST', '/api/authenticate', ['email' => 'rrr@rrr.rrr', 'password' => '123456'])
+       $this->post( '/api/authenticate', ['email' => 'rrr@rrr.rrr', 'password' => '123456'])
             >seeJson([
                  'created' => true,
              ]);
