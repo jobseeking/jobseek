@@ -9,7 +9,7 @@
 
 5. "php artisan migrate"   (create DB table)
 
-6  config baseURL : (frontend baseURL.js) + (backend base Controller)
+6  config baseURL : (backend base Controller)
 
 
 
@@ -17,4 +17,14 @@
 No need : 
 "chmod -R 777 storage"
 "composer update"     (download 3rd party lib to /vendor)
+config frontend baseURL.js
+
+----------------------------------------------------------------
+
+[How to clone project to other path]
+1. cp -a src dest
+2. edit base url in base Controller  Ex : $base_url = "/test_jobseek/public";
+3. "sudo chown -R ubuntu:www-data test_jobseek"
+
+----------------------------------------------------------------
 
