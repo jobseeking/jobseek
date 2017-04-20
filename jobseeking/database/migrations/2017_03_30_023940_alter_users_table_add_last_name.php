@@ -12,10 +12,13 @@ class AlterUsersTableAddLastName extends Migration
      */
     public function up()
     {
-        Schema::table('users', function(Blueprint $table)
-        {
-            $table->string('last_name');
-        });
+        if (!Schema::hasColumn('users', 'last_name')) {
+            Schema::table('users', function(Blueprint $table)
+            {
+                $table->string('last_name');
+            });
+        }
+
     }
 
     /**
