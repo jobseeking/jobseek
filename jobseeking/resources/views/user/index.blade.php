@@ -18,6 +18,9 @@
 			{!!\Nvd\Crud\Html::sortableTh('created_at','user.index','Created At')!!}
 			{!!\Nvd\Crud\Html::sortableTh('updated_at','user.index','Updated At')!!}
 			{!!\Nvd\Crud\Html::sortableTh('last_name','user.index','Last Name')!!}
+			{!!\Nvd\Crud\Html::sortableTh('interest_classification_id','user.index','Interest Classification Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('interest_classification_id_2','user.index','Interest Classification Id 2')!!}
+			{!!\Nvd\Crud\Html::sortableTh('interest_classification_id_3','user.index','Interest Classification Id 3')!!}
 			<th></th>
 		</tr>
 		<tr class="search-row">
@@ -30,6 +33,9 @@
 				<td><input type="text" class="form-control" name="created_at" value="{{Request::input("created_at")}}"></td>
 				<td><input type="text" class="form-control" name="updated_at" value="{{Request::input("updated_at")}}"></td>
 				<td><input type="text" class="form-control" name="last_name" value="{{Request::input("last_name")}}"></td>
+				<td><input type="text" class="form-control" name="interest_classification_id" value="{{Request::input("interest_classification_id")}}"></td>
+				<td><input type="text" class="form-control" name="interest_classification_id_2" value="{{Request::input("interest_classification_id_2")}}"></td>
+				<td><input type="text" class="form-control" name="interest_classification_id_3" value="{{Request::input("interest_classification_id_3")}}"></td>
 				<td style="min-width: 6em;">@include('vendor.crud.single-page-templates.common.search-btn')</td>
 			</form>
 		</tr>
@@ -92,10 +98,37 @@
 							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
 							  >{{ $record->last_name }}</span>
 						</td>
+					<td>
+						<span class="editable"
+							  data-type="number"
+							  data-name="interest_classification_id"
+							  data-value="{{ $record->interest_classification_id }}"
+							  data-pk="{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
+							  >{{ $record->interest_classification_id }}</span>
+						</td>
+					<td>
+						<span class="editable"
+							  data-type="number"
+							  data-name="interest_classification_id_2"
+							  data-value="{{ $record->interest_classification_id_2 }}"
+							  data-pk="{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
+							  >{{ $record->interest_classification_id_2 }}</span>
+						</td>
+					<td>
+						<span class="editable"
+							  data-type="number"
+							  data-name="interest_classification_id_3"
+							  data-value="{{ $record->interest_classification_id_3 }}"
+							  data-pk="{{ $record->{$record->getKeyName()} }}"
+							  data-url="{{$base_url}}/user/{{ $record->{$record->getKeyName()} }}"
+							  >{{ $record->interest_classification_id_3 }}</span>
+						</td>
 					@include( 'vendor.crud.single-page-templates.common.actions', [ 'url' => $base_url.'/user', 'record' => $record ] )
 		    	</tr>
 			@empty
-				@include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 9])
+				@include ('vendor.crud.single-page-templates.common.not-found-tr',['colspan' => 12])
 	    	@endforelse
 	    </tbody>
 

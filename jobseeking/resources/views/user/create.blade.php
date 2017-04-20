@@ -24,6 +24,12 @@
 
                     {!! \Nvd\Crud\Form::input('last_name','text')->show() !!}
 
+                    {!! \Nvd\Crud\Form::input('interest_classification_id','text')->show() !!}
+
+                    {!! \Nvd\Crud\Form::input('interest_classification_id_2','text')->show() !!}
+
+                    {!! \Nvd\Crud\Form::input('interest_classification_id_3','text')->show() !!}
+
                     <input type="hidden" id="post_token_id" name="post_token" value="">
                     <button type="submit" class="btn btn-primary">Create</button>
 

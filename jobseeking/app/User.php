@@ -21,6 +21,9 @@ class User extends Authenticatable {
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
         \Request::input('updated_at') and $query->where('updated_at',\Request::input('updated_at'));
         \Request::input('last_name') and $query->where('last_name','like','%'.\Request::input('last_name').'%');
+        \Request::input('interest_classification_id') and $query->where('interest_classification_id',\Request::input('interest_classification_id'));
+        \Request::input('interest_classification_id_2') and $query->where('interest_classification_id_2',\Request::input('interest_classification_id_2'));
+        \Request::input('interest_classification_id_3') and $query->where('interest_classification_id_3',\Request::input('interest_classification_id_3'));
         
         // sort results
         \Request::input("sort") and $query->orderBy(\Request::input("sort"),\Request::input("sortType","asc"));
@@ -37,6 +40,9 @@ class User extends Authenticatable {
             'password' => 'required|string|max:255',
             'remember_token' => 'string|max:100',
             'last_name' => 'required|string|max:255',
+            'interest_classification_id' => 'required|integer',
+            'interest_classification_id_2' => 'required|integer',
+            'interest_classification_id_3' => 'required|integer',
         ];
 
         // no list is provided

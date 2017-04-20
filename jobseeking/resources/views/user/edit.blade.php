@@ -20,6 +20,12 @@
 
         {!! \Nvd\Crud\Form::input('last_name','text')->model($user)->show() !!}
 
+        {!! \Nvd\Crud\Form::input('interest_classification_id','text')->model($user)->show() !!}
+
+        {!! \Nvd\Crud\Form::input('interest_classification_id_2','text')->model($user)->show() !!}
+
+        {!! \Nvd\Crud\Form::input('interest_classification_id_3','text')->model($user)->show() !!}
+
         <button type="submit" class="btn btn-default">Submit</button>
 
     </form>
