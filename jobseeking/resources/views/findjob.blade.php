@@ -140,6 +140,8 @@
 				<td></td>
 				
 				<td style="min-width: 6em;">
+				    <input type="hidden" id="login_user" name="login_user" value="">
+
 				    <!--  Use "<input>" instead for phpunit test
 				    <button type="submit" class="fa fa-search form-control btn btn-primary"></button>
 				    -->
@@ -256,6 +258,14 @@
 
 
 <script>
+    function check_login_callback(is_login){
+        if(is_login){
+            document.getElementById("login_user").value = g_user.id; 
+        }else{
+            
+         
+        }
+    } 
 
 </script>
 @endsection
