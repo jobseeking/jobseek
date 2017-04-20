@@ -106,7 +106,9 @@
 		                    name : $('#FirstName').val(),
 		                    last_name: $('#LastName').val(),
 		                    email: $('#Email').val(),
-		                    password: $('#Password').val()
+		                    password: $('#Password').val(),
+		                    interest_classification_id: $('#interest_classification_id').val(),
+		                    interest_classification_id_2: $('#interest_classification_id_2').val()
 		                },
 		              contentType:"application/x-www-form-urlencoded",
 		              timeout: 9000, // in milliseconds
