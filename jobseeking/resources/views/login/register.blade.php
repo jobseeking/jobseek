@@ -187,6 +187,22 @@
 				</div>
 			  </div>
 			  
+
+
+			  <div class="form-group">
+		          <label for="classification" class="col-sm-2 control-label">Classification</label>
+		          <div class="col-sm-10">
+		            <select class="form-control" id="interest_classification_id" name="interest_classification_id">
+		              @foreach ( $classifications as $classification )
+		                <option value ="{{$classification->id}}" > {{$classification->name}} </option>
+		              @endforeach   
+		            </select>
+		          </div>
+		      </div>
+
+
+
+
 			  <div class="form-group">
 				<div class="col-xs-12">
 				  <button type="submit" class="btn btn-primary" onClick="javascript:return validateRegistForm()">Create Account</button>
