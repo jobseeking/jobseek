@@ -12,7 +12,7 @@ class AlterUsersTableAddInterest extends Migration
      */
     public function up()
     {
-        Schema::table('users', function(Blueprint $table)
+        Schema::table('users', function($table)
         {
             $table->integer('interest_classification_id')->unsigned();
             $table->foreign('interest_classification_id')->references('id')->on('classifications');
@@ -30,6 +30,10 @@ class AlterUsersTableAddInterest extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function ($table) {
+            $table->dropColumn('interest_classification_id');
+            $table->dropColumn('interest_classification_id_2');
+            $table->dropColumn('interest_classification_id_3');
+        });
     }
 }
