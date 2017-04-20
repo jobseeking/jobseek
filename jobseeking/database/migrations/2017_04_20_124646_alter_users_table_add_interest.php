@@ -12,7 +12,15 @@ class AlterUsersTableAddInterest extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('users', function(Blueprint $table)
+        {
+            $table->integer('interest_classification_id')->unsigned();
+            $table->foreign('interest_classification_id')->references('id')->on('classifications');
+            $table->integer('interest_classification_id_2')->unsigned();
+            $table->foreign('interest_classification_id_2')->references('id')->on('classifications');
+            $table->integer('interest_classification_id_3')->unsigned();
+            $table->foreign('interest_classification_id_3')->references('id')->on('classifications');
+        });
     }
 
     /**
