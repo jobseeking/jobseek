@@ -190,7 +190,7 @@
 
 
 			  <div class="form-group">
-		          <label for="classification" class="col-sm-2 control-label">Classification</label>
+		          <label for="classification" class="col-sm-2 control-label">Interest</label>
 		          <div class="col-sm-10">
 		            <select class="form-control" id="interest_classification_id" name="interest_classification_id">
 		              @foreach ( $classifications as $classification )
@@ -200,7 +200,16 @@
 		          </div>
 		      </div>
 
-
+			  <div class="form-group">
+		          <label for="classification" class="col-sm-2 control-label"> </label>
+		          <div class="col-sm-10">
+		            <select class="form-control" id="interest_classification_id_2" name="interest_classification_id_2">
+		              @foreach ( $classifications as $classification )
+		                <option value ="{{$classification->id}}" > {{$classification->name}} </option>
+		              @endforeach   
+		            </select>
+		          </div>
+		      </div>
 
 
 			  <div class="form-group">
