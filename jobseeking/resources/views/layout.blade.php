@@ -54,7 +54,7 @@
         <!--class="active"-->
         <a href="{{$base_url}}/">Home</a> |
         <a href="{{$base_url}}/postjob">Post job</a> |
-        <a href="{{$base_url}}/findjob">Find job</a> |
+        <a id="findjob_link" href="{{$base_url}}/findjob">Find job</a> |
         <a href="{{$base_url}}/aboutus">About us</a> |
         <a href="{{$base_url}}/contactus">Contact us</a>
     </div>
@@ -109,6 +109,9 @@
         }else{
             $("#login_link").css({ display: "none"});
             $("#logout_link").css({ display: "block"});
+
+            var findjob_link = $("#findjob_link").attr('href');
+            $("#findjob_link").attr("href", findjob_link + "?login_user=" + g_user.id);
         }
 
         if (typeof check_login_callback === "function") { 
