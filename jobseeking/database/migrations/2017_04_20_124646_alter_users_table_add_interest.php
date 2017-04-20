@@ -15,11 +15,11 @@ class AlterUsersTableAddInterest extends Migration
         if (!Schema::hasColumn('users', 'interest_classification_id')){
             Schema::table('users', function($table)
             {
-                $table->integer('interest_classification_id')->unsigned();
+                $table->integer('interest_classification_id')->unsigned()->default(1);
                 $table->foreign('interest_classification_id')->references('id')->on('classifications');
-                $table->integer('interest_classification_id_2')->unsigned();
+                $table->integer('interest_classification_id_2')->unsigned()->default(1);
                 $table->foreign('interest_classification_id_2')->references('id')->on('classifications');
-                $table->integer('interest_classification_id_3')->unsigned();
+                $table->integer('interest_classification_id_3')->unsigned()->default(1);
                 $table->foreign('interest_classification_id_3')->references('id')->on('classifications');
             });
         }
