@@ -46,14 +46,14 @@ class Job extends Model {
         // Check if login_user is provided :  
         if (empty($login_user_id))
         {
-            return NULL;
+            return array();
         }
 
         // Find user's interest
         $user = User::where('id', $login_user_id)->get();
         if(empty($user))
         {
-            return NULL;
+            return array();
         }
       
         // Find jobs based on user's interest
