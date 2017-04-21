@@ -51,7 +51,7 @@ class Job extends Model {
 
         // Find user's interest
         $user = User::where('id', $login_user_id)->get();
-        return $user;
+        return $user[0]['email'];
  /*     
         // Find jobs based on user's interest
         $query = Job::query();
