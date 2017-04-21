@@ -61,7 +61,7 @@ class Job extends Model {
         $jobs_1 = $query->where('classification_id', $user[0]['interest_classification_id'])->get();
         $jobs_2 = $query->where('classification_id', $user[0]['interest_classification_id_2'])->get();
 
-        return count($jobs_1);
+        return get_class($jobs_1);
 /*
         // Random select
         $records_suggested = array();
