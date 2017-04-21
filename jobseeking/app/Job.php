@@ -58,11 +58,18 @@ class Job extends Model {
       
         // Find jobs based on user's interest
         $query = Job::query();
-        return $query->where('classification_id', $user[0]['interest_classification_id'])->get();
+        $jobs_1 = $query->where('classification_id', $user[0]['interest_classification_id'])->get();
+        $jobs_2 = $query->where('classification_id_2', $user[0]['interest_classification_id_2'])->get();
 
+        // Random select
+        $records_suggested = array();
+        $rand_keys = array_rand($jobs_1, 2);
+        array_push($records_suggested, $jobs_1[$rand_keys[0]], $jobs_1[$rand_keys[1]]);
+        $rand_keys = array_rand($jobs_2, 2);
+        array_push($records_suggested, $jobs_2[$rand_keys[0]], $jobs_2[$rand_keys[1]]);
+        return $records_suggested;
+       
 /*
-        // Random select 
-
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
         \Request::input('updated_at') and $query->where('updated_at',\Request::input('updated_at'));
 
