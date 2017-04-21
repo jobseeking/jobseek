@@ -51,11 +51,16 @@ class Job extends Model {
 
         // Find user's interest
         $user = User::where('id', $login_user_id)->get();
-        return $user[0]['email'];
- /*     
+        if(empty($user))
+        {
+            return NULL;
+        }
+      
         // Find jobs based on user's interest
         $query = Job::query();
+        return $query->where('classification_id', $user[0]['interest_classification_id'])->get();
 
+/*
         // Random select 
 
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
