@@ -47,7 +47,8 @@
 
 <h2>Find Job</h2>
 
-	
+{{$records_suggested}}
+
 <div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
 	    

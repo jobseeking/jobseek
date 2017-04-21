@@ -176,6 +176,7 @@ class JobController extends Controller
         $classifications = Classification::all();
 
         $records = Job::find();
+        $records_suggested = Job::findSuggested();
 
         foreach ($records as $record) {
             $record->type_name = Type::find($record->type_id)->name;
@@ -185,6 +186,7 @@ class JobController extends Controller
         }
 
         return view("findjob", ['records' => $records,
+                                    'records_suggested' => $records_suggested,
                                     'types' => $types, 
                                     'locations' => $locations,
                                     'classifications' => $classifications

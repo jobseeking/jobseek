@@ -2,6 +2,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User; // Model
 
 class Job extends Model {
 
@@ -36,6 +37,36 @@ class Job extends Model {
 
         // paginate results
         return $query->paginate(15);
+    }
+
+    public static function findSuggested()
+    {
+        $login_user_id = \Request::input('login_user');
+
+        // Check if login_user is provided :  
+        if (empty($login_user_id))
+        {
+            return NULL;
+        }
+
+        // Find user's interest
+        $user = App\User::where('id', $login_user_id)->get();
+        return $user
+ /*     
+        // Find jobs based on user's interest
+        $query = Job::query();
+
+        // Random select 
+
+        \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
+        \Request::input('updated_at') and $query->where('updated_at',\Request::input('updated_at'));
+
+        // sort results
+        \Request::input("sort") and $query->orderBy(\Request::input("sort"),\Request::input("sortType","asc"));
+
+        // paginate results
+        return $query->paginate(15);
+*/
     }
 
     public static function findRequested()
