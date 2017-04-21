@@ -65,8 +65,9 @@ class Job extends Model {
 
         // Random select
         $records_suggested = $jobs_1->random(2)->all();
-        $records_suggested->push($jobs_2->random(2)->all());
-        return $records_suggested;
+        return gettype($records_suggested);
+        //$records_suggested->push($jobs_2->random(2)->all());
+        //return $records_suggested;
        
 /*
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
