@@ -64,8 +64,19 @@ class Job extends Model {
 
 
         // Random select
-        $records_suggested = $jobs_1->random(2)->all();
-        return array_merge($records_suggested, $jobs_2->random(2)->all());
+        if(count($jobs_1) >= 2 ){
+            $records_suggested_1 = $jobs_1->random(2)->all();
+        }else if (count($jobs_1) == 1){
+            $records_suggested_1 = $jobs_1->random(1)->all();
+        }
+        
+        if(count($jobs_2) >= 2 ){
+            $records_suggested_2 = $jobs_2->random(2)->all();
+        }else if (count($jobs_2) == 1){
+            $records_suggested_2 = $jobs_2->random(1)->all();
+        }
+
+        return array_merge($records_suggested_1, $records_suggested_2);
        
 /*
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
