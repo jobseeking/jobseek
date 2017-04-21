@@ -47,10 +47,12 @@
 
 <h2>Find Job</h2>
 
-@foreach ( $records_suggested as $record )
+@forelse ( $records_suggested as $record )
 	{{  $record->id }}
 	{{  $record->classification_name }}
-@endforeach  
+@empty
+
+@endforelse
 
 
 <div class="table-responsive">  
