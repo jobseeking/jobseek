@@ -48,8 +48,8 @@
 <h2>Find Job</h2>
 
 @foreach ( $records_suggested as $record )
-	{{  gettype($record) }}
-	{{  get_class($record) }}
+	{{  $record->id }}
+	{{  $record->classification_name }}
 @endforeach  
 
 
