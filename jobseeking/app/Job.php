@@ -68,12 +68,16 @@ class Job extends Model {
             $records_suggested_1 = $jobs_1->random(2)->all();
         }else if (count($jobs_1) == 1){
             $records_suggested_1 = $jobs_1->random(1)->all();
+        }else{
+            $records_suggested_1 = array();
         }
         
         if(count($jobs_2) >= 2 ){
             $records_suggested_2 = $jobs_2->random(2)->all();
         }else if (count($jobs_2) == 1){
             $records_suggested_2 = $jobs_2->random(1)->all();
+        }else{
+            $records_suggested_2 = array();
         }
 
         return array_merge($records_suggested_1, $records_suggested_2);
