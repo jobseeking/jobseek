@@ -47,7 +47,10 @@
 
 <h2>Find Job</h2>
 
-{{$records_suggested}}
+@foreach ( $records_suggested as $record )
+	{{ $record->name }}
+@endforeach  
+
 
 <div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
