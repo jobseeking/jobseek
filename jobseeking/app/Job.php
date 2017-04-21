@@ -57,11 +57,10 @@ class Job extends Model {
         }
       
         // Find jobs based on user's interest
-        $query = Job::query();
-        $jobs_1 = $query->where('classification_id', $user[0]['interest_classification_id'])->get();
-        $jobs_2 = $query->where('classification_id', $user[0]['interest_classification_id_2'])->get();
-
-
+        $query_1 = Job::query();
+        $query_2 = Job::query();
+        $jobs_1 = $query_1->where('classification_id', $user[0]['interest_classification_id'])->get();
+        $jobs_2 = $query_2->where('classification_id', $user[0]['interest_classification_id_2'])->get();
 
         // Random select
         if(count($jobs_1) >= 2 ){
