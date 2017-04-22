@@ -49,8 +49,10 @@
 
 
 
-<h2>Recommended Jobs</h2>
 
+
+@if ( count($records_suggested) != 0 )
+<h2>Recommended Jobs</h2>
 <div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
 	    
@@ -167,7 +169,7 @@
 	</table>
 
 </div>
-
+@endif
 
 
 
