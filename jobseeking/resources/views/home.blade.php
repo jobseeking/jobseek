@@ -66,7 +66,8 @@
 	function check_login_callback(is_login){
 		console.log(" home : check_login_callback : " + is_login);
 		if(is_login){
-			
+			var search_form_action = $("#search_form").attr('action');
+            $("#search_form").attr("action", search_form_action + "?rand=" + g_user.id);
 		}else{
 			
 		}
