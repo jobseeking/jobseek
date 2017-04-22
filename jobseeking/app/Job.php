@@ -41,7 +41,7 @@ class Job extends Model {
 
     public static function findSuggested()
     {
-        $login_user_id = \Request::input('login_user');
+        $login_user_id = \Request::input('rand');
 
         // Check if login_user is provided :  
         if (empty($login_user_id))

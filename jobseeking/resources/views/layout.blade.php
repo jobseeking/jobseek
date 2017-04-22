@@ -111,7 +111,7 @@
             $("#logout_link").css({ display: "block"});
 
             var findjob_link = $("#findjob_link").attr('href');
-            $("#findjob_link").attr("href", findjob_link + "?login_user=" + g_user.id);
+            $("#findjob_link").attr("href", findjob_link + "?rand=" + g_user.id);
         }
 
         if (typeof check_login_callback === "function") { 
