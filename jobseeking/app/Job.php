@@ -79,7 +79,7 @@ class Job extends Model {
             $records_suggested_2 = array();
         }
 
-        return array_merge($records_suggested_1, $records_suggested_2);
+        return array_merge((array)$records_suggested_1, (array)$records_suggested_2);
        
 /*
         \Request::input('created_at') and $query->where('created_at',\Request::input('created_at'));
