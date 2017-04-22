@@ -66,7 +66,7 @@ class Job extends Model {
         if($jobs_1->count() >= 2 ){
             $records_suggested_1 = $jobs_1->random(2)->all();
         }else if ($jobs_1->count() == 1){
-            $records_suggested_1 = $jobs_1->random(1)->all();
+            $records_suggested_1 = array($jobs_1[0]);
         }else{
             $records_suggested_1 = array();
         }
