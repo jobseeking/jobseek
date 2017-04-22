@@ -47,18 +47,30 @@
 
 
 
-@forelse ( $records_suggested as $record )
-	{{  $record->id }}
-	{{  $record->classification_name }}
-@empty
 
-@endforelse
 
-<h2>Jobs you might be interested...</h2>
+<h2>Your interests</h2>
 
 <div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
 	    
+	    <thead>
+		<tr class="header-row">
+			{!!\Nvd\Crud\Html::sortableTh('id','findjob','Id')!!}
+			{!!\Nvd\Crud\Html::sortableTh('name','findjob','Name')!!}
+			{!!\Nvd\Crud\Html::sortableTh('company','findjob','Company')!!}
+			{!!\Nvd\Crud\Html::sortableTh('salary','findjob','Salary')!!}
+			{!!\Nvd\Crud\Html::sortableTh('details','findjob','Details')!!}
+			{!!\Nvd\Crud\Html::sortableTh('location_id','findjob','Location')!!}
+			{!!\Nvd\Crud\Html::sortableTh('type_id','findjob','Type')!!}
+			{!!\Nvd\Crud\Html::sortableTh('classification_id','findjob','Classification')!!}
+			{!!\Nvd\Crud\Html::sortableTh('user_id','findjob','User')!!}
+			{!!\Nvd\Crud\Html::sortableTh('created_at','findjob','Created At')!!}
+
+			<th></th>
+		</tr>
+	    </thead>
+
 	    <tbody>
 	    	@forelse ( $records_suggested as $record )
 		    	<tr>
