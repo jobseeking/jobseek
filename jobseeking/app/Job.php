@@ -63,17 +63,17 @@ class Job extends Model {
         $jobs_2 = $query_2->where('classification_id', $user[0]['interest_classification_id_2'])->get();
 
         // Random select
-        if(count($jobs_1) >= 2 ){
+        if($jobs_1->count() >= 2 ){
             $records_suggested_1 = $jobs_1->random(2)->all();
-        }else if (count($jobs_1) == 1){
+        }else if ($jobs_1->count() == 1){
             $records_suggested_1 = $jobs_1->random(1)->all();
         }else{
             $records_suggested_1 = array();
         }
         
-        if(count($jobs_2) >= 2 ){
+        if($jobs_2->count() >= 2 ){
             $records_suggested_2 = $jobs_2->random(2)->all();
-        }else if (count($jobs_2) == 1){
+        }else if ($jobs_2->count() == 1){
             $records_suggested_2 = $jobs_2->random(1)->all();
         }else{
             $records_suggested_2 = array();
