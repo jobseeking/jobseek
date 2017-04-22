@@ -49,7 +49,7 @@
 
 
 
-<h2>Your interests</h2>
+<h2>Recommended Jobs</h2>
 
 <div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
@@ -177,7 +177,7 @@
 
 
 
-<h2>Find Job</h2>
+<h2>Find Jobs</h2>
 
 <div class="table-responsive">  
 	<table class="table table-striped grid-view-tbl">
