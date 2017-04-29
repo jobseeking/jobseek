@@ -113,7 +113,7 @@ class TokenAuthController extends Controller
 
         return view('login.register',[
                                       'classifications' => $classifications,
-                                      'location' => $locations
+                                      'locations' => $locations
                                      ]);
     }
 
