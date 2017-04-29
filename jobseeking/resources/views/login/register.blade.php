@@ -149,10 +149,13 @@
 
 
 		function onSelectInterestChange(){
-			if (document.getElementById("interest_classification_id").value == 1){
+
+			var interest_classification_id = document.getElementById("interest_classification_id").value;
+
+			if (interest_classification_id == 1){
 				$("#skill_experience_1").css({ display: "block" });
 	            $("#skill_experience_2").css({ display: "none"  });
-			}else if (document.getElementById("interest_classification_id").value == 2) {
+			}else if (interest_classification_id == 2) {
 				$("#skill_experience_1").css({ display: "none" });
 	            $("#skill_experience_2").css({ display: "block"  });
 			}
