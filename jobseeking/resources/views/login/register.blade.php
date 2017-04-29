@@ -150,7 +150,11 @@
 
 		function onSelectInterestChange(){
 			if (document.getElementById("interest_classification_id").value == 1){
-
+				$("#skill_experience_1").css({ display: "block" });
+	            $("#skill_experience_2").css({ display: "none"  });
+			}else if (document.getElementById("interest_classification_id").value == 2) {
+				$("#skill_experience_1").css({ display: "none" });
+	            $("#skill_experience_2").css({ display: "block"  });
 			}
 		}
 
