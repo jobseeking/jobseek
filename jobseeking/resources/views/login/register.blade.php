@@ -202,11 +202,25 @@
 		          </div>
 		          <div class="col-sm-5">
 		            <select class="form-control" >
-		             
-		                <option value ="" > Java </option>
-		                <option value ="" > .NET </option>
-		                <option value ="" > PHP </option>
-		            
+		                <option value ="" > Java Experience </option>
+		                <option value ="" > Java < 1 year </option>
+		                <option value ="" > Java 1 ~ 3 years </option>
+		                <option value ="" > Java 3 ~ 5 years </option>
+		                <option value ="" > Java > 5 years </option>
+		            </select>
+		            <select class="form-control" >
+		                <option value ="" > .NET Experience </option>
+		                <option value ="" > .NET < 1 year </option>
+		                <option value ="" > .NET 1 ~ 3 years </option>
+		                <option value ="" > .NET 3 ~ 5 years </option>
+		                <option value ="" > .NET > 5 years </option>
+		            </select>
+		            <select class="form-control" >
+		                <option value ="" > PHP Experience </option>
+		                <option value ="" > PHP < 1 year </option>
+		                <option value ="" > PHP 1 ~ 3 years </option>
+		                <option value ="" > PHP 3 ~ 5 years </option>
+		                <option value ="" > PHP > 5 years </option>
 		            </select>
 		          </div>
 		      </div>
