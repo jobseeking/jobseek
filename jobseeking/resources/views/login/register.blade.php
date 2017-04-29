@@ -210,6 +210,18 @@
 	          </div>
 
 			  <div class="form-group">
+		          <label for="education" class="col-sm-2 control-label">Education</label>
+		          <div class="col-sm-10">
+		            <select class="form-control" name="education_id">
+		                <option value ="" > No Degree </option> 
+		                <option value ="" > Bachelor's Degree </option> 
+		                <option value ="" > Master's degree </option> 
+		                <option value ="" > Doctor's degree </option> 
+		            </select>
+		          </div>
+	          </div>
+
+			  <div class="form-group">
 		          <label for="classification" class="col-sm-2 control-label">Interest</label>
 		          <div class="col-sm-5">
 		            <select class="form-control" id="interest_classification_id" name="interest_classification_id" onchange="onSelectInterestChange()">
