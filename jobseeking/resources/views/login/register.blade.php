@@ -148,6 +148,11 @@
 		}
 
 
+		function onSelectInterestChange(){
+			if (document.getElementById("interest_classification_id").value == 1){
+
+			}
+		}
 
 	</script>
 
@@ -194,13 +199,13 @@
 			  <div class="form-group">
 		          <label for="classification" class="col-sm-2 control-label">Interest</label>
 		          <div class="col-sm-5">
-		            <select class="form-control" id="interest_classification_id" name="interest_classification_id">
+		            <select class="form-control" id="interest_classification_id" name="interest_classification_id" onchange="onSelectInterestChange()">
 		              @foreach ( $classifications as $classification )
 		                <option value ="{{$classification->id}}" > {{$classification->name}} </option>
 		              @endforeach   
 		            </select>
 		          </div>
-		          <div class="col-sm-5">
+		          <div class="col-sm-5" id = "skill_experience_1">
 		            <select class="form-control" >
 		                <option value ="" > Java Experience </option>
 		                <option value ="" > Java < 1 year </option>
@@ -221,6 +226,29 @@
 		                <option value ="" > PHP 1 ~ 3 years </option>
 		                <option value ="" > PHP 3 ~ 5 years </option>
 		                <option value ="" > PHP > 5 years </option>
+		            </select>
+		          </div>
+		          <div class="col-sm-5" id = "skill_experience_2" style="display:none" >
+		            <select class="form-control" >
+		                <option value ="" > Audit Experience </option>
+		                <option value ="" > Audit < 1 year </option>
+		                <option value ="" > Audit 1 ~ 3 years </option>
+		                <option value ="" > Audit 3 ~ 5 years </option>
+		                <option value ="" > Audit > 5 years </option>
+		            </select>
+		            <select class="form-control" >
+		                <option value ="" > Payroll Experience </option>
+		                <option value ="" > Payroll < 1 year </option>
+		                <option value ="" > Payroll 1 ~ 3 years </option>
+		                <option value ="" > Payroll 3 ~ 5 years </option>
+		                <option value ="" > Payroll > 5 years </option>
+		            </select>
+		            <select class="form-control" >
+		                <option value ="" > Tax Experience </option>
+		                <option value ="" > Tax < 1 year </option>
+		                <option value ="" > Tax 1 ~ 3 years </option>
+		                <option value ="" > Tax 3 ~ 5 years </option>
+		                <option value ="" > Tax > 5 years </option>
 		            </select>
 		          </div>
 		      </div>
