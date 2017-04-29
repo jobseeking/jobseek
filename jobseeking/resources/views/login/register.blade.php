@@ -211,21 +211,21 @@
 		          </div>
 		          <div class="col-sm-5" id = "skill_experience_1">
 		            <select class="form-control" >
-		                <option value ="" > Java Experience </option>
+		                <option value ="" > Java No Experience </option>
 		                <option value ="" > Java < 1 year </option>
 		                <option value ="" > Java 1 ~ 3 years </option>
 		                <option value ="" > Java 3 ~ 5 years </option>
 		                <option value ="" > Java > 5 years </option>
 		            </select>
 		            <select class="form-control" >
-		                <option value ="" > .NET Experience </option>
+		                <option value ="" > .NET No Experience </option>
 		                <option value ="" > .NET < 1 year </option>
 		                <option value ="" > .NET 1 ~ 3 years </option>
 		                <option value ="" > .NET 3 ~ 5 years </option>
 		                <option value ="" > .NET > 5 years </option>
 		            </select>
 		            <select class="form-control" >
-		                <option value ="" > PHP Experience </option>
+		                <option value ="" > PHP No Experience </option>
 		                <option value ="" > PHP < 1 year </option>
 		                <option value ="" > PHP 1 ~ 3 years </option>
 		                <option value ="" > PHP 3 ~ 5 years </option>
@@ -234,21 +234,21 @@
 		          </div>
 		          <div class="col-sm-5" id = "skill_experience_2" style="display:none" >
 		            <select class="form-control" >
-		                <option value ="" > Audit Experience </option>
+		                <option value ="" > Audit No Experience </option>
 		                <option value ="" > Audit < 1 year </option>
 		                <option value ="" > Audit 1 ~ 3 years </option>
 		                <option value ="" > Audit 3 ~ 5 years </option>
 		                <option value ="" > Audit > 5 years </option>
 		            </select>
 		            <select class="form-control" >
-		                <option value ="" > Payroll Experience </option>
+		                <option value ="" > Payroll No Experience </option>
 		                <option value ="" > Payroll < 1 year </option>
 		                <option value ="" > Payroll 1 ~ 3 years </option>
 		                <option value ="" > Payroll 3 ~ 5 years </option>
 		                <option value ="" > Payroll > 5 years </option>
 		            </select>
 		            <select class="form-control" >
-		                <option value ="" > Tax Experience </option>
+		                <option value ="" > Tax No Experience </option>
 		                <option value ="" > Tax < 1 year </option>
 		                <option value ="" > Tax 1 ~ 3 years </option>
 		                <option value ="" > Tax 3 ~ 5 years </option>
