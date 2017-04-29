@@ -224,7 +224,7 @@
 		            </select>
 		          </div>
 		      </div>
-
+<!--
 			  <div class="form-group">
 		          <label for="classification" class="col-sm-2 control-label"> </label>
 		          <div class="col-sm-10">
@@ -235,7 +235,7 @@
 		            </select>
 		          </div>
 		      </div>
-
+-->
 
 			  <div class="form-group">
 				<div class="col-xs-12">
