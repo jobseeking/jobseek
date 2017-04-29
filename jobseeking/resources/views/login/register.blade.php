@@ -198,7 +198,16 @@
 				</div>
 			  </div>
 			  
-
+			  <div class="form-group">
+		          <label for="location" class="col-sm-2 control-label">Location</label>
+		          <div class="col-sm-10">
+		            <select class="form-control" name="location_id">
+		              @foreach ( $locations as $location )
+		                <option value ="{{$location->id}}" > {{$location->name}} </option> 
+		              @endforeach
+		            </select>
+		          </div>
+	          </div>
 
 			  <div class="form-group">
 		          <label for="classification" class="col-sm-2 control-label">Interest</label>

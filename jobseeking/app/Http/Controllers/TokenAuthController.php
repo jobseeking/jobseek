@@ -108,10 +108,12 @@ class TokenAuthController extends Controller
     }
 
     public function register_page(Request $request){
+        $locations = Location::all();
         $classifications = Classification::all();
 
         return view('login.register',[
-                                      'classifications' => $classifications
+                                      'classifications' => $classifications,
+                                      'location' => $locations
                                      ]);
     }
 
