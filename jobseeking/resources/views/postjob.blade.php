@@ -88,6 +88,18 @@
         </div>
 
         <div class="form-group">
+          <label for="education" class="col-sm-2 control-label">Education</label>
+          <div class="col-sm-10">
+            <select class="form-control" name="education_id">
+                <option value ="" > No Degree </option> 
+                <option value ="" > Bachelor's Degree </option> 
+                <option value ="" > Master's degree </option> 
+                <option value ="" > Doctor's degree </option> 
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
           <label for="worktype" class="col-sm-2 control-label">Work type</label>
           <div class="col-sm-10">
             <select class="form-control" name="type_id">
@@ -100,13 +112,61 @@
 
         <div class="form-group">
           <label for="classification" class="col-sm-2 control-label">Classification</label>
-          <div class="col-sm-10">
-            <select class="form-control" name="classification_id">
+          <div class="col-sm-5">
+            <select class="form-control" id="classification_id" name="classification_id" onchange="onSelectInterestChange()">
               @foreach ( $classifications as $classification )
                 <option value ="{{$classification->id}}" > {{$classification->name}} </option>
               @endforeach   
             </select>
           </div>
+
+          <div class="col-sm-5" id = "skill_experience_1">
+            <select class="form-control" >
+                <option value ="" > Java No Experience </option>
+                <option value ="" > Java < 1 year </option>
+                <option value ="" > Java 1 ~ 3 years </option>
+                <option value ="" > Java 3 ~ 5 years </option>
+                <option value ="" > Java > 5 years </option>
+            </select>
+            <select class="form-control" >
+                <option value ="" > .NET No Experience </option>
+                <option value ="" > .NET < 1 year </option>
+                <option value ="" > .NET 1 ~ 3 years </option>
+                <option value ="" > .NET 3 ~ 5 years </option>
+                <option value ="" > .NET > 5 years </option>
+            </select>
+            <select class="form-control" >
+                <option value ="" > PHP No Experience </option>
+                <option value ="" > PHP < 1 year </option>
+                <option value ="" > PHP 1 ~ 3 years </option>
+                <option value ="" > PHP 3 ~ 5 years </option>
+                <option value ="" > PHP > 5 years </option>
+            </select>
+          </div>
+          <div class="col-sm-5" id = "skill_experience_2" style="display:none" >
+            <select class="form-control" >
+                <option value ="" > Audit No Experience </option>
+                <option value ="" > Audit < 1 year </option>
+                <option value ="" > Audit 1 ~ 3 years </option>
+                <option value ="" > Audit 3 ~ 5 years </option>
+                <option value ="" > Audit > 5 years </option>
+            </select>
+            <select class="form-control" >
+                <option value ="" > Payroll No Experience </option>
+                <option value ="" > Payroll < 1 year </option>
+                <option value ="" > Payroll 1 ~ 3 years </option>
+                <option value ="" > Payroll 3 ~ 5 years </option>
+                <option value ="" > Payroll > 5 years </option>
+            </select>
+            <select class="form-control" >
+                <option value ="" > Tax No Experience </option>
+                <option value ="" > Tax < 1 year </option>
+                <option value ="" > Tax 1 ~ 3 years </option>
+                <option value ="" > Tax 3 ~ 5 years </option>
+                <option value ="" > Tax > 5 years </option>
+            </select>
+          </div>
+
         </div>
 
         <input type="hidden" id="input_user_id" name="user_id" value="">
@@ -130,6 +190,18 @@
 
 
 <script>
+
+    function onSelectInterestChange(){
+      if (document.getElementById("classification_id").value == 1){
+        $("#skill_experience_1").css({ display: "block" });
+              $("#skill_experience_2").css({ display: "none"  });
+      }else if (document.getElementById("interest_classification_id").value == 2) {
+        $("#skill_experience_1").css({ display: "none" });
+              $("#skill_experience_2").css({ display: "block"  });
+      }
+    }
+
+
     function check_login_callback(is_login){
         if(is_login){
             $("#post_form_id").css({ display: "block"});
