@@ -193,11 +193,20 @@
 
 			  <div class="form-group">
 		          <label for="classification" class="col-sm-2 control-label">Interest</label>
-		          <div class="col-sm-10">
+		          <div class="col-sm-5">
 		            <select class="form-control" id="interest_classification_id" name="interest_classification_id">
 		              @foreach ( $classifications as $classification )
 		                <option value ="{{$classification->id}}" > {{$classification->name}} </option>
 		              @endforeach   
+		            </select>
+		          </div>
+		          <div class="col-sm-5">
+		            <select class="form-control" >
+		             
+		                <option value ="" > Java </option>
+		                <option value ="" > .NET </option>
+		                <option value ="" > PHP </option>
+		            
 		            </select>
 		          </div>
 		      </div>
