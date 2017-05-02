@@ -20,7 +20,7 @@
 			  <div class="form-group">
 			    <label for="">Please tell us what your enquiry to</label>
 			    <select class="form-control">
-			    	<option>Combox</option>
+			    	<option>Feedback</option>
 			    </select>
 			  </div>
 
@@ -53,7 +53,7 @@
 			<h4>Location</h4>
 
 			<p>
-				xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x xx x xx  xxx x xx x 
+				124 La Trobe Street, Melbourne, Victoria, 3000
 			</p>
 		</div>
 	</div>
