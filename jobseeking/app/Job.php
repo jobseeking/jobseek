@@ -97,7 +97,7 @@ class Job extends Model {
             $job['points'] = $points;
         }
        
-        $recommended_jobs = $jobs->sortByDesc('points')->all;
+        $recommended_jobs = $jobs->sortByDesc('points')->all();
         return $recommended_jobs;
     }
 
