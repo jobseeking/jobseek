@@ -152,6 +152,10 @@
 
 			var interest_classification_id = document.getElementById("interest_classification_id").value;
 
+            $(".skills_div").css({ display: "none"  });
+            $("classification_"+interest_classification_id+"_skill").css({ display: "block"  });
+    
+            /*
 			if (interest_classification_id == 1){
 				$("#skill_experience_1").css({ display: "block" });
 	            $("#skill_experience_2").css({ display: "none"  });
@@ -159,6 +163,8 @@
 				$("#skill_experience_1").css({ display: "none" });
 	            $("#skill_experience_2").css({ display: "block"  });
 			}
+			*/
+
 		}
 
 	</script>
@@ -233,52 +239,54 @@
 		              @endforeach   
 		            </select>
 		          </div>
-		          <div class="col-sm-5" id = "skill_experience_1">
-		            <select class="form-control" >
-		                <option value ="" > Java No Experience </option>
-		                <option value ="" > Java < 1 year </option>
-		                <option value ="" > Java 1 ~ 3 years </option>
-		                <option value ="" > Java 3 ~ 5 years </option>
-		                <option value ="" > Java > 5 years </option>
-		            </select>
-		            <select class="form-control" >
-		                <option value ="" > .NET No Experience </option>
-		                <option value ="" > .NET < 1 year </option>
-		                <option value ="" > .NET 1 ~ 3 years </option>
-		                <option value ="" > .NET 3 ~ 5 years </option>
-		                <option value ="" > .NET > 5 years </option>
-		            </select>
-		            <select class="form-control" >
-		                <option value ="" > PHP No Experience </option>
-		                <option value ="" > PHP < 1 year </option>
-		                <option value ="" > PHP 1 ~ 3 years </option>
-		                <option value ="" > PHP 3 ~ 5 years </option>
-		                <option value ="" > PHP > 5 years </option>
-		            </select>
-		          </div>
-		          <div class="col-sm-5" id = "skill_experience_2" style="display:none" >
-		            <select class="form-control" >
-		                <option value ="" > Audit No Experience </option>
-		                <option value ="" > Audit < 1 year </option>
-		                <option value ="" > Audit 1 ~ 3 years </option>
-		                <option value ="" > Audit 3 ~ 5 years </option>
-		                <option value ="" > Audit > 5 years </option>
-		            </select>
-		            <select class="form-control" >
-		                <option value ="" > Payroll No Experience </option>
-		                <option value ="" > Payroll < 1 year </option>
-		                <option value ="" > Payroll 1 ~ 3 years </option>
-		                <option value ="" > Payroll 3 ~ 5 years </option>
-		                <option value ="" > Payroll > 5 years </option>
-		            </select>
-		            <select class="form-control" >
-		                <option value ="" > Tax No Experience </option>
-		                <option value ="" > Tax < 1 year </option>
-		                <option value ="" > Tax 1 ~ 3 years </option>
-		                <option value ="" > Tax 3 ~ 5 years </option>
-		                <option value ="" > Tax > 5 years </option>
-		            </select>
-		          </div>
+
+
+		          @foreach ( $classifications as $classification )
+		              @if ( $classification->id == 1)
+		              <div class="col-sm-5 skills_div" id="classification_{{$classification->id}}_skill" >
+		              @else
+		              <div class="col-sm-5 skills_div" id="classification_{{$classification->id}}_skill" style="display:none" >
+		              @endif
+
+		              @foreach ( $classification_skills as $classification_skill )
+		                  @if ( $classification->id == 
+		                        $classification_skill->classification_id)
+				              <select class="form-control" name="classification_skill_{{$classification_skill->id}}">
+					              <option value ="0" > {{$classification_skill->name}} No Experience </option>
+					              <option value ="1" > {{$classification_skill->name}} < 1 year </option>
+					              <option value ="3" > {{$classification_skill->name}} 1 ~ 3 years </option>
+					              <option value ="5" > {{$classification_skill->name}} 3 ~ 5 years </option>
+					              <option value ="10"> {{$classification_skill->name}} > 5 years </option>
+					          </select>
+		                  @endif
+		              @endforeach  
+		              </div> 
+		          @endforeach   
+		          <!--
+			          <div class="col-sm-5" id = "skill_experience_1">
+			            <select class="form-control" >
+			                <option value ="" > Java No Experience </option>
+			                <option value ="" > Java < 1 year </option>
+			                <option value ="" > Java 1 ~ 3 years </option>
+			                <option value ="" > Java 3 ~ 5 years </option>
+			                <option value ="" > Java > 5 years </option>
+			            </select>
+			            <select class="form-control" >
+			                <option value ="" > .NET No Experience </option>
+			                <option value ="" > .NET < 1 year </option>
+			                <option value ="" > .NET 1 ~ 3 years </option>
+			                <option value ="" > .NET 3 ~ 5 years </option>
+			                <option value ="" > .NET > 5 years </option>
+			            </select>
+			            <select class="form-control" >
+			                <option value ="" > PHP No Experience </option>
+			                <option value ="" > PHP < 1 year </option>
+			                <option value ="" > PHP 1 ~ 3 years </option>
+			                <option value ="" > PHP 3 ~ 5 years </option>
+			                <option value ="" > PHP > 5 years </option>
+			            </select>
+			          </div>
+		          -->
 		      </div>
 <!--
 			  <div class="form-group">

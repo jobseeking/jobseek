@@ -10,6 +10,7 @@ use DB;
 use App\Classification; // Model
 use App\Type;  // Model
 use App\Location; // Model
+use App\ClassificationSkill; // Model
 
 use App\Http\Controllers\Controller;
 use JWTAuth;
@@ -110,6 +111,7 @@ class TokenAuthController extends Controller
     public function register_page(Request $request){
         $locations = Location::all();
         $classifications = Classification::all();
+        $classification_skills = ClassificationSkill::all();
 
         return view('login.register',[
                                       'classifications' => $classifications,

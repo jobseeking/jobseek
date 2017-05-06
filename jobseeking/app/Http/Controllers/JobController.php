@@ -10,6 +10,8 @@ use App\Type;  // Model
 use App\Location; // Model
 use App\Job; // Model
 use App\User; // Model
+use App\ClassificationSkill; // Model
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -121,7 +123,8 @@ class JobController extends Controller
         $types = Type::all();
         $locations = Location::all();
         $classifications = Classification::all();
-
+        $classification_skills = ClassificationSkill::all();
+        
         return view('postjob', ['types' => $types, 
                                 'locations' => $locations,
                                 'classifications' => $classifications
