@@ -12,8 +12,8 @@ class CreateJobSkillExperienceTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('job_skill_experience')){
-            Schema::create('job_skill_experience', function (Blueprint $table) {
+        if (!Schema::hasTable('job_skill_experiences')){
+            Schema::create('job_skill_experiences', function (Blueprint $table) {
                 $table->increments('id');
                
                 $table->integer('job_id')->unsigned();

@@ -12,8 +12,8 @@ class CreateUserSkillExperienceTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('user_skill_experience')){
-            Schema::create('user_skill_experience', function (Blueprint $table) {
+        if (!Schema::hasTable('user_skill_experiences')){
+            Schema::create('user_skill_experiences', function (Blueprint $table) {
                 $table->increments('id');
                
                 $table->integer('user_id')->unsigned();
