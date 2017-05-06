@@ -12,6 +12,7 @@ class AlterUsersJobsTableAddEducationLocation extends Migration
      */
     public function up()
     {
+        /*
         if (!Schema::hasColumn('users', 'location_id')) {
             Schema::table('users', function(Blueprint $table)
             {
@@ -27,7 +28,8 @@ class AlterUsersJobsTableAddEducationLocation extends Migration
                 $table->foreign('education_id')->references('id')->on('education');
             });
         }
-
+*/
+        
         if (!Schema::hasColumn('jobs', 'education_id')) {
             Schema::table('jobs', function(Blueprint $table)
             {
