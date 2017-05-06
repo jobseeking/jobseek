@@ -76,9 +76,6 @@ class TokenAuthController extends Controller
     // parse the request and create a new User in the database hashing the password
     public function register(Request $request){
  
-        $newuser= $request->all();
-
-
         // Check email existence : 
         $query_result = DB::select("SELECT * FROM users WHERE email = '".$request->input('email')."'");
         if($query_result){
@@ -87,12 +84,13 @@ class TokenAuthController extends Controller
         }
 
 
-        $password=Hash::make($request->input('password'));
-        $newuser['password'] = $password;
- 
 
         // Create user in TABLE "users"
+        $newuser = $request->only(["name", "last_name", "email", "password", "interest_classification_id", "location_id", "education_id"]);
+        $password=Hash::make($request->input('password'));
+        $newuser['password'] = $password;
         $user_created = User::create($newuser);
+
 
         // Create user's skill/experiecne in TABLE "user_skill_experiences" 
                 // Create skill/experience to TABLE "job_skill_experiences"
