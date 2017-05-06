@@ -41,3 +41,4 @@ Route::resource('type','TypeController');
 Route::resource('classification','ClassificationController');
 Route::resource('job','JobController');
 Route::resource('education','EducationController');
+Route::resource('classification-skill','ClassificationSkillController');
