@@ -3,11 +3,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User; // Model
+use App\JobSkillExperience; // Model
+use App\UserSkillExperience; // Model
 
 class Job extends Model {
 
     public $guarded = ["id","created_at","updated_at"];
 
+    // For manually search (used by find job page)
     public static function find()
     {
         $query = Job::query();
@@ -39,6 +42,67 @@ class Job extends Model {
         return $query->paginate(15);
     }
 
+    // Recommended Jobs (with Algorithm)
+    public static function findRecommended()
+    {
+        $login_user_id = \Request::input('rand');
+
+        // Check if login_user is provided :  
+        if (empty($login_user_id))
+        {
+            return array();
+        }
+
+        // Find user
+        $user = User::where('id', $login_user_id)->get();
+        if(empty($user))
+        {
+            return array();
+        }
+      
+        // Find user's skills
+        $user_skills = UserSkillExperience::query()->where('user_id', $login_user_id)->get();
+
+        // Find jobs based on user's interest
+        $query = Job::query();
+        $jobs = $query->where('classification_id', $user[0]['interest_classification_id'])->get();
+      
+        foreach ($jobs as $job) {
+            $points = 0;
+            // Find job's skill
+            $job_skills = JobSkillExperience::query()->where('job_id', $job->id)->get();
+
+            // Skill match?
+            foreach ($user_skills as $user_skill) {
+                foreach ($job_skills as $job_skill) {
+                    if($user_skill->skill_id == $job_skill->skill_id){
+                        if($user_skill->experience_years >= $job_skill->experience_years){
+                            // skill match
+                            $points += 10;
+                        }
+                    }
+                }
+            }
+
+            // Location match?
+            if($job->location_id == $user[0]->location_id){
+                $points += 30;
+            }
+
+            // Education match?
+            if($job->education_id == $user[0]->education_id){
+                $points += 10;
+            }
+
+            $job['points'] = $points;
+        }
+       
+        $recommended_jobs = $jobs->sortByDesc('points')->all;
+        return $recommended_jobs;
+    }
+
+
+    // For random recommended based on user's interest
     public static function findSuggested()
     {
         $login_user_id = \Request::input('rand');
@@ -93,6 +157,7 @@ class Job extends Model {
 */
     }
 
+    // For manually search (basic)
     public static function findRequested()
     {
         $query = Job::query();
