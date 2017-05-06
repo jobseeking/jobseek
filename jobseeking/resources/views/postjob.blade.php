@@ -195,7 +195,7 @@
 <script>
 
     function onSelectInterestChange(){
-      var classification_id = document.getElementById("classification_id").value;
+      var interest_classification_id = document.getElementById("classification_id").value;
 
       $(".skills_display").css({ display: "none"  });
       $(".skills_display").removeClass("skills_display");
