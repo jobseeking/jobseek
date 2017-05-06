@@ -151,7 +151,10 @@ class JobController extends Controller
 
 //   [validation] Option 2 to handle input error : this method will redirect back to the input view page with $errors
         $validate_return = $this->validate($request, Job::validationRules());
-        $create_return = Job::create($request->all());
+
+
+        $input = $request->only(["name", "company", "salary", "details", "location_id", "education_id", "type_id", "classification_id", "user_id"]);
+        $create_return = Job::create($input);
         
         Log::info('postjob_api create_return: '.$create_return);
 
