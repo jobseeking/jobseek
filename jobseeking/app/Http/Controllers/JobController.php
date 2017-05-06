@@ -127,7 +127,8 @@ class JobController extends Controller
         
         return view('postjob', ['types' => $types, 
                                 'locations' => $locations,
-                                'classifications' => $classifications
+                                'classifications' => $classifications,
+                                'classification_skills' => $classification_skills,
                                ]); 
     }
 

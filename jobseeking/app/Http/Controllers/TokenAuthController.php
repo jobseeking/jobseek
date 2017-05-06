@@ -115,6 +115,7 @@ class TokenAuthController extends Controller
 
         return view('login.register',[
                                       'classifications' => $classifications,
+                                      'classification_skills' => $classification_skills,
                                       'locations' => $locations
                                      ]);
     }
