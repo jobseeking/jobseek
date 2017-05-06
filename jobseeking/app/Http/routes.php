@@ -40,3 +40,4 @@ Route::resource('location','LocationController');
 Route::resource('type','TypeController');
 Route::resource('classification','ClassificationController');
 Route::resource('job','JobController');
+Route::resource('education','EducationController');
