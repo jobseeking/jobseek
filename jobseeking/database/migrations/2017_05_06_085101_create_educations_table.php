@@ -12,8 +12,8 @@ class CreateEducationsTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('educations')){
-            Schema::create('educations', function (Blueprint $table) {
+        if (!Schema::hasTable('education')){
+            Schema::create('education', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name');
                 $table->timestamps();
