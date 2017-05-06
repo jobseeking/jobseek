@@ -155,8 +155,8 @@
             $(".skills_display").css({ display: "none"  });
             $(".skills_display").removeClass("skills_display");
 
-            $("classification_"+interest_classification_id+"_skill").css({ display: "block"  });
-            $("classification_"+interest_classification_id+"_skill").addClass("skills_display");
+            $("#classification_"+interest_classification_id+"_skill").css({ display: "block"  });
+            $("#classification_"+interest_classification_id+"_skill").addClass("skills_display");
             console.log("display block id : " + "classification_"+interest_classification_id+"_skill");
       
             /*
