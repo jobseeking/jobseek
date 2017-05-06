@@ -157,7 +157,8 @@
 
             $("classification_"+interest_classification_id+"_skill").css({ display: "block"  });
             $("classification_"+interest_classification_id+"_skill").addClass("skills_display");
-
+            console.log("display block id : " + "classification_"+interest_classification_id+"_skill");
+      
             /*
 			if (interest_classification_id == 1){
 				$("#skill_experience_1").css({ display: "block" });
