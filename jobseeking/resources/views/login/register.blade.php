@@ -108,7 +108,9 @@
 		                    email: $('#Email').val(),
 		                    password: $('#Password').val(),
 		                    interest_classification_id: $('#interest_classification_id').val(),
-		                    interest_classification_id_2: $('#interest_classification_id_2').val()
+		                    interest_classification_id_2: $('#interest_classification_id_2').val(),
+		                    location_id: $('#location_id').val(),
+		                    education_id: $('#education_id').val()
 		                },
 		              contentType:"application/x-www-form-urlencoded",
 		              timeout: 9000, // in milliseconds
@@ -203,7 +205,7 @@
 			  <div class="form-group">
 		          <label for="location" class="col-sm-2 control-label">Location</label>
 		          <div class="col-sm-10">
-		            <select class="form-control" name="location_id">
+		            <select class="form-control" id="location_id" name="location_id">
 		              @foreach ( $locations as $location )
 		                <option value ="{{$location->id}}" > {{$location->name}} </option> 
 		              @endforeach
@@ -214,7 +216,7 @@
 			  <div class="form-group">
 		          <label for="education" class="col-sm-2 control-label">Education</label>
 		          <div class="col-sm-10">
-		            <select class="form-control" name="education_id">
+		            <select class="form-control" id="education_id" name="education_id">
 		              @foreach ( $educations as $education )
 		                <option value ="{{$education->id}}" > {{$education->name}} </option> 
 		              @endforeach
