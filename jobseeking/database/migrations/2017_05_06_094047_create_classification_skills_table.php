@@ -12,7 +12,18 @@ class CreateClassificationSkillsTable extends Migration
      */
     public function up()
     {
-        //
+        if (!Schema::hasTable('classification_skills')){
+            Schema::create('classification_skills', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+
+                $table->integer('classification_id')->unsigned()->default(1);
+                $table->foreign('classification_id')->references('id')->on('classifications');
+
+                $table->timestamps();
+            });
+        }
+
     }
 
     /**
