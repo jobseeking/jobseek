@@ -12,6 +12,7 @@ use App\Job; // Model
 use App\User; // Model
 use App\ClassificationSkill; // Model
 use App\Education; // Model
+use App\JobSkillExperience; // Model
 
 use Illuminate\Http\Request;
 
@@ -153,10 +154,26 @@ class JobController extends Controller
         $validate_return = $this->validate($request, Job::validationRules());
 
 
+
+
+        // Create Job to TABLE "jobs": 
         $input = $request->only(["name", "company", "salary", "details", "location_id", "education_id", "type_id", "classification_id", "user_id"]);
-        $create_return = Job::create($input);
-        
+        $create_return = Job::create($input);        
         Log::info('postjob_api create_return: '.$create_return);
+
+
+        // Create skill/experience to TABLE "job_skill_experiences"
+        $classification_skills = ClassificationSkill::all();
+        foreach ($classification_skills as $classification_skill) {
+            $req_input_name = "classification_skill_".$classification_skill->id;
+            if ($request->has($req_input_name)) {                
+                JobSkillExperience::create(['job_id' => $create_return->id,
+                                            'skill_id' => $classification_skill->id,
+                                            'experience_years' => $request->input($req_input_name)
+                                           ]);
+            }
+        }
+
 
         return redirect('/showjob/'.$create_return->id);
     }
