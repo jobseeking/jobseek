@@ -197,13 +197,12 @@
     function onSelectInterestChange(){
       var classification_id = document.getElementById("classification_id").value;
 
-      if (classification_id == 1){
-        $("#skill_experience_1").css({ display: "block" });
-              $("#skill_experience_2").css({ display: "none"  });
-      }else if (classification_id == 2) {
-        $("#skill_experience_1").css({ display: "none" });
-              $("#skill_experience_2").css({ display: "block"  });
-      }
+      $(".skills_display").css({ display: "none"  });
+      $(".skills_display").removeClass("skills_display");
+
+      $("#classification_"+interest_classification_id+"_skill").css({ display: "block"  });
+      $("#classification_"+interest_classification_id+"_skill").addClass("skills_display");
+
     }
 
 
