@@ -97,7 +97,7 @@ class Job extends Model {
             $job['points'] = $points;
         }
        
-        $recommended_jobs = $jobs->sortByDesc('points')->all();
+        $recommended_jobs = $jobs->sortByDesc('points')->slice(0, 5); // first 5 jobs
         return $recommended_jobs;
     }
 
