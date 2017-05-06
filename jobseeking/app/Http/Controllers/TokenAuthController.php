@@ -12,6 +12,7 @@ use App\Type;  // Model
 use App\Location; // Model
 use App\ClassificationSkill; // Model
 use App\Education; // Model
+use App\UserSkillExperience; // Model
 
 use App\Http\Controllers\Controller;
 use JWTAuth;
@@ -87,10 +88,27 @@ class TokenAuthController extends Controller
 
 
         $password=Hash::make($request->input('password'));
- 
         $newuser['password'] = $password;
  
-        return User::create($newuser);
+
+        // Create user in TABLE "users"
+        $user_created = User::create($newuser);
+
+        // Create user's skill/experiecne in TABLE "user_skill_experiences" 
+                // Create skill/experience to TABLE "job_skill_experiences"
+        $classification_skills = ClassificationSkill::all();
+        foreach ($classification_skills as $classification_skill) {
+            $req_input_name = "classification_skill_".$classification_skill->id;
+            if ($request->has($req_input_name)) {                
+                UserSkillExperience::create(['user_id' => $user_created->id,
+                                             'skill_id' => $classification_skill->id,
+                                             'experience_years' => $request->input($req_input_name)
+                                           ]);
+            }
+        }
+
+
+        return $user_created;
     }
 
     public function home_page(Request $request){   

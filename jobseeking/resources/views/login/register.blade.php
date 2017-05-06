@@ -110,7 +110,15 @@
 		                    interest_classification_id: $('#interest_classification_id').val(),
 		                    interest_classification_id_2: $('#interest_classification_id_2').val(),
 		                    location_id: $('#location_id').val(),
-		                    education_id: $('#education_id').val()
+		                    education_id: $('#education_id').val(),
+		                    
+		                    // !!! HARD CODE HERE
+		                    classification_skill_1: $('#classification_skill_1').val(),
+		                    classification_skill_2: $('#classification_skill_2').val(),
+		                    classification_skill_3: $('#classification_skill_3').val(),
+		                    classification_skill_4: $('#classification_skill_4').val(),
+		                    classification_skill_5: $('#classification_skill_5').val(),
+		                    classification_skill_6: $('#classification_skill_6').val()
 		                },
 		              contentType:"application/x-www-form-urlencoded",
 		              timeout: 9000, // in milliseconds
@@ -247,7 +255,9 @@
 		              @foreach ( $classification_skills as $classification_skill )
 		                  @if ( $classification->id == 
 		                        $classification_skill->classification_id)
-				              <select class="form-control" name="classification_skill_{{$classification_skill->id}}">
+				              <select class="form-control" 
+				                      id=  "classification_skill_{{$classification_skill->id}}" 
+				                      name="classification_skill_{{$classification_skill->id}}">
 					              <option value ="0" > {{$classification_skill->name}} No Experience </option>
 					              <option value ="1" > {{$classification_skill->name}} < 1 year </option>
 					              <option value ="3" > {{$classification_skill->name}} 1 ~ 3 years </option>
