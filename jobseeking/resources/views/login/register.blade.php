@@ -151,10 +151,13 @@
 		function onSelectInterestChange(){
 
 			var interest_classification_id = document.getElementById("interest_classification_id").value;
+         
+            $(".skills_display").css({ display: "none"  });
+            $(".skills_display").removeClass("skills_display");
 
-            $(".skills_div").css({ display: "none"  });
             $("classification_"+interest_classification_id+"_skill").css({ display: "block"  });
-    
+            $("classification_"+interest_classification_id+"_skill").addClass("skills_display");
+
             /*
 			if (interest_classification_id == 1){
 				$("#skill_experience_1").css({ display: "block" });
@@ -243,9 +246,11 @@
 
 		          @foreach ( $classifications as $classification )
 		              @if ( $classification->id == 1)
-		              <div class="col-sm-5 skills_div" id="classification_{{$classification->id}}_skill" >
+		              <div class="col-sm-5 skills_display" 
+		                   id="classification_{{$classification->id}}_skill" >
 		              @else
-		              <div class="col-sm-5 skills_div" id="classification_{{$classification->id}}_skill" style="display:none" >
+		              <div class="col-sm-5" 
+		                   id="classification_{{$classification->id}}_skill" style="display:none" >
 		              @endif
 
 		              @foreach ( $classification_skills as $classification_skill )
