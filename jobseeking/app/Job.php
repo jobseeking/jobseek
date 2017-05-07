@@ -45,8 +45,9 @@ class Job extends Model {
     // Recommended Jobs (with Algorithm)
     public static function findRecommended()
     {
-        $login_user_id = \Request::input('rand');
-
+        $login_user_id = request()->session()->get('login_user_id');
+                        
+                           
         // Check if login_user is provided :  
         if (empty($login_user_id))
         {
