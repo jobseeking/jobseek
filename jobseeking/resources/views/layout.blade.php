@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <a onclick="onClickTest()" > test </a>
+    <!-- <a onclick="onClickTest()" > test </a>   -->
 
     <div class="row mynav">
         <!--class="active"-->
