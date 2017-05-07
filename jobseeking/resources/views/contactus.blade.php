@@ -10,7 +10,7 @@
 		<div class="col-sm-6">
 			<h3>Submit a request</h3>
 
-			<form>
+			
 
 			  <div class="form-group">
 			    <label for="">Your email address</label>
@@ -26,11 +26,12 @@
 
 			  <div class="form-group">
 			    <label for="">How can we help</label>
-			    <textarea class="form-control" rows="3"></textarea>
+			    <textarea class="form-control" rows="3" id="email_message" ></textarea>
 			  </div>
 			  
-			  <button type="submit" class="btn btn-default">Submit</button>
-			</form>
+			  <button type="submit" class="btn btn-default" onclick="onClickSend()">Submit</button>
+			
+
 
 			<hr class="visible-xs">
 		</div>
@@ -62,6 +63,20 @@
 
 
 <script>
+	function onClickSend(){
+		var service_id = 'outlook';
+		var template_id = 'template1';
+		var template_params = {
+			name: 'John',
+			reply_email: $('#exampleInputEmail1').val(),
+			message: $('#email_message').val()
+		};
+
+		emailjs.send(service_id,template_id,template_params);
+		alert("Email Sent");
+	}
+
+
     function check_login_callback(is_login){
         if(is_login){
        
