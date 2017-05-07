@@ -21,7 +21,6 @@ use Tymon\JWTAuth\Exceptions\JWTException;
  
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth; 
  
