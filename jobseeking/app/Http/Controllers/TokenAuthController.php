@@ -7,6 +7,7 @@ use Log;
 use Validator;
 use DB;
 
+use App\User;  // Model
 use App\Classification; // Model
 use App\Type;  // Model
 use App\Location; // Model
@@ -43,10 +44,25 @@ class TokenAuthController extends Controller
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
  
+        // Store Session 
+        $user = User::where('email', $request->input('email'))->get();
+        $request->session()->put('login_user_id', $user[0]->id);
+
         // if no errors are encountered we can return a JWT
         return response()->json(compact('token'));
     }
  
+    // Call this API to delete session when logout
+    public function logout(Request $request){
+        $request->session()->forget('login_user_id');
+        return response()->json("logout OK");
+    }
+
+    public function get_login_user_id(Request $request){
+        $user_id = $request->session()->get('login_user_id');
+        return response()->json($user_id);
+    }
+
     // parse the token in the request and if the token is valid and the user is present it return the user itself
     public function getAuthenticatedUser()
     {
@@ -70,6 +86,9 @@ class TokenAuthController extends Controller
  
         }
  
+        // Store Session 
+        $request->session()->put('login_user_id', $user->id);
+
         return response()->json(compact('user'));
     }
  
@@ -114,13 +133,11 @@ class TokenAuthController extends Controller
         $locations = Location::all();
         $classifications = Classification::all();
 
-        $user = Auth::user();
 
         return view('home', [
                                 'types' => $types, 
                                 'locations' => $locations,
-                                'classifications' => $classifications,
-                                'user' => $user
+                                'classifications' => $classifications
                             ] );
     }
 

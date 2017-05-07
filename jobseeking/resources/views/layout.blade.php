@@ -50,6 +50,8 @@
         </div>
     </div>
 
+    <a onclick="onClickTest()" > test </a>
+
     <div class="row mynav">
         <!--class="active"-->
         <a href="{{$base_url}}/">Home</a> |
@@ -92,13 +94,69 @@
 
 <script>
 
+    function onClickTest(){
+        $.ajax({
+                  url:  "{{$base_url}}/api/get_login_user_id",
+                  type:"GET",
+                  timeout: 9000, // in milliseconds
+                  success: function(data, status){
+                        console.log(JSON.stringify(status)); 
+                        console.log(JSON.stringify(data));
+                        
+                        if(status == 'success'){
+                        
+                        }
+                  }
+        }).done(function() {
+                
+                })
+          .fail(function(xhr, status, error) {
+                console.log('fail');
+                console.log(JSON.stringify(xhr));
+                console.log(JSON.stringify(status)); 
+                console.log(JSON.stringify(error)); 
+           });
+    }
+
     var g_is_login = false;
     var g_user = null;
 
     function onClickLogout(){
         console.log("onClickLogout");
+
+        // Delete Browser data
         localStorage.removeItem("my_token");
-        window.location = "{{$base_url}}/"; // redirect to home
+
+        // Delete server session
+        $.ajax({
+                  url:  "{{$base_url}}/api/logout",
+                  type:"POST",
+                  contentType:"application/x-www-form-urlencoded",
+                  timeout: 9000, // in milliseconds
+                  success: function(data, status){
+                        console.log(JSON.stringify(status)); 
+                        console.log(JSON.stringify(data));
+                        if(status == 'success'){
+                            alert( "Logout Success" );
+                            window.location = "{{$base_url}}/"; // redirect to home
+                        }else{
+                            alert("Logout status not success");
+                        }
+                  }
+        }).done(function() {
+                    //alert( "done" );
+                })
+          .fail(function(xhr, status, error) {
+                    alert( "Logout Fail" );
+                    //alert( xhr );
+                    //alert( status );
+                    //alert( error );
+                    console.log(JSON.stringify(xhr));
+                    console.log(JSON.stringify(status)); 
+                    console.log(JSON.stringify(error)); 
+
+        });
+
     }
 
     // to show or hide login/logout/register button

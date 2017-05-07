@@ -15,8 +15,10 @@ Route::get('/', 'TokenAuthController@home_page');
 
 // APIs for login & register
 Route::post('api/register', 'TokenAuthController@register');
-Route::post('api/authenticate', 'TokenAuthController@authenticate');
-Route::get('api/authenticate/user', 'TokenAuthController@getAuthenticatedUser');
+Route::post('api/authenticate', 'TokenAuthController@authenticate'); // login
+Route::post('api/logout', 'TokenAuthController@logout'); // logout
+Route::get('api/get_login_user_id', 'TokenAuthController@get_login_user_id'); // get_login_user_id
+Route::get('api/authenticate/user', 'TokenAuthController@getAuthenticatedUser'); // get user by token
 Route::post('api/test', 'TokenAuthController@test');
 
 // login page & register page

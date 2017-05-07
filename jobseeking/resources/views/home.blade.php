@@ -5,7 +5,6 @@
 
 
 
-{{$user}}
 
 <div >
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
