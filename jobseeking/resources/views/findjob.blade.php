@@ -4,12 +4,6 @@
 
 <style>
 
-#des_div {
-    white-space: nowrap; 
-    width: 24em; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
 
 
 .page_div{
@@ -113,7 +107,7 @@
 							  data-value="{{ $record->details }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
 							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  ><div id="des_div" >{{ $record->details }}</div></span>
+							  ><div class="des_div" >{{ $record->details }}</div></span>
 						</td>
 					<td>
 						<span 
@@ -324,7 +318,7 @@
 							  data-value="{{ $record->details }}"
 							  data-pk="{{ $record->{$record->getKeyName()} }}"
 							  data-url="{{$base_url}}/job/{{ $record->{$record->getKeyName()} }}"
-							  ><div id="des_div" >{{ $record->details }}</div></span>
+							  ><div class="des_div" >{{ $record->details }}</div></span>
 						</td>
 					<td>
 						<span 

@@ -118,6 +118,12 @@ a {
 	margin: 0px;
 }
 
+.des_div {
+    white-space: nowrap; 
+    width: 24em; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
 
 
 
