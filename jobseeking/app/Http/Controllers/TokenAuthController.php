@@ -63,7 +63,7 @@ class TokenAuthController extends Controller
     }
 
     // parse the token in the request and if the token is valid and the user is present it return the user itself
-    public function getAuthenticatedUser()
+    public function getAuthenticatedUser(Request $request)
     {
         try {
  
