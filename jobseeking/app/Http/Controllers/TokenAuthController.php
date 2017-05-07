@@ -114,10 +114,13 @@ class TokenAuthController extends Controller
         $locations = Location::all();
         $classifications = Classification::all();
 
+        $user = Auth::user();
+
         return view('home', [
                                 'types' => $types, 
                                 'locations' => $locations,
-                                'classifications' => $classifications
+                                'classifications' => $classifications,
+                                'user' => $user
                             ] );
     }
 
