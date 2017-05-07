@@ -7,6 +7,7 @@ use Log;
 use Validator;
 use DB;
 
+use App\Job; // Model
 use App\User;  // Model
 use App\Classification; // Model
 use App\Type;  // Model
@@ -133,10 +134,21 @@ class TokenAuthController extends Controller
         $classifications = Classification::all();
 
 
+        // Recommended Jobs....
+        $records_suggested = Job::findRecommended();
+        foreach ($records_suggested as $record) {
+            $record->type_name = Type::find($record->type_id)->name;
+            $record->location_name = Location::find($record->location_id)->name;
+            $record->classification_name = Classification::find($record->classification_id)->name;
+            $record->user_name = User::find($record->user_id)->name ."  ". User::find($record->user_id)->last_name;
+        }
+
+
         return view('home', [
                                 'types' => $types, 
                                 'locations' => $locations,
-                                'classifications' => $classifications
+                                'classifications' => $classifications,
+                                'records_suggested' => $records_suggested
                             ] );
     }
 
