@@ -138,7 +138,7 @@
 
 
 		          @foreach ( $classifications as $classification )
-		              @if ( $classification->id == 1)
+		              @if ( $classification->id == $user->interest_classification_id)
 		              <div class="col-sm-5 skills_display" 
 		                   id="classification_{{$classification->id}}_skill" >
 		              @else
