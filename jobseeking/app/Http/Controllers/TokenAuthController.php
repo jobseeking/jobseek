@@ -242,7 +242,7 @@ class TokenAuthController extends Controller
 
         //$this->validate($user_data, User::validationRules());
 
-        $user->update($user_data);
+        $user[0]->update($user_data);
 
         //return redirect('/');
         return view('aboutus');
