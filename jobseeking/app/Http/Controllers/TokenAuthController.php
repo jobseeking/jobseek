@@ -243,7 +243,8 @@ class TokenAuthController extends Controller
                                      ])
                      );
 
-        return redirect('/');
+        //return redirect('/');
+        return view('aboutus');
     }
 
     public function test(Request $request){
