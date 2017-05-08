@@ -179,6 +179,76 @@ class TokenAuthController extends Controller
         return view('aboutus');
     }
 
+    public function edit_user_page(Request $request){
+        $login_user_id = $request->session()->get('login_user_id');
+
+        // Check if login_user is provided :  
+        if (empty($login_user_id))
+        {
+            return redirect('/');
+        }
+
+        // Find user
+        $user = User::where('id', $login_user_id)->get();
+        if(empty($user))
+        {
+            return redirect('/');
+        }
+
+        // Find user's skills
+        $user_skills = UserSkillExperience::query()->where('user_id', $login_user_id)->get();
+        $user_skills_years = array();
+        foreach ($user_skills as $value) {
+            $user_skills_years[$value->skill_id] = $value->experience_years;
+        }
+
+        $locations = Location::all();
+        $educations = Education::all();
+        $classifications = Classification::all();
+        $classification_skills = ClassificationSkill::all();
+        return view( "edituser", ['user' => $user,
+                                  'user_skills_years' => $user_skills_years,
+                                  'classifications' => $classifications,
+                                  'classification_skills' => $classification_skills,
+                                  'locations' => $locations,
+                                  'educations' => $educations
+                                  ]
+                    );
+    }
+
+    public function update_user(Request $request){
+        $login_user_id = $request->session()->get('login_user_id');
+
+        // Check if login_user is provided :  
+        if (empty($login_user_id))
+        {
+            return redirect('/');
+        }
+
+        // Find user
+        $user = User::where('id', $login_user_id)->get();
+        if(empty($user))
+        {
+            return redirect('/');
+        }
+
+        if( $request->isXmlHttpRequest() )
+        {
+            $data = [$request->name  => $request->value];
+            $validator = \Validator::make( $data, User::validationRules( $request->name ) );
+            if($validator->fails())
+                return response($validator->errors()->first( $request->name),403);
+            $user->update($data);
+            return "Record updated";
+        }
+
+        $this->validate($request, User::validationRules());
+
+        $user->update($request->all());
+
+        return redirect('/');
+    }
+
     public function test(Request $request){
         
         $user = $this->getUser($request);

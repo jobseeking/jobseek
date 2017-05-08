@@ -21,9 +21,11 @@ Route::get('api/get_login_user_id', 'TokenAuthController@get_login_user_id'); //
 Route::get('api/authenticate/user', 'TokenAuthController@getAuthenticatedUser'); // get user by token
 Route::post('api/test', 'TokenAuthController@test');
 
-// login page & register page
+// login page & register & edit user page
 Route::get('register', 'TokenAuthController@register_page');
 Route::get('login', 'TokenAuthController@login_page');
+Route::get('edit_user', 'TokenAuthController@edit_user_page');
+Route::post('update_user', 'TokenAuthController@update_user');
 
 // contact us & about us
 Route::get('contactus', 'TokenAuthController@contactus_page');
