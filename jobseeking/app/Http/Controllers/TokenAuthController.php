@@ -203,7 +203,7 @@ class TokenAuthController extends Controller
         // Find user's skills
         $user_skills = UserSkillExperience::query()->where('user_id', $login_user_id)->get();
         $user_skills_years = array();
-        if(!empty($user_skills)){
+        if(count($user_skills)!=0){
             foreach ($user_skills as $value) {
                 $user_skills_years[$value->skill_id] = $value->experience_years;
             }
