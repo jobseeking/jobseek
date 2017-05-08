@@ -80,7 +80,7 @@
 
 			  <div class="form-group">
 				<div class="col-sm-12">
-				 {{$user->email}}
+				 <h3>{{$user->email}}</h3>
 				</div>
 			  </div>
 
