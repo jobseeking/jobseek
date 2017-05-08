@@ -239,13 +239,9 @@ class TokenAuthController extends Controller
                                       "location_id", 
                                       "education_id"
                                      ]);
-
-        //$this->validate($user_data, User::validationRules());
-
         $user[0]->update($user_data);
 
-        //return redirect('/');
-        return view('aboutus');
+        return redirect('/');
     }
 
     public function test(Request $request){
