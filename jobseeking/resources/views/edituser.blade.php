@@ -187,7 +187,7 @@
 
 			  <div class="form-group">
 				<div class="col-xs-12">
-				  <button type="submit" class="btn btn-primary" onClick="javascript:return validateRegistForm()">Save</button>
+				  <button type="submit" class="btn btn-primary" onClick="javascript:return validateRegistForm()"> Save </button>
 				  <button type="submit" class="btn btn-primary" onClick="">Cancel</button>
 				</div>
 			  </div>
