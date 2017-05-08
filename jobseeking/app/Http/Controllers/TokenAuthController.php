@@ -232,19 +232,16 @@ class TokenAuthController extends Controller
             return redirect('/');
         }
 
-        if( $request->isXmlHttpRequest() )
-        {
-            $data = [$request->name  => $request->value];
-            $validator = \Validator::make( $data, User::validationRules( $request->name ) );
-            if($validator->fails())
-                return response($validator->errors()->first( $request->name),403);
-            $user->update($data);
-            return "Record updated";
-        }
-
         $this->validate($request, User::validationRules());
 
-        $user->update($request->all());
+        $user->update($request->only([
+                                      "name", 
+                                      "last_name",  
+                                      "interest_classification_id", 
+                                      "location_id", 
+                                      "education_id"
+                                     ])
+                     );
 
         return redirect('/');
     }

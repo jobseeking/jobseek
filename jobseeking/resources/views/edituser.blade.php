@@ -73,7 +73,7 @@
 	<div class="post_form" id="" >
 		<div class="well">
 			<h1 class="center">User Profile</h1>
-			<div class="form-horizontal"  >
+			<form class="form-horizontal" action="{{$base_url}}/update_user" method="post">
 
 			  <div class="form-group">
 				<div class="col-sm-12">
@@ -83,11 +83,11 @@
 
 			  <div class="form-group">
 				<div class="col-xs-6">
-				  <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First name" value="{{$user->name}}">
+				  <input type="text" class="form-control" id="FirstName" name="name" placeholder="First name" value="{{$user->name}}">
 				</div>
 
 				 <div class="col-xs-6">
-				  <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Last name" value="{{$user->last_name}}">
+				  <input type="text" class="form-control" id="LastName" name="last_name" placeholder="Last name" value="{{$user->last_name}}">
 				</div>
 			  </div>
 
@@ -187,11 +187,11 @@
 
 			  <div class="form-group">
 				<div class="col-xs-12">
-				  <button type="submit" class="btn btn-primary" onClick="javascript:return validateRegistForm()"> Save </button>
+				  <button type="submit" class="btn btn-primary" onClick=""> Save </button>
 				  <button type="submit" class="btn btn-primary" onClick="">Cancel</button>
 				</div>
 			  </div>
-			</div>
+			</form>
 		</div>
 	</div>
 @endsection
