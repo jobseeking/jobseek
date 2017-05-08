@@ -232,16 +232,17 @@ class TokenAuthController extends Controller
             return redirect('/');
         }
 
-        $this->validate($request, User::validationRules());
-
-        $user->update($request->only([
+        $user_data = $request->only([
                                       "name", 
                                       "last_name",  
                                       "interest_classification_id", 
                                       "location_id", 
                                       "education_id"
-                                     ])
-                     );
+                                     ]);
+
+        $this->validate($user_data, User::validationRules());
+
+        $user->update($user_data);
 
         //return redirect('/');
         return view('aboutus');
