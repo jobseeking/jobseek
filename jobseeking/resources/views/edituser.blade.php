@@ -152,11 +152,19 @@
 				              <select class="form-control" 
 				                      id=  "classification_skill_{{$classification_skill->id}}" 
 				                      name="classification_skill_{{$classification_skill->id}}">
-					              <option value ="0" > {{$classification_skill->name}} No Experience </option>
-					              <option value ="1" > {{$classification_skill->name}} < 1 year </option>
-					              <option value ="3" > {{$classification_skill->name}} 1 ~ 3 years </option>
-					              <option value ="5" > {{$classification_skill->name}} 3 ~ 5 years </option>
-					              <option value ="10"> {{$classification_skill->name}} > 5 years </option>
+					              <option value ="0" 
+					              @if ($user_skills_years[$classification_skill->id] == 0) 
+					              selected 
+					              @endif
+					              > {{$classification_skill->name}} No Experience </option>
+					              <option value ="1" 
+					              > {{$classification_skill->name}} < 1 year </option>
+					              <option value ="3" 
+					              > {{$classification_skill->name}} 1 ~ 3 years </option>
+					              <option value ="5" 
+					              > {{$classification_skill->name}} 3 ~ 5 years </option>
+					              <option value ="10"
+					              > {{$classification_skill->name}} > 5 years </option>
 					          </select>
 		                  @endif
 		              @endforeach  
