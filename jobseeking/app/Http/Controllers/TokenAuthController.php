@@ -240,7 +240,7 @@ class TokenAuthController extends Controller
                                       "education_id"
                                      ]);
 
-        $this->validate($user_data, User::validationRules());
+        //$this->validate($user_data, User::validationRules());
 
         $user->update($user_data);
 
