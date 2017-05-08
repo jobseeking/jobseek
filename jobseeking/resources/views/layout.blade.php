@@ -53,6 +53,8 @@
             <a href="{{$base_url}}/register">Register</a>
         </div>
         <div id="logout_link" class="col-xs-8 info" style="display:none; cursor: pointer;" >
+            <a href="{{$base_url}}/edit_user">My Profile</a>
+            /
             <a onclick="onClickLogout()" >Logout</a>
         </div>
     </div>
