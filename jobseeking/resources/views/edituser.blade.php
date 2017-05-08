@@ -78,9 +78,10 @@
 			<h1 class="center">User Profile</h1>
 			<form class="form-horizontal" action="{{$base_url}}/update_user" method="post">
 
-			  <div class="form-group">
-				<div class="col-sm-12">
-				 <h3>{{$user->email}}</h3>
+			  <div class="form-group">	
+				<label class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<h4>{{$user->email}}</h4>
 				</div>
 			  </div>
 
