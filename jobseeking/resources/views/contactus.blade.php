@@ -67,7 +67,7 @@
 		var service_id = 'outlook';
 		var template_id = 'template1';
 		var template_params = {
-			name: 'John',
+			name: 'JobSeeking',
 			reply_email: $('#exampleInputEmail1').val(),
 			message: $('#email_message').val()
 		};

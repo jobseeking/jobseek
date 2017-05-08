@@ -87,11 +87,11 @@ class Job extends Model {
 
             // Location match?
             if($job->location_id == $user[0]->location_id){
-                $points += 30;
+                $points += 35;
             }
 
             // Education match?
-            if($job->education_id == $user[0]->education_id){
+            if($job->education_id <= $user[0]->education_id){
                 $points += 10;
             }
 
