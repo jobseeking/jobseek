@@ -232,6 +232,7 @@ class TokenAuthController extends Controller
             return redirect('/');
         }
 
+        // Update user TABLE
         $user_data = $request->only([
                                       "name", 
                                       "last_name",  
@@ -240,6 +241,23 @@ class TokenAuthController extends Controller
                                       "education_id"
                                      ]);
         $user[0]->update($user_data);
+
+
+        // Delete all records of this user in TABLE "user_skill_experiences"
+        UserSkillExperience::where('user_id', $user[0]->id)->delete();
+
+        // Update user's skill/experiecne in TABLE "user_skill_experiences"
+        $classification_skills = ClassificationSkill::all();
+        foreach ($classification_skills as $classification_skill) {
+            $req_input_name = "classification_skill_".$classification_skill->id;
+            if ($request->has($req_input_name)) {                
+                UserSkillExperience::create(['user_id' => $user[0]->id,
+                                             'skill_id' => $classification_skill->id,
+                                             'experience_years' => $request->input($req_input_name)
+                                           ]);
+            }
+        }
+
 
         return redirect('/');
     }
