@@ -195,17 +195,24 @@ class TokenAuthController extends Controller
             return redirect('/');
         }
 
-        // Find user's skills
-        $user_skills = UserSkillExperience::query()->where('user_id', $login_user_id)->get();
-        $user_skills_years = array();
-        foreach ($user_skills as $value) {
-            $user_skills_years[$value->skill_id] = $value->experience_years;
-        }
-
         $locations = Location::all();
         $educations = Education::all();
         $classifications = Classification::all();
         $classification_skills = ClassificationSkill::all();
+
+        // Find user's skills
+        $user_skills = UserSkillExperience::query()->where('user_id', $login_user_id)->get();
+        $user_skills_years = array();
+        if(!empty($user_skills)){
+            foreach ($user_skills as $value) {
+                $user_skills_years[$value->skill_id] = $value->experience_years;
+            }
+        }else{
+            foreach ($classification_skills as $value) {
+                $user_skills_years[$value->id] = 0;
+            }
+        }
+
         return view( "edituser", ['user' => $user[0],
                                   'user_skills_years' => $user_skills_years,
                                   'classifications' => $classifications,
