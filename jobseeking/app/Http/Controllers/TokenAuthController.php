@@ -206,7 +206,7 @@ class TokenAuthController extends Controller
         $educations = Education::all();
         $classifications = Classification::all();
         $classification_skills = ClassificationSkill::all();
-        return view( "edituser", ['user' => $user,
+        return view( "edituser", ['user' => $user[0],
                                   'user_skills_years' => $user_skills_years,
                                   'classifications' => $classifications,
                                   'classification_skills' => $classification_skills,
