@@ -158,12 +158,24 @@
 					              @endif
 					              > {{$classification_skill->name}} No Experience </option>
 					              <option value ="1" 
+					              @if ($user_skills_years[$classification_skill->id] == 1) 
+					              selected 
+					              @endif
 					              > {{$classification_skill->name}} < 1 year </option>
-					              <option value ="3" 
+					              <option value ="3"
+					              @if ($user_skills_years[$classification_skill->id] == 3) 
+					              selected 
+					              @endif  
 					              > {{$classification_skill->name}} 1 ~ 3 years </option>
 					              <option value ="5" 
+					              @if ($user_skills_years[$classification_skill->id] == 5) 
+					              selected 
+					              @endif
 					              > {{$classification_skill->name}} 3 ~ 5 years </option>
 					              <option value ="10"
+					              @if ($user_skills_years[$classification_skill->id] == 10) 
+					              selected 
+					              @endif
 					              > {{$classification_skill->name}} > 5 years </option>
 					          </select>
 		                  @endif
