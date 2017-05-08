@@ -50,7 +50,10 @@
 			}
 		} 
 
-		
+		function onClickCancel(){
+			window.location = "{{$base_url}}/"; // redirect to home
+		}
+
 		function onSelectInterestChange(){
 
 			var interest_classification_id = document.getElementById("interest_classification_id").value;
@@ -188,7 +191,7 @@
 			  <div class="form-group">
 				<div class="col-xs-12">
 				  <button type="submit" class="btn btn-primary" onClick=""> Save </button>
-				  <button type="submit" class="btn btn-primary" onClick="">Cancel</button>
+				  <button class="btn btn-primary" onClick="event.preventDefault();onClickCancel()">Cancel</button>
 				</div>
 			  </div>
 			</form>
