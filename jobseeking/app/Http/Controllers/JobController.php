@@ -216,6 +216,37 @@ class JobController extends Controller
     public function updatejob_api(Request $request, Job $job)
     {
         
+        // Update job TABLE
+        $job_data = $request->only([
+                                    "name", 
+                                    "company", 
+                                    "salary", 
+                                    "details", 
+                                    "location_id", 
+                                    "education_id", 
+                                    "type_id", 
+                                    "classification_id"
+                                    ]);
+        $job->update($job_data);
+
+        // Delete all records of this job in TABLE "job_skill_experiences"
+        JobSkillExperience::where('job_id', $job->id)->delete();
+
+        // Update job's skill/experiecne in TABLE "job_skill_experiences"
+        $classification_skills = ClassificationSkill::all();
+        foreach ($classification_skills as $classification_skill) {
+            $req_input_name = "classification_skill_".$classification_skill->id;
+            if ($request->has($req_input_name)) {                
+                JobSkillExperience::create(['job_id' => $job->id,
+                                            'skill_id' => $classification_skill->id,
+                                            'experience_years' => $request->input($req_input_name)
+                                           ]);
+            }
+        }
+
+
+        return redirect('/findjob');
+
     }
 
     // Show single job

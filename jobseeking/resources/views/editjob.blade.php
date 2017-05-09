@@ -190,6 +190,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
             -->
             <input type="submit" value="Submit" class="btn btn-primary">
+            <button class="btn btn-primary" onClick="event.preventDefault();onClickCancel()">Cancel</button>
           </div>
         </div>
 
@@ -203,6 +204,11 @@
 
 <script>
 
+
+    function onClickCancel(){
+      window.location = "{{$base_url}}/findjob"; // redirect to home
+    }
+    
     function onSelectInterestChange(){
       var interest_classification_id = document.getElementById("classification_id").value;
 
