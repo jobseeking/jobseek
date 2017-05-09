@@ -30,7 +30,13 @@
 
 <div id="post_form_id" class="post_form" >
   <div class="well">
-      <h1 class="center">Edit/View your job</h1>
+      <h1 class="center">
+          @if ($myjob == false) 
+              View Job
+          @else
+              Edit Your Job
+          @endif 
+      </h1>
       <form class="form-horizontal" id="myform" action="{{$base_url}}/api/updatejob/{{$job->id}}" method="post">
         
         {{-- input error message --}}
@@ -62,28 +68,44 @@
         <div class="form-group">
           <label for="companyname" class="col-sm-2 control-label">Company name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="company" value="{{$job->company}}">
+            <input
+            @if ($myjob == false) 
+            disabled
+            @endif  
+            type="text" class="form-control" name="company" value="{{$job->company}}">
           </div>
         </div>
 
         <div class="form-group">
           <label for="salary" class="col-sm-2 control-label">Salary</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="salary" value="{{$job->salary}}">
+            <input
+            @if ($myjob == false) 
+            disabled
+            @endif  
+            type="text" class="form-control" name="salary" value="{{$job->salary}}">
           </div>
         </div>
 
         <div class="form-group">
           <label for="details" class="col-sm-2 control-label">Details</label>
           <div class="col-sm-10">
-            <textarea class="form-control" name="details" rows="3" >{{$job->details}}</textarea>
+            <textarea
+            @if ($myjob == false) 
+            disabled
+            @endif  
+            class="form-control" name="details" rows="3" >{{$job->details}}</textarea>
           </div>
         </div>
 
         <div class="form-group">
           <label for="location" class="col-sm-2 control-label">Location</label>
           <div class="col-sm-10">
-            <select class="form-control" name="location_id">
+            <select
+            @if ($myjob == false) 
+            disabled
+            @endif  
+            class="form-control" name="location_id">
               @foreach ( $locations as $location )
                 @if ($location->id == $job->location_id)
                 <option value ="{{$location->id}}" selected> {{$location->name}} </option>      
@@ -98,7 +120,11 @@
         <div class="form-group">
           <label for="education" class="col-sm-2 control-label">Education</label>
           <div class="col-sm-10">
-            <select class="form-control" name="education_id">
+            <select
+            @if ($myjob == false) 
+            disabled
+            @endif  
+            class="form-control" name="education_id">
               @foreach ( $educations as $education )
                 @if ($education->id == $job->education_id)
                 <option value ="{{$education->id}}" selected> {{$education->name}} </option> 
@@ -113,7 +139,11 @@
         <div class="form-group">
           <label for="worktype" class="col-sm-2 control-label">Work type</label>
           <div class="col-sm-10">
-            <select class="form-control" name="type_id">
+            <select
+            @if ($myjob == false) 
+            disabled
+            @endif  
+            class="form-control" name="type_id">
               @foreach ( $types as $type )
                 @if ($type->id == $job->type_id)
                 <option value ="{{$type->id}}" selected> {{$type->name}} </option>     
@@ -128,7 +158,11 @@
         <div class="form-group">
           <label for="classification" class="col-sm-2 control-label">Classification</label>
           <div class="col-sm-5">
-            <select class="form-control" id="classification_id" name="classification_id" onchange="onSelectInterestChange()">
+            <select
+            @if ($myjob == false) 
+            disabled
+            @endif  
+            class="form-control" id="classification_id" name="classification_id" onchange="onSelectInterestChange()">
               @foreach ( $classifications as $classification )
                 @if ($classification->id == $job->classification_id)
                 <option value ="{{$classification->id}}" selected> {{$classification->name}} </option>
@@ -151,7 +185,11 @@
               @foreach ( $classification_skills as $classification_skill )
                   @if ( $classification->id == 
                         $classification_skill->classification_id)
-                  <select class="form-control" name="classification_skill_{{$classification_skill->id}}">
+                  <select
+                  @if ($myjob == false) 
+                  disabled
+                  @endif  
+                  class="form-control" name="classification_skill_{{$classification_skill->id}}">
                     <option value ="0" 
                     @if ($job_skills_years[$classification_skill->id] == 0) 
                     selected 
@@ -193,8 +231,12 @@
             <!--   Use "<input>" instead for phpunit test
             <button type="submit" class="btn btn-primary">Submit</button>
             -->
-            <input type="submit" value="Submit" class="btn btn-primary">
-            <button class="btn btn-primary" onClick="event.preventDefault();onClickCancel()">Cancel</button>
+            @if ($myjob == true) 
+              <input type="submit" value="Submit" class="btn btn-primary">
+              <button class="btn btn-primary" onClick="event.preventDefault();onClickCancel()">Cancel</button>
+            @else
+              <button class="btn btn-primary" onClick="event.preventDefault();onClickCancel()"> Back </button>
+            #endif
           </div>
         </div>
 
