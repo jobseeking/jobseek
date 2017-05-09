@@ -51,7 +51,11 @@
         <div class="form-group">
           <label for="jobname" class="col-sm-2 control-label">Job name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" value="{{$job->name}}">
+            <input
+            @if ($myjob == false) 
+            disabled
+            @endif 
+            type="text" class="form-control" name="name" value="{{$job->name}}">
           </div>
         </div>
 
@@ -208,7 +212,7 @@
     function onClickCancel(){
       window.location = "{{$base_url}}/findjob"; // redirect to home
     }
-    
+
     function onSelectInterestChange(){
       var interest_classification_id = document.getElementById("classification_id").value;
 

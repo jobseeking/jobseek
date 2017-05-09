@@ -202,13 +202,22 @@ class JobController extends Controller
             }
         }
 
+        // Check if this job belongs to current login user
+        $login_user_id = $request->session()->get('login_user_id');
+        if(!empty($login_user_id) and $login_user_id == $job->user_id){
+            $myjob = true;
+        }else{
+            $myjob = false;
+        }
+
         return view('editjob', ['types' => $types, 
                                 'locations' => $locations,
                                 'educations' => $educations,
                                 'classifications' => $classifications,
                                 'classification_skills' => $classification_skills,
                                 'job' => $job,
-                                'job_skills_years' => $job_skills_years
+                                'job_skills_years' => $job_skills_years,
+                                'myjob' => $myjob
                                ]); 
     }
 
