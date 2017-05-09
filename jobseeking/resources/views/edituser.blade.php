@@ -87,11 +87,11 @@
 
 			  <div class="form-group">
 				<div class="col-xs-6">
-				  <input type="text" class="form-control" id="FirstName" name="name" placeholder="First name" value="{{$user->name}}">
+				  <input disable type="text" class="form-control" id="FirstName" name="name" placeholder="First name" value="{{$user->name}}">
 				</div>
 
 				 <div class="col-xs-6">
-				  <input type="text" class="form-control" id="LastName" name="last_name" placeholder="Last name" value="{{$user->last_name}}">
+				  <input disable type="text" class="form-control" id="LastName" name="last_name" placeholder="Last name" value="{{$user->last_name}}">
 				</div>
 			  </div>
 
