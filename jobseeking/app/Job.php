@@ -106,7 +106,7 @@ class Job extends Model {
     // For random recommended based on user's interest
     public static function findSuggested()
     {
-        $login_user_id = \Request::input('rand');
+        $login_user_id = \Request::input('rand'); // Should use session instead
 
         // Check if login_user is provided :  
         if (empty($login_user_id))

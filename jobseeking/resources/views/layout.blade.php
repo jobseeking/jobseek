@@ -177,8 +177,8 @@
             $("#login_link").css({ display: "none"});
             $("#logout_link").css({ display: "block"});
 
-            var findjob_link = $("#findjob_link").attr('href');
-            $("#findjob_link").attr("href", findjob_link + "?rand=" + g_user.id);
+            //var findjob_link = $("#findjob_link").attr('href');
+            //$("#findjob_link").attr("href", findjob_link + "?rand=" + g_user.id);
         }
 
         if (typeof check_login_callback === "function") { 
