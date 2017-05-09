@@ -236,7 +236,7 @@
               <button class="btn btn-primary" onClick="event.preventDefault();onClickCancel()">Cancel</button>
             @else
               <button class="btn btn-primary" onClick="event.preventDefault();onClickCancel()"> Back </button>
-            #endif
+            @endif
           </div>
         </div>
 
