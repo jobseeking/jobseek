@@ -178,6 +178,46 @@ class JobController extends Controller
         return redirect('/showjob/'.$create_return->id);
     }
 
+    // edit job page
+    public function editjob_page(Request $request, Job $job)
+    {
+        $types = Type::all();
+        $locations = Location::all();
+        $educations = Education::all();
+        $classifications = Classification::all();
+        $classification_skills = ClassificationSkill::all();
+        
+        $job->user_name = User::find($job->user_id)->name ."  ". User::find($job->user_id)->last_name;
+
+        // Find job's skills
+        $job_skills = JobSkillExperience::query()->where('job_id', $job->id)->get();
+        $job_skills_years = array();
+        if(count($job_skills)!=0){
+            foreach ($job_skills as $value) {
+                $job_skills_years[$value->skill_id] = $value->experience_years;
+            }
+        }else{
+            foreach ($classification_skills as $value) {
+                $job_skills_years[$value->id] = 0;
+            }
+        }
+
+        return view('editjob', ['types' => $types, 
+                                'locations' => $locations,
+                                'educations' => $educations,
+                                'classifications' => $classifications,
+                                'classification_skills' => $classification_skills,
+                                'job' => $job,
+                                'job_skills_years' => $job_skills_years
+                               ]); 
+    }
+
+    // Call this API to update job
+    public function updatejob_api(Request $request, Job $job)
+    {
+        
+    }
+
     // Show single job
     public function showjob_page(Request $request, Job $job)
     {
