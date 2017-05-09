@@ -81,7 +81,7 @@
 			  <div class="form-group">	
 				<label class="col-sm-2 control-label">Email</label>
 				<div class="col-sm-10">
-					<h4>{{$user->email}}</h4>
+				    <input disabled type="text" class="form-control" id="" name="" placeholder="" value="{{$user->email}}">
 				</div>
 			  </div>
 
