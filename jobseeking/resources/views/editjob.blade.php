@@ -72,7 +72,7 @@
         <div class="form-group">
           <label for="details" class="col-sm-2 control-label">Details</label>
           <div class="col-sm-10">
-            <textarea class="form-control" name="details" rows="3" value="{{$job->details}}"></textarea>
+            <textarea class="form-control" name="details" rows="3" >{{$job->details}}</textarea>
           </div>
         </div>
 
