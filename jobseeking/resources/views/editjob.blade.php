@@ -55,6 +55,15 @@
         @endif
 
         <div class="form-group">
+          <label for="jobname" class="col-sm-2 control-label">User name</label>
+          <div class="col-sm-10">
+            <input 
+            disabled
+            type="text" class="form-control" name="name" value="{{$job->user_name}}">
+          </div>
+        </div>
+
+        <div class="form-group">
           <label for="jobname" class="col-sm-2 control-label">Job name</label>
           <div class="col-sm-10">
             <input
