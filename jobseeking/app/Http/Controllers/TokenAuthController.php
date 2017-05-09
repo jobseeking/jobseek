@@ -241,8 +241,8 @@ class TokenAuthController extends Controller
 
         // Update user TABLE
         $user_data = $request->only([
-                                      "name", 
-                                      "last_name",  
+                                    //  "name", 
+                                    //  "last_name",  
                                       "interest_classification_id", 
                                       "location_id", 
                                       "education_id"
