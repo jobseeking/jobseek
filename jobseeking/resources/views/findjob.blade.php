@@ -295,7 +295,7 @@
 	  setSelectWidth();
 
 	  $('#salary_top').change( function() {
-	    
+	    setSelectWidth();
 	  } );
 
 /*
