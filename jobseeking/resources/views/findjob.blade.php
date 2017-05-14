@@ -287,8 +287,8 @@
 	  $('#templateOption_select').text( s1.val() );
 	  // for some reason, a small fudge factor is needed
 	  // so that the text doesn't become clipped
-	  s1.width( $('#template_select').width() * 1.03 );
-	  //s2.width( $('#template_select').width() * 1.03 );
+	  s1.width( $('#template_select').width() * 1.5 );
+	  //s2.width( $('#template_select').width() * 1.5 );
 	}
 
 	$(document).ready( function() {
