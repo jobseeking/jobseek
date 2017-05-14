@@ -88,11 +88,15 @@
 
 <!--Rex-->
 <div class="container footer">
+<!--
     <hr>
     <a href="http://www.facebook.com" target="_blank"><img src="{{ asset('images/facebook.png') }}" alt=""></a>
     <a href="http://www.google.com" target="_blank"><img src="{{ asset('images/google.png') }}" alt=""></a>
     <a href="http://www.twitter.com" target="_blank"><img src="{{ asset('images/twitter.png') }}" alt=""></a>
     <a href="http://www.youtube.com" target="_blank"><img src="{{ asset('images/youtube.png') }}" alt=""></a>
+-->
+    <p>jobseeking Copyright &copy; 2017</p>
+
 </div>
 <!--Rex-->
 
