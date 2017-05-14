@@ -281,14 +281,21 @@
     } 
 
 
+    // For select options : long text makes width logner 
 	function setSelectWidth() {
 	  var s1 = $('#salary_bottom');
 	  var s2 = $('#salary_top');
 	  $('#templateOption_select').text( s1.val() );
+	  var s1_width = $('#template_select').width();
+	  $('#templateOption_select').text( s2.val() );
+	  var s2_width = $('#template_select').width();
+
+	  var longer_width = (s1_width > s2_width) ? s1_width : s2_width;
+
 	  // for some reason, a small fudge factor is needed
 	  // so that the text doesn't become clipped
-	  s1.width( $('#template_select').width() * 1.5 );
-	  //s2.width( $('#template_select').width() * 1.5 );
+	  s1.width( longer_width * 1.5 );
+	  s2.width( longer_width * 1.5 );
 	}
 
 	$(document).ready( function() {
@@ -302,16 +309,9 @@
 	    setSelectWidth();
 	  } );
 
-/*
-	  $('#salary_top').change( function() {
-	    setSelectWidth();
-	  } );
 
-	  $('#salary_bottom').change( function() {
-	    setSelectWidth();
-	  } );
-*/	  
 	});
+	// End : // For select options : long text makes width logner 
 
 </script>
 @endsection
