@@ -19,8 +19,10 @@
 
 			  <div class="form-group">
 			    <label for="">Please tell us what your enquiry to</label>
-			    <select class="form-control">
-			    	<option>Feedback</option>
+			    <select class="form-control" id="message_type">
+			    	<option value="Feedback" >Feedback</option>
+			    	<option value="Enquiry">Enquiry</option>
+			    	<option value="Complaint">Complaint</option>
 			    </select>
 			  </div>
 
@@ -69,7 +71,7 @@
 		var template_params = {
 			name: 'JobSeeking',
 			reply_email: $('#exampleInputEmail1').val(),
-			message: $('#email_message').val()
+			message:   $('#message_type').val() + " : " + $('#email_message').val()
 		};
 
 		emailjs.send(service_id,template_id,template_params);
