@@ -285,9 +285,18 @@
 	function setSelectWidth() {
 	  var s1 = $('#salary_bottom');
 	  var s2 = $('#salary_top');
-	  $('#templateOption_select').text( s1.val() );
+	 
+	  if(s1.val() == "99999999999999" || s2.val() == "99999999999999" ){
+	    var s1_val = "12345"; // for "$Max"	  	
+	  	var s2_val = "12345"; // for "$Max"	  	
+	  }else{
+	  	var s1_val = s1.val();
+	  	var s2_val = s2.val();
+	  }
+
+	  $('#templateOption_select').text( s1_val );
 	  var s1_width = $('#template_select').width();
-	  $('#templateOption_select').text( s2.val() );
+	  $('#templateOption_select').text( s2_val );
 	  var s2_width = $('#template_select').width();
 
 	  var longer_width = (s1_width > s2_width) ? s1_width : s2_width;
