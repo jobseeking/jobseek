@@ -51,7 +51,7 @@
         <div class="form-group">
           <label for="jobname" class="col-sm-2 control-label">Job name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" placeholder="Job name">
+            <input type="text" class="form-control" id="job_name" name="name" placeholder="Job name">
           </div>
         </div>
 
@@ -216,6 +216,14 @@
 
     //before form submit do something : 
     $('#myform').submit(function() {
+        //Check input 
+        var job_name= $('#job_name').val();
+        if (/[\d]/.test(job_name)  ) {
+          alert("Error : Job name can not be number.");
+          return false;
+        } 
+
+
         console.log("before submit");
         console.log("user id : " + g_user.id);
         document.getElementById("input_user_id").value = g_user.id;
