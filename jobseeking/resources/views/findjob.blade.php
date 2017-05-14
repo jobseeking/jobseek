@@ -298,6 +298,10 @@
 	    setSelectWidth();
 	  } );
 
+	  $('#salary_bottom').change( function() {
+	    setSelectWidth();
+	  } );
+
 /*
 	  $('#salary_top').change( function() {
 	    setSelectWidth();
