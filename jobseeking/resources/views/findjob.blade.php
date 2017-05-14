@@ -93,9 +93,9 @@
             		&nbsp;&nbsp;&nbsp;&nbsp; To
             		<select class="form-control" name="salary_top">
             			@if ( Request::input("salary_top") > 200000 )
-				        	<option value ="99999999999999" selected> &nbsp;&nbsp;&nbsp;&nbsp;$Max&nbsp;&nbsp;&nbsp;&nbsp; </option>      
+				        	<option value ="99999999999999" selected> $Max </option>      
 				        @else
-				        	<option value ="99999999999999" > &nbsp;&nbsp;&nbsp;&nbsp;$Max&nbsp;&nbsp;&nbsp;&nbsp; </option>      
+				        	<option value ="99999999999999" > $Max </option>      
 				        @endif
 
             		    @for ($i = 10000; $i < 200001; $i+=10000)
