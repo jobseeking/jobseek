@@ -90,6 +90,11 @@
 				return false;	
 			}
 
+			if (/[\d]/.test(firstName) || /[\d]/.test(lastName) ) {
+				alert("Error : First Name & Last Name contain Numbers!");
+				return false;
+			} 
+			
 			onClickSubmit();
 		}
 		
