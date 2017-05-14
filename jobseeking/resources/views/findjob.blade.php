@@ -294,8 +294,8 @@
 
 	  // for some reason, a small fudge factor is needed
 	  // so that the text doesn't become clipped
-	  s1.width( longer_width * 1.7 );
-	  s2.width( longer_width * 1.7 );
+	  s1.width( longer_width * 1.5 );
+	  s2.width( longer_width * 1.5 );
 	}
 
 	$(document).ready( function() {
