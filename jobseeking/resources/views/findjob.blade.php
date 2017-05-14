@@ -299,7 +299,7 @@
 	}
 
 	$(document).ready( function() {
-	  //setSelectWidth();
+	  //setSelectWidth(); // This makes initial length too long
 
 	  $('#salary_top').change( function() {
 	    setSelectWidth();
