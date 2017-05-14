@@ -81,7 +81,10 @@
 				<td><input type="text" class="form-control" name="company" value="{{Request::input("company")}}"></td>
 				<td>
 				    <!-- &nbsp;&nbsp;&nbsp;&nbsp; From -->
-				    <select class="form-control" name="salary_bottom">
+				    <select id="template_select" style="display:none;">
+  						<option id="templateOption_select"></option>
+					</select>
+				    <select class="form-control" id="salary_bottom" name="salary_bottom">
 				        @for ($i = 0; $i < 200001; $i+=10000)
 				        	@if ( Request::input("salary_bottom") == $i)
 				        		<option value ="{{$i}}" selected> ${{number_format($i)}} </option>
@@ -91,7 +94,7 @@
 				        @endfor  		       
             		</select>
             		&nbsp;&nbsp;&nbsp;&nbsp; To
-            		<select class="form-control" name="salary_top">
+            		<select class="form-control" id="salary_top" name="salary_top">
             			@if ( Request::input("salary_top") > 200000 )
 				        	<option value ="99999999999999" selected> $Max </option>      
 				        @else
@@ -276,6 +279,29 @@
          
         }
     } 
+
+
+	function setSelectWidth() {
+	  var s1 = $('#salary_bottom');
+	  var s2 = $('#salary_top');
+	  $('#templateOption_select').text( s1.val() );
+	  // for some reason, a small fudge factor is needed
+	  // so that the text doesn't become clipped
+	  s1.width( $('#template_select').width() * 1.03 );
+	  //s2.width( $('#template_select').width() * 1.03 );
+	}
+
+	$(document).ready( function() {
+	  setSelectWidth();
+
+	  $('#salary_top').change( function() {
+	    setSelectWidth();
+	  } );​ 
+
+	  $('#salary_bottom').change( function() {
+	    setSelectWidth();
+	  } );​    
+	});
 
 </script>
 @endsection
