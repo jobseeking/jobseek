@@ -295,12 +295,18 @@
 	  setSelectWidth();
 
 	  $('#salary_top').change( function() {
+	    
+	  } );
+
+/*
+	  $('#salary_top').change( function() {
 	    setSelectWidth();
 	  } );
 
 	  $('#salary_bottom').change( function() {
 	    setSelectWidth();
 	  } );
+*/	  
 	});
 
 </script>
