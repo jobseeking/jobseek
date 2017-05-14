@@ -299,7 +299,7 @@
 	}
 
 	$(document).ready( function() {
-	  setSelectWidth();
+	  //setSelectWidth();
 
 	  $('#salary_top').change( function() {
 	    setSelectWidth();
