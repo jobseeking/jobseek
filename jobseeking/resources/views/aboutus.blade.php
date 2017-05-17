@@ -6,7 +6,7 @@
 
 
 <h1 class='center'>About us</h1>
-<div style="border-style: solid; border-radius: 5px;padding: 25px;">
+<div style="border-style: solid; border-radius: 5px;padding: 25px; text-indent: 50px;">
 	<h4>
 		Jobseeking is a diverse online business that aim to help people to find fulfilling and productive work and help organisations succeed. We have developed a great product technology solution in order for job seekers and hirers to facilitate job matches. Our extensive matchmaking entails asking our clients vital information to create the best possible match.
 	</h4>
