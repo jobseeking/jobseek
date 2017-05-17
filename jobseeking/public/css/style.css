@@ -33,8 +33,8 @@ a {
 */
 
 .header{
-	font-size: 70%;  /* fallback of vmin */
-	font-size: 2vmin;
+	font-size: 80%;  /* fallback of vmin */
+	font-size: 3vmin;
 
 }
 
